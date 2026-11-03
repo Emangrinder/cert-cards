@@ -28,3 +28,6 @@ Named actor types (hacktivist, organized crime, unskilled attacker), shadow IT, 
 
 ## Security+ Domain 3 gaps (no verified public source yet)
 IaC, microservices, serverless, RTOS/embedded, responsibility matrix, NGFW/WAF/UTM, load balancer, 802.1X port security, SASE/SD-WAN, device placement and failure modes, data classification levels and sovereignty, platform diversity, multi-cloud, capacity planning, backup types and replication, generators.
+
+## Security+ Domain 4 gaps (no verified public source yet)
+Secure baselines and wireless security (WPA3), asset inventory/tracking, data retention, OSINT, penetration testing, responsible disclosure, prioritization and exposure factor, NetFlow, SOAR and automation/orchestration, FIM, EDR/XDR, UEBA, ACLs, web and DNS filtering, PAM, provisioning/deprovisioning, password concepts, legal hold and e-discovery, threat hunting, order of volatility.

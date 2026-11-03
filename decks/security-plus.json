@@ -1681,5 +1681,522 @@
       "url": "https://csrc.nist.gov/glossary/term/disaster_recovery_plan#:~:text=Management%20policy%20and%20procedures%20used%20to%20guide%20an%20enterprise%20response%20to%20a%20perceived%20loss%20of%20mission%20capability",
       "q": "Management policy and procedures used to guide an enterprise response to a perceived loss of mission capability"
     }
+  },
+  {
+    "id": "4.9-01",
+    "obj": "4.9",
+    "front": "Audit log\n\nWhat does it record?",
+    "back": "A chronological record of system activities, including accesses and operations performed. Evidence for investigations and accountability.",
+    "src": {
+      "title": "NIST Glossary: audit log",
+      "url": "https://csrc.nist.gov/glossary/term/audit_log#:~:text=A%20chronological%20record%20of%20system%20activities%2C%20including%20records%20of%20system%20accesses%20and%20operations%20performed",
+      "q": "A chronological record of system activities, including records of system accesses and operations performed"
+    }
+  },
+  {
+    "id": "4.4-01",
+    "obj": "4.4",
+    "front": "Log management\n\nWhat steps does it cover?",
+    "back": "Generating, transmitting, storing, analyzing and disposing of log data. Protect logs from tampering and set retention.",
+    "src": {
+      "title": "NIST Glossary: log management",
+      "url": "https://csrc.nist.gov/glossary/term/log_management#:~:text=The%20process%20for%20generating%2C%20transmitting%2C%20storing%2C%20analyzing%2C%20and%20disposing%20of%20log%20data",
+      "q": "The process for generating, transmitting, storing, analyzing, and disposing of log data"
+    }
+  },
+  {
+    "id": "4.4-02",
+    "obj": "4.4",
+    "front": "SIEM\n\nWhat does it do with logs?",
+    "back": "Centralizes logging for many log types, then correlates events and raises alerts.",
+    "src": {
+      "title": "NIST Glossary: SIEM",
+      "url": "https://csrc.nist.gov/glossary/term/security_information_and_event_management#:~:text=A%20program%20that%20provides%20centralized%20logging%20capabilities%20for%20a%20variety%20of%20log%20types",
+      "q": "A program that provides centralized logging capabilities for a variety of log types"
+    }
+  },
+  {
+    "id": "4.9-02",
+    "obj": "4.9",
+    "front": "Syslog\n\nWhat does it standardize?",
+    "back": "A log entry format and a transport mechanism, so devices can send event messages to a central collector.",
+    "src": {
+      "title": "RFC 5424: The Syslog Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc5424.html#:~:text=This%20document%20describes%20the%20syslog%20protocol%2C%20which%20is%20used%20to%20convey%20event%20notification%20messages",
+      "q": "This document describes the syslog protocol, which is used to convey event notification messages"
+    }
+  },
+  {
+    "id": "4.4-03",
+    "obj": "4.4",
+    "front": "SNMP\n\nWhat is it used for?",
+    "back": "A framework for managing and monitoring network devices. Devices can send traps to a manager. Use SNMPv3 for authentication and encryption.",
+    "src": {
+      "title": "RFC 3411: SNMP Management Frameworks",
+      "url": "https://www.rfc-editor.org/rfc/rfc3411.html#:~:text=The%20architecture%20is%20designed%20to%20be%20modular%20to%20allow%20the%20evolution%20of%20the%20SNMP%20protocol%20standards%20over%20time",
+      "q": "The architecture is designed to be modular to allow the evolution of the SNMP protocol standards over time"
+    }
+  },
+  {
+    "id": "4.9-03",
+    "obj": "4.9",
+    "front": "Packet capture\n\nWhat does a packet sniffer record?",
+    "back": "Observes and records network traffic, capturing packets from wired or wireless networks. Useful for investigation and troubleshooting.",
+    "src": {
+      "title": "NIST Glossary: packet sniffer",
+      "url": "https://csrc.nist.gov/glossary/term/packet_sniffer#:~:text=Software%20that%20monitors%20network%20traffic%20on%20wired%20or%20wireless%20networks%20and%20captures%20packets",
+      "q": "Software that monitors network traffic on wired or wireless networks and captures packets"
+    }
+  },
+  {
+    "id": "4.3-01",
+    "obj": "4.3",
+    "front": "False positive\n\nWhat went wrong?",
+    "back": "A scanner reports a vulnerability that is not actually present, or a tool flags benign content as malicious. Confirm findings before acting.",
+    "src": {
+      "title": "NIST Glossary: false positive",
+      "url": "https://csrc.nist.gov/glossary/term/false_positive#:~:text=An%20alert%20that%20incorrectly%20indicates%20that%20a%20vulnerability%20is%20present",
+      "q": "An alert that incorrectly indicates that a vulnerability is present"
+    }
+  },
+  {
+    "id": "4.3-02",
+    "obj": "4.3",
+    "front": "False negative\n\nWhy is it worse than a false positive?",
+    "back": "A tool meant to detect a threat fails to do so, so the problem goes unseen and unfixed.",
+    "src": {
+      "title": "NIST Glossary: false negative",
+      "url": "https://csrc.nist.gov/glossary/term/false_negative#:~:text=An%20instance%20in%20which%20a%20security%20tool%20intended%20to%20detect%20a%20particular%20threat%20fails%20to%20do%20so",
+      "q": "An instance in which a security tool intended to detect a particular threat fails to do so"
+    }
+  },
+  {
+    "id": "4.3-03",
+    "obj": "4.3",
+    "front": "CVE\n\nWhat does an entry contain?",
+    "back": "A public list of known vulnerabilities, each with an ID number, a description and at least one public reference.",
+    "src": {
+      "title": "NIST Glossary: CVE",
+      "url": "https://csrc.nist.gov/glossary/term/common_vulnerabilities_and_exposures#:~:text=containing%20an%20identification%20number%2C%20a%20description%2C%20and%20at%20least%20one%20public%20reference",
+      "q": "containing an identification number, a description, and at least one public reference"
+    }
+  },
+  {
+    "id": "4.3-04",
+    "obj": "4.3",
+    "front": "CVSS\n\nWhat does it communicate?",
+    "back": "A standard way to describe vulnerability characteristics and rate relative severity, used to prioritize fixes.",
+    "src": {
+      "title": "NIST Glossary: CVSS",
+      "url": "https://csrc.nist.gov/glossary/term/common_vulnerability_scoring_system#:~:text=An%20SCAP%20specification%20for%20communicating%20the%20characteristics%20of%20vulnerabilities%20and%20measuring%20their%20relative%20severity",
+      "q": "An SCAP specification for communicating the characteristics of vulnerabilities and measuring their relative severity"
+    }
+  },
+  {
+    "id": "4.3-05",
+    "obj": "4.3",
+    "front": "CVSS metric groups\n\nName the three.",
+    "back": "Base (intrinsic, constant), Temporal (changes over time) and Environmental (specific to the user's environment).",
+    "src": {
+      "title": "FIRST: CVSS v3.1 Specification",
+      "url": "https://www.first.org/cvss/v3.1/specification-document#:~:text=CVSS%20consists%20of%20three%20metric%20groups%3A%20Base%2C%20Temporal%2C%20and%20Environmental",
+      "q": "CVSS consists of three metric groups: Base, Temporal, and Environmental"
+    }
+  },
+  {
+    "id": "4.3-06",
+    "obj": "4.3",
+    "front": "Risk tolerance\n\nHow does it affect remediation?",
+    "back": "The level of risk an entity is willing to assume to achieve a desired result. Low tolerance means faster fixes or stricter compensating controls.",
+    "src": {
+      "title": "NIST Glossary: risk tolerance",
+      "url": "https://csrc.nist.gov/glossary/term/risk_tolerance#:~:text=The%20level%20of%20risk%20an%20entity%20is%20willing%20to%20assume%20in%20order%20to%20achieve%20a%20potential%20desired%20result",
+      "q": "The level of risk an entity is willing to assume in order to achieve a potential desired result"
+    }
+  },
+  {
+    "id": "4.3-07",
+    "obj": "4.3",
+    "front": "Bug bounty\n\nWho is paid, and for what?",
+    "back": "Rewards individuals for reporting software flaws that could be exploited. A form of responsible disclosure.",
+    "src": {
+      "title": "NIST Glossary: bug bounty",
+      "url": "https://csrc.nist.gov/glossary/term/bug_bounty#:~:text=A%20method%20of%20compensating%20individuals%20for%20reporting%20software%20errors%2C%20flaws%2C%20or%20faults",
+      "q": "A method of compensating individuals for reporting software errors, flaws, or faults"
+    }
+  },
+  {
+    "id": "4.3-08",
+    "obj": "4.3",
+    "front": "Threat intelligence\n\nWhat makes information intelligence?",
+    "back": "Threat information that is analyzed and given context so it supports decisions. Feeds help identify vulnerabilities and indicators.",
+    "src": {
+      "title": "NIST Glossary: threat intelligence",
+      "url": "https://csrc.nist.gov/glossary/term/threat_intelligence#:~:text=Threat%20information%20that%20has%20been%20aggregated%2C%20transformed%2C%20analyzed%2C%20interpreted%2C%20or%20enriched",
+      "q": "Threat information that has been aggregated, transformed, analyzed, interpreted, or enriched"
+    }
+  },
+  {
+    "id": "4.2-01",
+    "obj": "4.2",
+    "front": "Media sanitization\n\nWhat is the goal?",
+    "back": "Make data on media unrecoverable by both logical and state-of-the-art laboratory techniques before reuse or disposal.",
+    "src": {
+      "title": "NIST Glossary: media sanitization",
+      "url": "https://csrc.nist.gov/glossary/term/media_sanitization#:~:text=The%20actions%20taken%20to%20render%20data%20written%20on%20media%20unrecoverable",
+      "q": "The actions taken to render data written on media unrecoverable"
+    }
+  },
+  {
+    "id": "4.2-02",
+    "obj": "4.2",
+    "front": "Sanitization: Clear\n\nWhat threat does it defend against?",
+    "back": "Logical techniques (overwrite, factory reset) that protect against simple non-invasive recovery. Media can be reused.",
+    "src": {
+      "title": "NIST SP 800-88 Rev 1",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf#page=18",
+      "q": "Clear applies logical techniques to sanitize data in all user-addressable storage locations"
+    }
+  },
+  {
+    "id": "4.2-03",
+    "obj": "4.2",
+    "front": "Sanitization: Purge\n\nWhat can it defeat?",
+    "back": "Physical or logical techniques that make recovery infeasible even with state-of-the-art lab techniques. Examples: cryptographic erase, degaussing.",
+    "src": {
+      "title": "NIST SP 800-88 Rev 1",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf#page=18",
+      "q": "Purge applies physical or logical techniques that render Target Data recovery infeasible"
+    }
+  },
+  {
+    "id": "4.2-04",
+    "obj": "4.2",
+    "front": "Sanitization: Destroy\n\nCan the media be reused?",
+    "back": "Makes recovery infeasible and the media unusable for storage. Examples: shredding, incineration, pulverizing.",
+    "src": {
+      "title": "NIST SP 800-88 Rev 1",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf#page=18",
+      "q": "Destroy renders Target Data recovery infeasible using state of the art laboratory"
+    }
+  },
+  {
+    "id": "4.2-05",
+    "obj": "4.2",
+    "front": "Media disposal\n\nWhen can media be released?",
+    "back": "After the decision that media holds no sensitive data, either because it never did or because sanitization removed it. Record the decision.",
+    "src": {
+      "title": "NIST Glossary: disposal",
+      "url": "https://csrc.nist.gov/glossary/term/disposal#:~:text=A%20release%20outcome%20following%20the%20decision%20that%20media%20does%20not%20contain%20sensitive%20data",
+      "q": "A release outcome following the decision that media does not contain sensitive data"
+    }
+  },
+  {
+    "id": "4.5-01",
+    "obj": "4.5",
+    "front": "Antivirus\n\nWhat does it do?",
+    "back": "Monitors a computer or network to identify major types of malware and prevent or contain incidents. Signature and behavior based.",
+    "src": {
+      "title": "NIST Glossary: antivirus software",
+      "url": "https://csrc.nist.gov/glossary/term/antivirus_software#:~:text=A%20program%20that%20monitors%20a%20computer%20or%20network%20to%20identify%20all%20major%20types%20of%20malware",
+      "q": "A program that monitors a computer or network to identify all major types of malware"
+    }
+  },
+  {
+    "id": "4.5-02",
+    "obj": "4.5",
+    "front": "SPF\n\nWhat does the domain owner publish?",
+    "back": "A DNS record listing the hosts allowed to send mail for the domain, so receivers can check the sending server.",
+    "src": {
+      "title": "RFC 7208: Sender Policy Framework",
+      "url": "https://www.rfc-editor.org/rfc/rfc7208.html#:~:text=whereby%20ADministrative%20Management%20Domains%20%28ADMDs%29%20can%20explicitly%20authorize%20the%20hosts%20that%20are%20allowed%20to%20use%20their%20domain%20names",
+      "q": "whereby ADministrative Management Domains (ADMDs) can explicitly authorize the hosts that are allowed to use their domain names"
+    }
+  },
+  {
+    "id": "4.5-03",
+    "obj": "4.5",
+    "front": "DKIM\n\nWhat does it add to a message?",
+    "back": "A cryptographic signature tied to the signing domain, which receivers verify with a public key in DNS. Shows origin and integrity.",
+    "src": {
+      "title": "RFC 6376: DKIM Signatures",
+      "url": "https://www.rfc-editor.org/rfc/rfc6376.html#:~:text=permits%20a%20person%2C%20role%2C%20or%20organization%20that%20owns%20the%20signing%20domain%20to%20claim%20some%20responsibility%20for%20a%20message",
+      "q": "permits a person, role, or organization that owns the signing domain to claim some responsibility for a message"
+    }
+  },
+  {
+    "id": "4.5-04",
+    "obj": "4.5",
+    "front": "DMARC\n\nWhat does it add on top of SPF and DKIM?",
+    "back": "A domain-level policy for how receivers should handle failures, plus reporting back to the domain owner.",
+    "src": {
+      "title": "RFC 7489: DMARC",
+      "url": "https://www.rfc-editor.org/rfc/rfc7489.html#:~:text=is%20a%20scalable%20mechanism%20by%20which%20a%20mail-originating%20organization%20can%20express%20domain-level%20policies",
+      "q": "is a scalable mechanism by which a mail-originating organization can express domain-level policies"
+    }
+  },
+  {
+    "id": "4.6-01",
+    "obj": "4.6",
+    "front": "Identity proofing\n\nWhat is established?",
+    "back": "Providing enough information (history, documents, credentials) to establish that a person is who they claim, before issuing an account.",
+    "src": {
+      "title": "NIST Glossary: identity proofing",
+      "url": "https://csrc.nist.gov/glossary/term/identity_proofing#:~:text=The%20process%20of%20providing%20sufficient%20information%20%28e.g.%2C%20identity%20history%2C%20credentials%2C%20documents%29%20to%20establish%20an%20identity",
+      "q": "The process of providing sufficient information (e.g., identity history, credentials, documents) to establish an identity"
+    }
+  },
+  {
+    "id": "4.6-02",
+    "obj": "4.6",
+    "front": "Single sign-on (SSO)\n\nWhat do users gain and what is the risk?",
+    "back": "One account and authenticators access multiple applications seamlessly, usually through federation. One compromised login exposes many apps.",
+    "src": {
+      "title": "NIST Glossary: single sign-on",
+      "url": "https://csrc.nist.gov/glossary/term/single_sign_on#:~:text=An%20authentication%20process%20by%20which%20one%20account%20and%20its%20authenticators%20are%20used%20to%20access%20multiple%20applications",
+      "q": "An authentication process by which one account and its authenticators are used to access multiple applications"
+    }
+  },
+  {
+    "id": "4.6-03",
+    "obj": "4.6",
+    "front": "Federation\n\nWhat crosses the boundary?",
+    "back": "Identity and authentication information conveyed across a set of networked systems that trust each other.",
+    "src": {
+      "title": "NIST Glossary: federation",
+      "url": "https://csrc.nist.gov/glossary/term/federation#:~:text=A%20process%20that%20allows%20for%20the%20conveyance%20of%20identity%20and%20authentication%20information%20across%20a%20set%20of%20networked%20systems",
+      "q": "A process that allows for the conveyance of identity and authentication information across a set of networked systems"
+    }
+  },
+  {
+    "id": "4.6-04",
+    "obj": "4.6",
+    "front": "SAML\n\nWhat does it exchange?",
+    "back": "XML-based requests and responses carrying assertions about subjects between online partners, typically for browser SSO.",
+    "src": {
+      "title": "NIST Glossary: SAML",
+      "url": "https://csrc.nist.gov/glossary/term/security_assertion_markup_language#:~:text=A%20protocol%20consisting%20of%20XML-based%20request%20and%20response%20message%20formats%20for%20exchanging%20security%20information",
+      "q": "A protocol consisting of XML-based request and response message formats for exchanging security information"
+    }
+  },
+  {
+    "id": "4.6-05",
+    "obj": "4.6",
+    "front": "OAuth 2.0\n\nWhat does it authorize?",
+    "back": "Lets a third-party application obtain limited access to a service on a user's behalf. Authorization, not authentication.",
+    "src": {
+      "title": "RFC 6749: OAuth 2.0",
+      "url": "https://www.rfc-editor.org/rfc/rfc6749.html#:~:text=The%20OAuth%202.0%20authorization%20framework%20enables%20a%20third-party%20application%20to%20obtain%20limited%20access%20to%20an%20HTTP%20service",
+      "q": "The OAuth 2.0 authorization framework enables a third-party application to obtain limited access to an HTTP service"
+    }
+  },
+  {
+    "id": "4.6-06",
+    "obj": "4.6",
+    "front": "LDAP\n\nWhat does it provide?",
+    "back": "Access to distributed directory services, the usual store of users and groups. Active Directory speaks LDAP.",
+    "src": {
+      "title": "RFC 4511: LDAP",
+      "url": "https://www.rfc-editor.org/rfc/rfc4511.html#:~:text=LDAP%20provides%20access%20to%20distributed%20directory%20services",
+      "q": "LDAP provides access to distributed directory services"
+    }
+  },
+  {
+    "id": "4.6-07",
+    "obj": "4.6",
+    "front": "Kerberos\n\nWhat problem does it solve?",
+    "back": "Lets two parties exchange private information across a public network using tickets from a trusted third party. Core of Active Directory.",
+    "src": {
+      "title": "NIST Glossary: Kerberos",
+      "url": "https://csrc.nist.gov/glossary/term/kerberos#:~:text=An%20authentication%20system%20developed%20at%20the%20Massachusetts%20Institute%20of%20Technology%20%28MIT%29",
+      "q": "An authentication system developed at the Massachusetts Institute of Technology (MIT)"
+    }
+  },
+  {
+    "id": "4.6-08",
+    "obj": "4.6",
+    "front": "Discretionary access control (DAC)\n\nWho sets permissions?",
+    "back": "The object's owner (or anyone authorized by them) decides who gets access.",
+    "src": {
+      "title": "NIST Glossary: DAC",
+      "url": "https://csrc.nist.gov/glossary/term/discretionary_access_control#:~:text=leaves%20a%20certain%20amount%20of%20access%20control%20to%20the%20discretion%20of%20the%20object",
+      "q": "leaves a certain amount of access control to the discretion of the object"
+    }
+  },
+  {
+    "id": "4.6-09",
+    "obj": "4.6",
+    "front": "Mandatory access control (MAC)\n\nWho sets permissions?",
+    "back": "A central authority sets policy by labels, and users cannot change access rights. Typical of military systems.",
+    "src": {
+      "title": "NIST Glossary: MAC",
+      "url": "https://csrc.nist.gov/glossary/term/mandatory_access_control#:~:text=access%20control%20policy%20decisions%20are%20made%20by%20a%20central%20authority",
+      "q": "access control policy decisions are made by a central authority"
+    }
+  },
+  {
+    "id": "4.6-10",
+    "obj": "4.6",
+    "front": "Role-based access control (RBAC)\n\nWhat do permissions attach to?",
+    "back": "Roles, not individuals. Users get a role and inherit its permitted actions.",
+    "src": {
+      "title": "NIST Glossary: RBAC",
+      "url": "https://csrc.nist.gov/glossary/term/role_based_access_control#:~:text=permitted%20actions%20on%20resources%20are%20identified%20with%20roles%20rather%20than%20with%20individual%20subject%20identities",
+      "q": "permitted actions on resources are identified with roles rather than with individual subject identities"
+    }
+  },
+  {
+    "id": "4.6-11",
+    "obj": "4.6",
+    "front": "Attribute-based access control (ABAC)\n\nWhat drives the decision?",
+    "back": "Attributes of the subject and the object (like department, clearance, time), compared to policy at request time.",
+    "src": {
+      "title": "NIST Glossary: ABAC",
+      "url": "https://csrc.nist.gov/glossary/term/attribute_based_access_control#:~:text=access%20is%20mediated%20based%20on%20attributes%20associated%20with%20subjects%20%28requesters%29%20and%20the%20objects%20to%20be%20accessed",
+      "q": "access is mediated based on attributes associated with subjects (requesters) and the objects to be accessed"
+    }
+  },
+  {
+    "id": "4.6-12",
+    "obj": "4.6",
+    "front": "Biometrics\n\nWhat is measured?",
+    "back": "A measurable physical or behavioral trait, like fingerprint, face or iris, used to recognize or verify identity. A \"something you are\" factor.",
+    "src": {
+      "title": "NIST Glossary: biometrics",
+      "url": "https://csrc.nist.gov/glossary/term/biometrics#:~:text=A%20measurable%20physical%20characteristic%20or%20personal%20behavioral%20trait%20used%20to%20recognize%20the%20identity",
+      "q": "A measurable physical characteristic or personal behavioral trait used to recognize the identity"
+    }
+  },
+  {
+    "id": "4.6-13",
+    "obj": "4.6",
+    "front": "Multi-factor authentication (MFA)\n\nHow much confidence does it add?",
+    "back": "Proves control of more than one kind of authenticator (know, have, are). NIST AAL2 requires it for high confidence the claimant controls the account.",
+    "src": {
+      "title": "NIST SP 800-63B-4",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html#:~:text=AAL2%20provides%20high%20confidence%20that%20the%20claimant%20controls%20one%20or%20more%20authenticators",
+      "q": "AAL2 provides high confidence that the claimant controls one or more authenticators"
+    }
+  },
+  {
+    "id": "4.8-01",
+    "obj": "4.8",
+    "front": "Incident\n\nWhat qualifies?",
+    "back": "An occurrence that actually or potentially jeopardizes confidentiality, integrity or availability, or violates security policy.",
+    "src": {
+      "title": "NIST Glossary: incident",
+      "url": "https://csrc.nist.gov/glossary/term/incident#:~:text=An%20occurrence%20that%20actually%20or%20potentially%20jeopardizes%20the%20confidentiality%2C%20integrity%2C%20or%20availability%20of%20an%20information%20system",
+      "q": "An occurrence that actually or potentially jeopardizes the confidentiality, integrity, or availability of an information system"
+    }
+  },
+  {
+    "id": "4.8-02",
+    "obj": "4.8",
+    "front": "Incident response life cycle\n\nName the phases in order.",
+    "back": "Preparation, detection and analysis, containment, eradication and recovery, then post-incident activity. It loops back to detection during handling.",
+    "src": {
+      "title": "NIST SP 800-61 Rev 2",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf#page=31",
+      "q": "the major phases of the incident response process"
+    }
+  },
+  {
+    "id": "4.8-03",
+    "obj": "4.8",
+    "front": "IR: Preparation\n\nWhat is covered?",
+    "back": "Building the response capability and also preventing incidents by securing systems, networks and applications.",
+    "src": {
+      "title": "NIST SP 800-61 Rev 2",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf#page=31",
+      "q": "Incident response methodologies typically emphasize preparation"
+    }
+  },
+  {
+    "id": "4.8-04",
+    "obj": "4.8",
+    "front": "IR: Containment\n\nWhy is it done early?",
+    "back": "Stops the incident from overwhelming resources or increasing damage. Choose a strategy per incident.",
+    "src": {
+      "title": "NIST SP 800-61 Rev 2",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf#page=45",
+      "q": "Containment is important before an incident overwhelms resources or increases damage"
+    }
+  },
+  {
+    "id": "4.8-05",
+    "obj": "4.8",
+    "front": "IR: Eradication\n\nWhat gets removed?",
+    "back": "Delete malware, disable breached accounts, and mitigate the exploited vulnerabilities on all affected hosts.",
+    "src": {
+      "title": "NIST SP 800-61 Rev 2",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf#page=47",
+      "q": "After an incident has been contained, eradication may be necessary to eliminate components of the incident"
+    }
+  },
+  {
+    "id": "4.8-06",
+    "obj": "4.8",
+    "front": "IR: Recovery\n\nWhat is restored?",
+    "back": "Executing contingency plan activities to restore business functions and systems to normal.",
+    "src": {
+      "title": "NIST Glossary: recovery",
+      "url": "https://csrc.nist.gov/glossary/term/recovery#:~:text=Recovery%20is%20executing%20system%20contingency%20plan%20activities%20to%20restore%20organizational%20missions%2Fbusiness%20functions",
+      "q": "Recovery is executing system contingency plan activities to restore organizational missions/business functions"
+    }
+  },
+  {
+    "id": "4.8-07",
+    "obj": "4.8",
+    "front": "IR: Lessons learned\n\nWhen is the meeting held?",
+    "back": "After a major incident, with all involved parties, to review what happened and how well the response worked. Often skipped but very valuable.",
+    "src": {
+      "title": "NIST SP 800-61 Rev 2",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf#page=48",
+      "q": "One of the most important parts of incident response is also the most often omitted: learning and improving"
+    }
+  },
+  {
+    "id": "4.8-08",
+    "obj": "4.8",
+    "front": "Root cause analysis\n\nWhat is it after?",
+    "back": "The underlying causes of a set of risks or an incident, not just the symptoms, so the fix prevents recurrence.",
+    "src": {
+      "title": "NIST Glossary: root cause analysis",
+      "url": "https://csrc.nist.gov/glossary/term/root_cause_analysis#:~:text=A%20principle-based%2C%20systems%20approach%20for%20the%20identification%20of%20underlying%20causes%20associated%20with%20a%20particular%20set%20of%20risks",
+      "q": "A principle-based, systems approach for the identification of underlying causes associated with a particular set of risks"
+    }
+  },
+  {
+    "id": "4.8-09",
+    "obj": "4.8",
+    "front": "Digital forensics\n\nWhat must be followed?",
+    "back": "Examination of digital evidence with proper search authority, chain of custody and validation, so findings hold up.",
+    "src": {
+      "title": "NIST Glossary: digital forensics",
+      "url": "https://csrc.nist.gov/glossary/term/digital_forensics#:~:text=the%20application%20of%20computer%20science%20and%20investigative%20procedures%20involving%20the%20examination%20of%20digital%20evidence",
+      "q": "the application of computer science and investigative procedures involving the examination of digital evidence"
+    }
+  },
+  {
+    "id": "4.8-10",
+    "obj": "4.8",
+    "front": "Chain of custody\n\nWhat does it document?",
+    "back": "Who handled the evidence, when it was collected or transferred, and why, from collection through analysis.",
+    "src": {
+      "title": "NIST Glossary: chain of custody",
+      "url": "https://csrc.nist.gov/glossary/term/chain_of_custody#:~:text=A%20process%20that%20tracks%20the%20movement%20of%20evidence%20through%20its%20collection%2C%20safeguarding%2C%20and%20analysis%20lifecycle",
+      "q": "A process that tracks the movement of evidence through its collection, safeguarding, and analysis lifecycle"
+    }
+  },
+  {
+    "id": "4.8-11",
+    "obj": "4.8",
+    "front": "Evidence handling\n\nWhy does handling matter?",
+    "back": "Evidence may be needed in legal proceedings, so document how it was preserved and follow law and counsel guidance so it is admissible.",
+    "src": {
+      "title": "NIST SP 800-61 Rev 2",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf#page=46",
+      "q": "Although the primary reason for gathering evidence during an incident is to resolve the incident"
+    }
   }
 ]
