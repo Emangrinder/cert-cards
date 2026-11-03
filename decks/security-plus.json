@@ -2198,5 +2198,478 @@
       "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf#page=46",
       "q": "Although the primary reason for gathering evidence during an incident is to resolve the incident"
     }
+  },
+  {
+    "id": "5.1-01",
+    "obj": "5.1",
+    "front": "Security policy\n\nWhat does it regulate?",
+    "back": "The laws, rules and practices that regulate how an organization manages, protects and distributes sensitive information. Standards and procedures implement it.",
+    "src": {
+      "title": "NIST Glossary: security policy",
+      "url": "https://csrc.nist.gov/glossary/term/security_policy#:~:text=The%20set%20of%20laws%2C%20rules%2C%20and%20practices%20that%20regulate%20how%20an%20organization%20manages%2C%20protects%2C%20and%20distributes%20sensitive%20information",
+      "q": "The set of laws, rules, and practices that regulate how an organization manages, protects, and distributes sensitive information"
+    }
+  },
+  {
+    "id": "5.1-02",
+    "obj": "5.1",
+    "front": "Information owner\n\nWhat authority do they hold?",
+    "back": "An official with statutory or operational authority over specified information and responsibility for setting controls for its generation, collection, processing, dissemination and disposal.",
+    "src": {
+      "title": "NIST Glossary: information owner",
+      "url": "https://csrc.nist.gov/glossary/term/information_owner#:~:text=Official%20with%20statutory%20or%20operational%20authority%20for%20specified%20information",
+      "q": "Official with statutory or operational authority for specified information"
+    }
+  },
+  {
+    "id": "5.1-03",
+    "obj": "5.1",
+    "front": "Data steward\n\nHow do they differ from the data owner?",
+    "back": "Enforces data policies day to day, assesses classification criteria and tests compliance. Custodians and managers carry out the handling.",
+    "src": {
+      "title": "NIST Glossary: data steward",
+      "url": "https://csrc.nist.gov/glossary/term/data_steward#:~:text=Data%20stewards%20enforce%20policies%2C%20and%20functional%20data%20managers%20implement%20the%20policies",
+      "q": "Data stewards enforce policies, and functional data managers implement the policies"
+    }
+  },
+  {
+    "id": "5.1-04",
+    "obj": "5.1",
+    "front": "Data controller\n\nWhat do they decide?",
+    "back": "The party that determines the purposes and means of processing personal data, alone or jointly with others.",
+    "src": {
+      "title": "GDPR Article 4",
+      "url": "https://gdpr-info.eu/art-4-gdpr/#:~:text=means%20the%20natural%20or%20legal%20person%2C%20public%20authority%2C%20agency%20or%20other%20body%20which%2C%20alone%20or%20jointly%20with%20others%2C%20determines%20the%20purposes%20and%20means%20of%20the%20processing%20of%20personal%20data",
+      "q": "means the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data"
+    }
+  },
+  {
+    "id": "5.1-05",
+    "obj": "5.1",
+    "front": "Data processor\n\nWhose behalf do they act on?",
+    "back": "Processes personal data on behalf of the controller, following the controller's instructions.",
+    "src": {
+      "title": "GDPR Article 4",
+      "url": "https://gdpr-info.eu/art-4-gdpr/#:~:text=which%20processes%20personal%20data%20on%20behalf%20of%20the%20controller",
+      "q": "which processes personal data on behalf of the controller"
+    }
+  },
+  {
+    "id": "5.2-01",
+    "obj": "5.2",
+    "front": "Risk\n\nWhat two factors make it up?",
+    "back": "How threatened an entity is by a possible event, typically a function of the adverse impact if it occurs and the likelihood that it occurs.",
+    "src": {
+      "title": "NIST Glossary: risk",
+      "url": "https://csrc.nist.gov/glossary/term/risk#:~:text=A%20measure%20of%20the%20extent%20to%20which%20an%20entity%20is%20threatened%20by%20a%20potential%20circumstance%20or%20event",
+      "q": "A measure of the extent to which an entity is threatened by a potential circumstance or event"
+    }
+  },
+  {
+    "id": "5.2-02",
+    "obj": "5.2",
+    "front": "Likelihood\n\nWhat does it estimate?",
+    "back": "The chance of something happening. Paired with impact to rate a risk.",
+    "src": {
+      "title": "NIST Glossary: likelihood",
+      "url": "https://csrc.nist.gov/glossary/term/likelihood#:~:text=Chance%20of%20something%20happening",
+      "q": "Chance of something happening"
+    }
+  },
+  {
+    "id": "5.2-03",
+    "obj": "5.2",
+    "front": "Impact\n\nWhat does it measure?",
+    "back": "The effect on operations, assets, individuals or other organizations of a loss of confidentiality, integrity or availability.",
+    "src": {
+      "title": "NIST Glossary: impact",
+      "url": "https://csrc.nist.gov/glossary/term/impact#:~:text=The%20effect%20on%20organizational%20operations%2C%20organizational%20assets%2C%20individuals",
+      "q": "The effect on organizational operations, organizational assets, individuals"
+    }
+  },
+  {
+    "id": "5.2-04",
+    "obj": "5.2",
+    "front": "Risk assessment\n\nWhat does it enable?",
+    "back": "A systematic examination of risk using disciplined methods so decision makers can evaluate and prioritize risks and pick strategies.",
+    "src": {
+      "title": "NIST Glossary: risk assessment",
+      "url": "https://csrc.nist.gov/glossary/term/risk_assessment#:~:text=A%20systematic%20examination%20of%20risk%20using%20disciplined%20processes%2C%20methods%2C%20and%20tools",
+      "q": "A systematic examination of risk using disciplined processes, methods, and tools"
+    }
+  },
+  {
+    "id": "5.2-05",
+    "obj": "5.2",
+    "front": "Qualitative risk analysis\n\nWhat scale does it use?",
+    "back": "Non-numerical categories or levels, such as low, medium and high. Fast, subjective.",
+    "src": {
+      "title": "NIST Glossary: qualitative assessment",
+      "url": "https://csrc.nist.gov/glossary/term/qualitative_assessment#:~:text=Use%20of%20a%20set%20of%20methods%2C%20principles%2C%20or%20rules%20for%20assessing%20risk%20based%20on%20nonnumerical%20categories%20or%20levels",
+      "q": "Use of a set of methods, principles, or rules for assessing risk based on nonnumerical categories or levels"
+    }
+  },
+  {
+    "id": "5.2-06",
+    "obj": "5.2",
+    "front": "Quantitative risk analysis\n\nWhat scale does it use?",
+    "back": "Numbers, such as dollar values and probabilities, whose meaning is preserved. More precise, needs good data.",
+    "src": {
+      "title": "NIST Glossary: quantitative assessment",
+      "url": "https://csrc.nist.gov/glossary/term/quantitative_assessment#:~:text=Use%20of%20a%20set%20of%20methods%2C%20principles%2C%20or%20rules%20for%20assessing%20risks%20based%20on%20the%20use%20of%20numbers",
+      "q": "Use of a set of methods, principles, or rules for assessing risks based on the use of numbers"
+    }
+  },
+  {
+    "id": "5.2-07",
+    "obj": "5.2",
+    "front": "Single loss expectancy (SLE)\n\nHow is it calculated?",
+    "back": "Expected monetary loss from one occurrence: asset value x exposure factor.",
+    "src": {
+      "title": "Wikipedia: Single-loss expectancy",
+      "url": "https://en.wikipedia.org/wiki/Single-loss_expectancy#:~:text=is%20the%20monetary%20value%20expected%20from%20the%20occurrence%20of%20a%20risk%20on%20an%20asset",
+      "q": "is the monetary value expected from the occurrence of a risk on an asset"
+    }
+  },
+  {
+    "id": "5.2-08",
+    "obj": "5.2",
+    "front": "Annualized rate of occurrence (ARO)\n\nWhat does it estimate?",
+    "back": "How often a threat is expected to successfully exploit a vulnerability in a year.",
+    "src": {
+      "title": "Wikipedia: Annualized rate of occurrence",
+      "url": "https://en.wikipedia.org/wiki/Annualized_rate_of_occurrence#:~:text=an%20estimate%20of%20how%20often%20a%20threat%20would%20be%20successful%20in%20exploiting%20a%20vulnerability",
+      "q": "an estimate of how often a threat would be successful in exploiting a vulnerability"
+    }
+  },
+  {
+    "id": "5.2-09",
+    "obj": "5.2",
+    "front": "Annualized loss expectancy (ALE)\n\nHow is it calculated?",
+    "back": "ALE = ARO x SLE. Compare it to the yearly cost of a control to decide whether the control is worth it.",
+    "src": {
+      "title": "Wikipedia: Annualized loss expectancy",
+      "url": "https://en.wikipedia.org/wiki/Annualized_loss_expectancy#:~:text=is%20the%20product%20of%20the%20annual%20rate%20of%20occurrence%20%28ARO%29%20and%20the%20single%20loss%20expectancy%20%28SLE%29",
+      "q": "is the product of the annual rate of occurrence (ARO) and the single loss expectancy (SLE)"
+    }
+  },
+  {
+    "id": "5.2-10",
+    "obj": "5.2",
+    "front": "Risk register\n\nWhat does it hold?",
+    "back": "A central repository of identified risks with their details, tracked over time: owner, rating, response and status.",
+    "src": {
+      "title": "NIST Glossary: risk register",
+      "url": "https://csrc.nist.gov/glossary/term/risk_register#:~:text=A%20repository%20of%20risk%20information%20including%20the%20data%20understood%20about%20risks%20over%20time",
+      "q": "A repository of risk information including the data understood about risks over time"
+    }
+  },
+  {
+    "id": "5.2-11",
+    "obj": "5.2",
+    "front": "Risk appetite\n\nHow is it different from tolerance?",
+    "back": "The types and amount of risk, at a broad level, an organization is willing to accept in pursuit of value. Tolerance is the narrower acceptable variation.",
+    "src": {
+      "title": "NIST Glossary: risk appetite",
+      "url": "https://csrc.nist.gov/glossary/term/risk_appetite#:~:text=The%20types%20and%20amount%20of%20risk%2C%20on%20a%20broad%20level",
+      "q": "The types and amount of risk, on a broad level"
+    }
+  },
+  {
+    "id": "5.2-12",
+    "obj": "5.2",
+    "front": "Risk response\n\nName the options.",
+    "back": "Accept, avoid, mitigate, share or transfer the risk. Transfer examples: insurance, outsourcing.",
+    "src": {
+      "title": "NIST Glossary: risk response",
+      "url": "https://csrc.nist.gov/glossary/term/risk_response#:~:text=Accepting%2C%20avoiding%2C%20mitigating%2C%20sharing%2C%20or%20transferring%20risk",
+      "q": "Accepting, avoiding, mitigating, sharing, or transferring risk"
+    }
+  },
+  {
+    "id": "5.2-13",
+    "obj": "5.2",
+    "front": "Risk mitigation\n\nWhat does it involve?",
+    "back": "Prioritizing, evaluating and implementing risk-reducing controls recommended by the risk management process.",
+    "src": {
+      "title": "NIST Glossary: risk mitigation",
+      "url": "https://csrc.nist.gov/glossary/term/risk_mitigation#:~:text=Prioritizing%2C%20evaluating%2C%20and%20implementing%20the%20appropriate%20risk-reducing%20controls%2Fcountermeasures",
+      "q": "Prioritizing, evaluating, and implementing the appropriate risk-reducing controls/countermeasures"
+    }
+  },
+  {
+    "id": "5.2-14",
+    "obj": "5.2",
+    "front": "Risk management\n\nWhat does it manage?",
+    "back": "The process of managing risks to operations, assets and individuals from operating an information system. Includes assess, respond and monitor.",
+    "src": {
+      "title": "NIST Glossary: risk management",
+      "url": "https://csrc.nist.gov/glossary/term/risk_management#:~:text=The%20process%20of%20managing%20risks%20to%20organizational%20operations",
+      "q": "The process of managing risks to organizational operations"
+    }
+  },
+  {
+    "id": "5.2-15",
+    "obj": "5.2",
+    "front": "Business impact analysis (BIA)\n\nWhat does it find?",
+    "back": "Analyzes operational functions and the effect a disruption would have on them. Drives RTO, RPO and recovery priorities.",
+    "src": {
+      "title": "NIST Glossary: business impact analysis",
+      "url": "https://csrc.nist.gov/glossary/term/business_impact_analysis#:~:text=Process%20of%20analyzing%20operational%20functions%20and%20the%20effect%20that%20a%20disruption%20might%20have%20on%20them",
+      "q": "Process of analyzing operational functions and the effect that a disruption might have on them"
+    }
+  },
+  {
+    "id": "5.3-01",
+    "obj": "5.3",
+    "front": "Supply chain risk management\n\nWhat does it cover?",
+    "back": "A systematic process for finding susceptibilities, vulnerabilities and threats throughout the supply chain, and building mitigation strategies.",
+    "src": {
+      "title": "NIST Glossary: SCRM",
+      "url": "https://csrc.nist.gov/glossary/term/supply_chain_risk_management#:~:text=A%20systematic%20process%20for%20managing%20supply%20chain%20risk%20by%20identifying%20susceptibilities%2C%20vulnerabilities%2C%20and%20threats%20throughout%20the%20supply%20chain",
+      "q": "A systematic process for managing supply chain risk by identifying susceptibilities, vulnerabilities, and threats throughout the supply chain"
+    }
+  },
+  {
+    "id": "5.3-02",
+    "obj": "5.3",
+    "front": "Service level agreement (SLA)\n\nWhat does it define?",
+    "back": "The provider's specific responsibilities and the customer's expectations, such as uptime and response times.",
+    "src": {
+      "title": "NIST Glossary: service level agreement",
+      "url": "https://csrc.nist.gov/glossary/term/service_level_agreement#:~:text=Defines%20the%20specific%20responsibilities%20of%20the%20service%20provider%20and%20sets%20the%20customer%20expectations",
+      "q": "Defines the specific responsibilities of the service provider and sets the customer expectations"
+    }
+  },
+  {
+    "id": "5.3-03",
+    "obj": "5.3",
+    "front": "Interconnection security agreement (ISA)\n\nWhen is it needed?",
+    "back": "When systems connect. States the security requirements for the connection and for the data exchanged.",
+    "src": {
+      "title": "NIST Glossary: interconnection security agreement",
+      "url": "https://csrc.nist.gov/glossary/term/interconnection_security_agreement#:~:text=A%20document%20specifying%20information%20security%20requirements%20for%20system%20interconnections",
+      "q": "A document specifying information security requirements for system interconnections"
+    }
+  },
+  {
+    "id": "5.3-04",
+    "obj": "5.3",
+    "front": "Memorandum of understanding (MOU)\n\nIs it binding?",
+    "back": "An agreement between parties expressing a common line of action. Usually less formal than a contract.",
+    "src": {
+      "title": "Wikipedia: Memorandum of understanding",
+      "url": "https://en.wikipedia.org/wiki/Memorandum_of_understanding#:~:text=It%20expresses%20a%20convergence%20of%20will%20between%20the%20parties%2C%20indicating%20an%20intended%20common%20line%20of%20action",
+      "q": "It expresses a convergence of will between the parties, indicating an intended common line of action"
+    }
+  },
+  {
+    "id": "5.3-05",
+    "obj": "5.3",
+    "front": "Master service agreement (MSA)\n\nWhat does it settle in advance?",
+    "back": "Most of the terms governing future transactions, so later work orders only add specifics.",
+    "src": {
+      "title": "Wikipedia: Master service agreement",
+      "url": "https://en.wikipedia.org/wiki/Master_service_agreement#:~:text=the%20parties%20agree%20to%20most%20of%20the%20terms%20that%20will%20govern%20future%20transactions%20or%20future%20agreements",
+      "q": "the parties agree to most of the terms that will govern future transactions or future agreements"
+    }
+  },
+  {
+    "id": "5.3-06",
+    "obj": "5.3",
+    "front": "Statement of work (SOW)\n\nWhat does it contain?",
+    "back": "Project-specific activities, deliverables, timelines and pricing for a vendor's work.",
+    "src": {
+      "title": "Wikipedia: Statement of work",
+      "url": "https://en.wikipedia.org/wiki/Statement_of_work#:~:text=It%20defines%20project-specific%20activities%2C%20deliverables%20and%20timelines%20for%20a%20vendor%20providing%20services%20to%20the%20client",
+      "q": "It defines project-specific activities, deliverables and timelines for a vendor providing services to the client"
+    }
+  },
+  {
+    "id": "5.3-07",
+    "obj": "5.3",
+    "front": "Non-disclosure agreement (NDA)\n\nWhat does it protect?",
+    "back": "A legal contract restricting what confidential information the parties may share with others.",
+    "src": {
+      "title": "Wikipedia: Non-disclosure agreement",
+      "url": "https://en.wikipedia.org/wiki/Non-disclosure_agreement#:~:text=is%20a%20legal%20contract%20or%20part%20of%20a%20contract%20between%20at%20least%20two%20parties",
+      "q": "is a legal contract or part of a contract between at least two parties"
+    }
+  },
+  {
+    "id": "5.4-01",
+    "obj": "5.4",
+    "front": "Privacy\n\nHow does it relate to confidentiality?",
+    "back": "Assurance that the confidentiality of, and access to, information about an entity is protected.",
+    "src": {
+      "title": "NIST Glossary: privacy",
+      "url": "https://csrc.nist.gov/glossary/term/privacy#:~:text=Assurance%20that%20the%20confidentiality%20of%2C%20and%20access%20to%2C%20certain%20information%20about%20an%20entity%20is%20protected",
+      "q": "Assurance that the confidentiality of, and access to, certain information about an entity is protected"
+    }
+  },
+  {
+    "id": "5.4-02",
+    "obj": "5.4",
+    "front": "Privacy impact assessment (PIA)\n\nWhat does it check?",
+    "back": "How information is handled, to ensure it meets legal, regulatory and policy privacy requirements and to find risks.",
+    "src": {
+      "title": "NIST Glossary: privacy impact assessment",
+      "url": "https://csrc.nist.gov/glossary/term/privacy_impact_assessment#:~:text=An%20analysis%20of%20how%20information%20is%20handled%20to%20ensure%20handling%20conforms%20to%20applicable%20legal%2C%20regulatory%2C%20and%20policy%20requirements%20regarding%20privacy",
+      "q": "An analysis of how information is handled to ensure handling conforms to applicable legal, regulatory, and policy requirements regarding privacy"
+    }
+  },
+  {
+    "id": "5.4-03",
+    "obj": "5.4",
+    "front": "Personal data\n\nWhat is the test?",
+    "back": "Any information relating to an identified or identifiable person (the data subject), under GDPR.",
+    "src": {
+      "title": "GDPR Article 4",
+      "url": "https://gdpr-info.eu/art-4-gdpr/#:~:text=any%20information%20relating%20to%20an%20identified%20or%20identifiable%20natural%20person",
+      "q": "any information relating to an identified or identifiable natural person"
+    }
+  },
+  {
+    "id": "5.4-04",
+    "obj": "5.4",
+    "front": "Right to erasure\n\nWho has it, and who must act?",
+    "back": "Under GDPR a data subject can have the controller erase their personal data without undue delay when grounds apply (the right to be forgotten).",
+    "src": {
+      "title": "GDPR Article 17",
+      "url": "https://gdpr-info.eu/art-17-gdpr/#:~:text=The%20data%20subject%20shall%20have%20the%20right%20to%20obtain%20from%20the%20controller%20the%20erasure%20of%20personal%20data",
+      "q": "The data subject shall have the right to obtain from the controller the erasure of personal data"
+    }
+  },
+  {
+    "id": "5.5-01",
+    "obj": "5.5",
+    "front": "Audit\n\nWhat three traits define it?",
+    "back": "Systematic, independent and documented, gathering evidence and judging it objectively against criteria. Can be internal or external.",
+    "src": {
+      "title": "NIST Glossary: audit",
+      "url": "https://csrc.nist.gov/glossary/term/audit#:~:text=Systematic%2C%20independent%20and%20documented%20process%20for%20obtaining%20audit%20evidence",
+      "q": "Systematic, independent and documented process for obtaining audit evidence"
+    }
+  },
+  {
+    "id": "5.5-02",
+    "obj": "5.5",
+    "front": "Security assessment\n\nWhat does it test?",
+    "back": "Testing or evaluating a system's management, operational and technical controls: are they implemented correctly, operating as intended and meeting requirements.",
+    "src": {
+      "title": "NIST Glossary: security assessment",
+      "url": "https://csrc.nist.gov/glossary/term/security_assessment#:~:text=The%20testing%20and%2For%20evaluation%20of%20the%20management%2C%20operational%2C%20and%20technical%20security%20controls%20in%20an%20information%20system",
+      "q": "The testing and/or evaluation of the management, operational, and technical security controls in an information system"
+    }
+  },
+  {
+    "id": "5.5-03",
+    "obj": "5.5",
+    "front": "Rules of engagement (ROE)\n\nWhen is it set, and what does it give the testers?",
+    "back": "Written guidelines and limits for a security test, agreed before it starts, giving the test team authority to run defined activities.",
+    "src": {
+      "title": "NIST Glossary: rules of engagement",
+      "url": "https://csrc.nist.gov/glossary/term/rules_of_engagement#:~:text=Detailed%20guidelines%20and%20constraints%20regarding%20the%20execution%20of%20information%20security%20testing",
+      "q": "Detailed guidelines and constraints regarding the execution of information security testing"
+    }
+  },
+  {
+    "id": "5.5-04",
+    "obj": "5.5",
+    "front": "Red team\n\nWhat is its role?",
+    "back": "Authorized people who emulate an adversary's attack capabilities to improve security by showing weaknesses.",
+    "src": {
+      "title": "NIST Glossary: red team",
+      "url": "https://csrc.nist.gov/glossary/term/red_team#:~:text=A%20group%20of%20people%20authorized%20and%20organized%20to%20emulate%20a%20potential%20adversary",
+      "q": "A group of people authorized and organized to emulate a potential adversary"
+    }
+  },
+  {
+    "id": "5.5-05",
+    "obj": "5.5",
+    "front": "Blue team\n\nWhat is its role?",
+    "back": "Defends the enterprise's systems against mock attackers (the red team), maintaining the security posture.",
+    "src": {
+      "title": "NIST Glossary: blue team",
+      "url": "https://csrc.nist.gov/glossary/term/blue_team#:~:text=The%20group%20responsible%20for%20defending%20an%20enterprise",
+      "q": "The group responsible for defending an enterprise"
+    }
+  },
+  {
+    "id": "5.5-06",
+    "obj": "5.5",
+    "front": "White team\n\nWhat is its role?",
+    "back": "A small group with prior knowledge of red team activity. Observes and makes sure testing stays within the agreed scope.",
+    "src": {
+      "title": "NIST Glossary: white team",
+      "url": "https://csrc.nist.gov/glossary/term/white_team#:~:text=A%20small%20group%20of%20people%20who%20have%20prior%20knowledge%20of%20unannounced%20Red%20Team%20activities",
+      "q": "A small group of people who have prior knowledge of unannounced Red Team activities"
+    }
+  },
+  {
+    "id": "5.5-07",
+    "obj": "5.5",
+    "front": "Known environment (white box) testing\n\nWhat does the tester know?",
+    "back": "Explicit and substantial knowledge of the internal structure and implementation details of the target.",
+    "src": {
+      "title": "NIST Glossary: white box testing",
+      "url": "https://csrc.nist.gov/glossary/term/white_box_testing#:~:text=A%20test%20methodology%20that%20assumes%20explicit%20and%20substantial%20knowledge%20of%20the%20internal%20structure",
+      "q": "A test methodology that assumes explicit and substantial knowledge of the internal structure"
+    }
+  },
+  {
+    "id": "5.5-08",
+    "obj": "5.5",
+    "front": "Partially known environment (gray box) testing\n\nWhat does the tester know?",
+    "back": "Some knowledge of the internal structure and implementation details of the target.",
+    "src": {
+      "title": "NIST Glossary: gray box testing",
+      "url": "https://csrc.nist.gov/glossary/term/gray_box_testing#:~:text=A%20test%20methodology%20that%20assumes%20some%20knowledge%20of%20the%20internal%20structure",
+      "q": "A test methodology that assumes some knowledge of the internal structure"
+    }
+  },
+  {
+    "id": "5.5-09",
+    "obj": "5.5",
+    "front": "Unknown environment (black box) testing\n\nWhat does the tester know?",
+    "back": "Examines functionality without looking at internal structures or workings. Simulates an outside attacker.",
+    "src": {
+      "title": "NIST Glossary: black box testing",
+      "url": "https://csrc.nist.gov/glossary/term/black_box_testing#:~:text=A%20method%20of%20software%20testing%20that%20examines%20the%20functionality%20of%20an%20application%20without%20peering%20into%20its%20internal%20structures",
+      "q": "A method of software testing that examines the functionality of an application without peering into its internal structures"
+    }
+  },
+  {
+    "id": "5.6-01",
+    "obj": "5.6",
+    "front": "Awareness program goal\n\nWhat should it change?",
+    "back": "Behavior. The program should encourage behavior change as part of risk management and develop a privacy and security culture.",
+    "src": {
+      "title": "NIST SP 800-50 Rev 1",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-50r1.pdf#page=5",
+      "q": "The program should encourage behavior change as part of risk management and lead to developing a privacy and security culture in the organization"
+    }
+  },
+  {
+    "id": "5.6-02",
+    "obj": "5.6",
+    "front": "Awareness activities\n\nBeyond classroom training, name four.",
+    "back": "Tabletop exercises, role-playing simulations, cyber ranges and phishing campaigns, plus topic-based and role-based training.",
+    "src": {
+      "title": "NIST SP 800-50 Rev 1",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-50r1.pdf#page=13",
+      "q": "awareness training, practical exercises (e.g., tabletop exercises, role-playing simulations, cyber ranges, or phishing campaigns)"
+    }
+  },
+  {
+    "id": "5.6-03",
+    "obj": "5.6",
+    "front": "Phishing simulation\n\nWhat is it meant to promote?",
+    "back": "A tactic that builds awareness of social engineering attacks. Track simulated attack responses and reporting rates as a metric.",
+    "src": {
+      "title": "NIST SP 800-50 Rev 1",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-50r1.pdf#page=29",
+      "q": "such as a phishing exercise to promote awareness of social engineering attacks"
+    }
   }
 ]

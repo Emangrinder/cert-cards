@@ -31,3 +31,6 @@ IaC, microservices, serverless, RTOS/embedded, responsibility matrix, NGFW/WAF/U
 
 ## Security+ Domain 4 gaps (no verified public source yet)
 Secure baselines and wireless security (WPA3), asset inventory/tracking, data retention, OSINT, penetration testing, responsible disclosure, prioritization and exposure factor, NetFlow, SOAR and automation/orchestration, FIM, EDR/XDR, UEBA, ACLs, web and DNS filtering, PAM, provisioning/deprovisioning, password concepts, legal hold and e-discovery, threat hunting, order of volatility.
+
+## Security+ Domain 5 gaps (no verified public source yet)
+Governance structures and external regulations (named laws/standards), policy vs standard vs procedure, MTBF/MTTR, risk exemptions, right to audit, vendor due diligence and questionnaires, BPA/WO, compliance consequences and reporting, attestation, passive/active reconnaissance, user guidance topics (insider threat, password management, operational security), awareness effectiveness metrics.
