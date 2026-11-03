@@ -647,5 +647,544 @@
       "url": "https://csrc.nist.gov/glossary/term/blockchain#:~:text=A%20distributed%20digital%20ledger%20of%20cryptographically-signed%20transactions",
       "q": "A distributed digital ledger of cryptographically-signed transactions"
     }
+  },
+  {
+    "id": "2.1-01",
+    "obj": "2.1",
+    "front": "Threat\n\nHow is it different from a vulnerability?",
+    "back": "A circumstance or event that could harm operations, assets or people. A threat exploits a vulnerability, which is a weakness.",
+    "src": {
+      "title": "NIST Glossary: threat",
+      "url": "https://csrc.nist.gov/glossary/term/threat#:~:text=Any%20circumstance%20or%20event%20with%20the%20potential%20to%20adversely%20impact%20organizational%20operations",
+      "q": "Any circumstance or event with the potential to adversely impact organizational operations"
+    }
+  },
+  {
+    "id": "2.3-01",
+    "obj": "2.3",
+    "front": "Vulnerability\n\nWhat is it, and what can trigger it?",
+    "back": "A weakness in a system, its procedures, internal controls or implementation that a threat source can exploit or trigger.",
+    "src": {
+      "title": "NIST Glossary: vulnerability",
+      "url": "https://csrc.nist.gov/glossary/term/vulnerability#:~:text=Weakness%20in%20an%20information%20system%2C%20system%20security%20procedures%2C%20internal%20controls%2C%20or%20implementation",
+      "q": "Weakness in an information system, system security procedures, internal controls, or implementation"
+    }
+  },
+  {
+    "id": "2.1-02",
+    "obj": "2.1",
+    "front": "Threat actor\n\nWhat is one?",
+    "back": "An individual or group posing a threat. Actors differ in resources, expertise and motivation (money, espionage, disruption, grievance).",
+    "src": {
+      "title": "NIST Glossary: threat actor",
+      "url": "https://csrc.nist.gov/glossary/term/threat_actor#:~:text=An%20individual%20or%20a%20group%20posing%20a%20threat",
+      "q": "An individual or a group posing a threat"
+    }
+  },
+  {
+    "id": "2.1-03",
+    "obj": "2.1",
+    "front": "Advanced persistent threat (APT)\n\nWhat sets it apart from a typical attacker?",
+    "back": "An adversary with sophisticated expertise and significant resources, using multiple attack vectors to pursue its goals over a long period. Often a nation-state.",
+    "src": {
+      "title": "NIST Glossary: advanced persistent threat",
+      "url": "https://csrc.nist.gov/glossary/term/advanced_persistent_threat#:~:text=An%20adversary%20with%20sophisticated%20levels%20of%20expertise%20and%20significant%20resources",
+      "q": "An adversary with sophisticated levels of expertise and significant resources"
+    }
+  },
+  {
+    "id": "2.1-04",
+    "obj": "2.1",
+    "front": "Insider threat\n\nCan it be unintentional?",
+    "back": "Yes. An insider uses authorized access, wittingly or unwittingly, to harm the organization. A careless employee counts as much as a malicious one.",
+    "src": {
+      "title": "NIST Glossary: insider threat",
+      "url": "https://csrc.nist.gov/glossary/term/insider_threat#:~:text=The%20threat%20that%20an%20insider%20will%20use%20her%2Fhis%20authorized%20access%2C%20wittingly%20or%20unwittingly",
+      "q": "The threat that an insider will use her/his authorized access, wittingly or unwittingly"
+    }
+  },
+  {
+    "id": "2.2-01",
+    "obj": "2.2",
+    "front": "Attack surface\n\nWhat is it, and how do you shrink it?",
+    "back": "Every point where an attacker can try to enter, affect, or extract data from a system. Shrink it by removing unused services, ports and accounts.",
+    "src": {
+      "title": "NIST Glossary: attack surface",
+      "url": "https://csrc.nist.gov/glossary/term/attack_surface#:~:text=The%20set%20of%20points%20on%20the%20boundary%20of%20a%20system%2C%20a%20system%20component%2C%20or%20an%20environment",
+      "q": "The set of points on the boundary of a system, a system component, or an environment"
+    }
+  },
+  {
+    "id": "2.2-02",
+    "obj": "2.2",
+    "front": "Social engineering\n\nWhat does it target?",
+    "back": "People, not systems. Tricks someone into revealing information (like a password) or taking an action that helps the attacker.",
+    "src": {
+      "title": "NIST Glossary: social engineering",
+      "url": "https://csrc.nist.gov/glossary/term/social_engineering#:~:text=An%20attempt%20to%20trick%20someone%20into%20revealing%20information",
+      "q": "An attempt to trick someone into revealing information"
+    }
+  },
+  {
+    "id": "2.2-03",
+    "obj": "2.2",
+    "front": "Phishing\n\nHow does it work?",
+    "back": "A fraudulent message, usually email or a web site, posing as a legitimate business to get sensitive data such as account numbers or credentials.",
+    "src": {
+      "title": "NIST Glossary: phishing",
+      "url": "https://csrc.nist.gov/glossary/term/phishing#:~:text=A%20technique%20for%20attempting%20to%20acquire%20sensitive%20data%2C%20such%20as%20bank%20account%20numbers%2C%20through%20a%20fraudulent%20solicitation",
+      "q": "A technique for attempting to acquire sensitive data, such as bank account numbers, through a fraudulent solicitation"
+    }
+  },
+  {
+    "id": "2.2-04",
+    "obj": "2.2",
+    "front": "Watering hole attack\n\nWhere is the malware placed?",
+    "back": "The attacker infects a website that the target group visits often, then waits for someone from the group to browse there.",
+    "src": {
+      "title": "NIST Glossary: watering hole attack",
+      "url": "https://csrc.nist.gov/glossary/term/watering_hole_attack#:~:text=A%20security%20exploit%20where%20the%20attacker%20infects%20websites%20that%20are%20frequently%20visited",
+      "q": "A security exploit where the attacker infects websites that are frequently visited"
+    }
+  },
+  {
+    "id": "2.2-05",
+    "obj": "2.2",
+    "front": "Supply chain attack\n\nWhere does the attacker strike?",
+    "back": "At a supplier or service the target depends on, not the target itself, at any point in the system lifecycle. Examples: tampered updates, compromised vendors.",
+    "src": {
+      "title": "NIST Glossary: supply chain attack",
+      "url": "https://csrc.nist.gov/glossary/term/supply_chain_attack#:~:text=An%20incident%20where%20an%20adversary%20exploits%20vulnerabilities%20in%20the%20product%20or%20service%20supply%20network",
+      "q": "An incident where an adversary exploits vulnerabilities in the product or service supply network"
+    }
+  },
+  {
+    "id": "2.2-06",
+    "obj": "2.2",
+    "front": "Removable media\n\nWhy is it an attack vector?",
+    "back": "USB drives, external disks and discs can carry malware onto a system or carry data out of it. Disable autorun and control use.",
+    "src": {
+      "title": "NIST Glossary: removable media",
+      "url": "https://csrc.nist.gov/glossary/term/removable_media#:~:text=Portable%20data%20storage%20medium%20that%20can%20be%20added%20to%20or%20removed%20from%20a%20computing%20device%20or%20network",
+      "q": "Portable data storage medium that can be added to or removed from a computing device or network"
+    }
+  },
+  {
+    "id": "2.2-07",
+    "obj": "2.2",
+    "front": "Default credentials\n\nWhy are they dangerous?",
+    "back": "Vendor passwords or keys left unchanged are publicly known, so attackers try them first. Change them at deployment.",
+    "src": {
+      "title": "CWE-1392: Use of Default Credentials",
+      "url": "https://cwe.mitre.org/data/definitions/1392.html#:~:text=The%20product%20uses%20default%20credentials",
+      "q": "The product uses default credentials"
+    }
+  },
+  {
+    "id": "2.4-01",
+    "obj": "2.4",
+    "front": "Malware\n\nWhat makes software malware?",
+    "back": "Hardware, firmware or software intentionally included or inserted in a system for a harmful purpose.",
+    "src": {
+      "title": "NIST Glossary: malware",
+      "url": "https://csrc.nist.gov/glossary/term/malware#:~:text=Hardware%2C%20firmware%2C%20or%20software%20that%20is%20intentionally%20included%20or%20inserted%20in%20a%20system%20for%20a%20harmful%20purpose",
+      "q": "Hardware, firmware, or software that is intentionally included or inserted in a system for a harmful purpose"
+    }
+  },
+  {
+    "id": "2.4-02",
+    "obj": "2.4",
+    "front": "Virus\n\nHow does it spread?",
+    "back": "Spreads by modifying other programs to include a copy of itself, and runs when the infected program is run. Needs a host program.",
+    "src": {
+      "title": "NIST Glossary: virus",
+      "url": "https://csrc.nist.gov/glossary/term/virus#:~:text=Type%20of%20malicious%20software%20that%20propagates%20itself%20by%20modifying%20other%20programs",
+      "q": "Type of malicious software that propagates itself by modifying other programs"
+    }
+  },
+  {
+    "id": "2.4-03",
+    "obj": "2.4",
+    "front": "Worm\n\nHow does it differ from a virus?",
+    "back": "A self-contained program that propagates itself across systems or networks without needing a host program. Often eats resources.",
+    "src": {
+      "title": "NIST Glossary: worm",
+      "url": "https://csrc.nist.gov/glossary/term/worm#:~:text=Self-contained%20program%20that%20can%20propagate%20itself%20through%20data%20processing%20systems%20or%20computer%20networks",
+      "q": "Self-contained program that can propagate itself through data processing systems or computer networks"
+    }
+  },
+  {
+    "id": "2.4-04",
+    "obj": "2.4",
+    "front": "Trojan\n\nWhat is the trick?",
+    "back": "Appears to have a useful function but hides a malicious one, often using the legitimate authorizations of whoever runs it.",
+    "src": {
+      "title": "NIST Glossary: trojan horse",
+      "url": "https://csrc.nist.gov/glossary/term/trojan_horse#:~:text=A%20computer%20program%20that%20appears%20to%20have%20a%20useful%20function%2C%20but%20also%20has%20a%20hidden",
+      "q": "A computer program that appears to have a useful function, but also has a hidden"
+    }
+  },
+  {
+    "id": "2.4-05",
+    "obj": "2.4",
+    "front": "Ransomware\n\nWhat does it do, and what is demanded?",
+    "back": "Malware that encrypts files so systems are unusable, then demands ransom for decryption. Actors often also threaten to leak stolen data.",
+    "src": {
+      "title": "CISA: Ransomware 101",
+      "url": "https://www.cisa.gov/stopransomware/ransomware-101#:~:text=Ransomware%20is%20an%20ever-evolving%20form%20of%20malware%20designed%20to%20encrypt%20files%20on%20a%20device",
+      "q": "Ransomware is an ever-evolving form of malware designed to encrypt files on a device"
+    }
+  },
+  {
+    "id": "2.4-06",
+    "obj": "2.4",
+    "front": "Spyware\n\nWhat does it collect, and how is it installed?",
+    "back": "Secretly installed software that gathers information about people or organizations without their knowledge.",
+    "src": {
+      "title": "NIST Glossary: spyware",
+      "url": "https://csrc.nist.gov/glossary/term/spyware#:~:text=Software%20that%20is%20secretly%20or%20surreptitiously%20installed%20into%20an%20information%20system%20to%20gather%20information",
+      "q": "Software that is secretly or surreptitiously installed into an information system to gather information"
+    }
+  },
+  {
+    "id": "2.4-07",
+    "obj": "2.4",
+    "front": "Rootkit\n\nWhat is it for?",
+    "back": "Tools used after gaining root access to hide the attacker's activity and keep covert access to the host.",
+    "src": {
+      "title": "NIST Glossary: rootkit",
+      "url": "https://csrc.nist.gov/glossary/term/rootkit#:~:text=A%20set%20of%20tools%20used%20by%20an%20attacker%20after%20gaining%20root-level%20access%20to%20a%20host%20to%20conceal",
+      "q": "A set of tools used by an attacker after gaining root-level access to a host to conceal"
+    }
+  },
+  {
+    "id": "2.4-08",
+    "obj": "2.4",
+    "front": "Logic bomb\n\nWhen does it fire?",
+    "back": "Malicious code deliberately inserted into software that triggers when specified conditions are met, such as a date or a deleted account.",
+    "src": {
+      "title": "NIST Glossary: logic bomb",
+      "url": "https://csrc.nist.gov/glossary/term/logic_bomb#:~:text=A%20piece%20of%20code%20intentionally%20inserted%20into%20a%20software%20system%20that%20will%20set%20off%20a%20malicious%20function",
+      "q": "A piece of code intentionally inserted into a software system that will set off a malicious function"
+    }
+  },
+  {
+    "id": "2.4-09",
+    "obj": "2.4",
+    "front": "Botnet\n\nHow is one built, and what is it used for?",
+    "back": "Many compromised computers brought under one attacker's control. Commonly used for DDoS, spam and credential attacks.",
+    "src": {
+      "title": "NIST Glossary: botnet",
+      "url": "https://csrc.nist.gov/glossary/term/botnet#:~:text=The%20word%20%E2%80%9Cbotnet%E2%80%9D%20is%20formed%20from%20the%20words%20%E2%80%9Crobot%E2%80%9D%20and%20%E2%80%9Dnetwork.%E2%80%9D",
+      "q": "The word “botnet” is formed from the words “robot” and ”network.”"
+    }
+  },
+  {
+    "id": "2.4-10",
+    "obj": "2.4",
+    "front": "Denial of service (DoS)\n\nWhich leg of CIA does it hit?",
+    "back": "Availability. It prevents authorized access to resources or delays time-critical operations.",
+    "src": {
+      "title": "NIST Glossary: denial of service",
+      "url": "https://csrc.nist.gov/glossary/term/denial_of_service#:~:text=The%20prevention%20of%20authorized%20access%20to%20resources%20or%20the%20delaying%20of%20time-%20critical%20operations",
+      "q": "The prevention of authorized access to resources or the delaying of time- critical operations"
+    }
+  },
+  {
+    "id": "2.4-11",
+    "obj": "2.4",
+    "front": "Distributed denial of service (DDoS)\n\nHow is it different from DoS?",
+    "back": "Uses numerous hosts to perform the attack, so blocking one source is not enough. Often driven by a botnet.",
+    "src": {
+      "title": "NIST Glossary: distributed denial of service",
+      "url": "https://csrc.nist.gov/glossary/term/distributed_denial_of_service#:~:text=A%20denial%20of%20service%20technique%20that%20uses%20numerous%20hosts%20to%20perform%20the%20attack",
+      "q": "A denial of service technique that uses numerous hosts to perform the attack"
+    }
+  },
+  {
+    "id": "2.4-12",
+    "obj": "2.4",
+    "front": "On-path (man-in-the-middle) attack\n\nWhat weakness does it exploit?",
+    "back": "Weak verification of who is at each end of a channel, or of the channel's integrity, so a third party can read or alter traffic. Mutual authentication and TLS defend against it.",
+    "src": {
+      "title": "CWE-300: Channel Accessible by Non-Endpoint",
+      "url": "https://cwe.mitre.org/data/definitions/300.html#:~:text=The%20product%20does%20not%20adequately%20verify%20the%20identity%20of%20actors%20at%20both%20ends%20of%20a%20communication%20channel",
+      "q": "The product does not adequately verify the identity of actors at both ends of a communication channel"
+    }
+  },
+  {
+    "id": "2.4-13",
+    "obj": "2.4",
+    "front": "Replay attack\n\nWhat does the attacker reuse?",
+    "back": "A previously captured valid message, resent to impersonate the sender. Nonces, timestamps and session tokens defend against it.",
+    "src": {
+      "title": "NIST Glossary: replay attack",
+      "url": "https://csrc.nist.gov/glossary/term/replay_attack#:~:text=An%20attack%20in%20which%20the%20Attacker%20is%20able%20to%20replay%20previously%20captured%20messages",
+      "q": "An attack in which the Attacker is able to replay previously captured messages"
+    }
+  },
+  {
+    "id": "2.4-14",
+    "obj": "2.4",
+    "front": "Brute force\n\nWhat control stops it?",
+    "back": "Guessing credentials repeatedly. Defend by limiting failed attempts in a short window: lockout, throttling or delays.",
+    "src": {
+      "title": "CWE-307: Excessive Authentication Attempts",
+      "url": "https://cwe.mitre.org/data/definitions/307.html#:~:text=The%20product%20does%20not%20implement%20sufficient%20measures%20to%20prevent%20multiple%20failed%20authentication%20attempts",
+      "q": "The product does not implement sufficient measures to prevent multiple failed authentication attempts"
+    }
+  },
+  {
+    "id": "2.4-15",
+    "obj": "2.4",
+    "front": "Credential stuffing\n\nWhat does the attacker rely on?",
+    "back": "People reusing passwords and usernames across sites. Stolen pairs from one breach are tried on other services.",
+    "src": {
+      "title": "OWASP Credential Stuffing Prevention Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html#:~:text=Credential%20stuffing%20attacks%20rely%20on%20not%20just%20the%20re-use%20of%20passwords%20between%20multiple%20sites",
+      "q": "Credential stuffing attacks rely on not just the re-use of passwords between multiple sites"
+    }
+  },
+  {
+    "id": "2.4-16",
+    "obj": "2.4",
+    "front": "Password spraying\n\nHow does it differ from brute force on one account?",
+    "back": "Tries a few common passwords against many accounts, staying under per-account lockout limits. The same defenses (MFA, rate limits) help against it.",
+    "src": {
+      "title": "OWASP Credential Stuffing Prevention Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html#:~:text=credential%20stuffing%20and%20password%20spraying",
+      "q": "credential stuffing and password spraying"
+    }
+  },
+  {
+    "id": "2.3-02",
+    "obj": "2.3",
+    "front": "Buffer overflow\n\nWhat goes wrong?",
+    "back": "Code copies input into a buffer without checking it fits, overwriting adjacent memory. Can crash a program or let an attacker run code.",
+    "src": {
+      "title": "CWE-120: Buffer Copy without Checking Size of Input",
+      "url": "https://cwe.mitre.org/data/definitions/120.html#:~:text=The%20product%20copies%20an%20input%20buffer%20to%20an%20output%20buffer%20without%20verifying",
+      "q": "The product copies an input buffer to an output buffer without verifying"
+    }
+  },
+  {
+    "id": "2.3-03",
+    "obj": "2.3",
+    "front": "Use after free\n\nWhat gets reused?",
+    "back": "Memory is referenced after it was freed and reallocated, so a stale pointer reads or writes data it should not. A memory-safety flaw.",
+    "src": {
+      "title": "CWE-416: Use After Free",
+      "url": "https://cwe.mitre.org/data/definitions/416.html#:~:text=The%20product%20reuses%20or%20references%20memory%20after%20it%20has%20been%20freed",
+      "q": "The product reuses or references memory after it has been freed"
+    }
+  },
+  {
+    "id": "2.3-04",
+    "obj": "2.3",
+    "front": "SQL injection\n\nWhat input is the problem, and what is the fix?",
+    "back": "Untrusted input alters the structure of an SQL command. Fix with parameterized queries and input validation.",
+    "src": {
+      "title": "CWE-89: SQL Injection",
+      "url": "https://cwe.mitre.org/data/definitions/89.html#:~:text=The%20product%20constructs%20all%20or%20part%20of%20an%20SQL%20command%20using%20externally-influenced%20input",
+      "q": "The product constructs all or part of an SQL command using externally-influenced input"
+    }
+  },
+  {
+    "id": "2.3-05",
+    "obj": "2.3",
+    "front": "Cross-site scripting (XSS)\n\nWho runs the attacker's script?",
+    "back": "User input is placed into a page without neutralizing it, so the victim's browser runs attacker script. Fix with output encoding.",
+    "src": {
+      "title": "CWE-79: Cross-site Scripting",
+      "url": "https://cwe.mitre.org/data/definitions/79.html#:~:text=The%20product%20does%20not%20neutralize%20or%20incorrectly%20neutralizes%20user-controllable%20input",
+      "q": "The product does not neutralize or incorrectly neutralizes user-controllable input"
+    }
+  },
+  {
+    "id": "2.3-06",
+    "obj": "2.3",
+    "front": "Directory traversal\n\nWhat do the special elements do?",
+    "back": "Input like ../ escapes the intended directory so the attacker reads or writes other files. Validate and canonicalize paths.",
+    "src": {
+      "title": "CWE-22: Path Traversal",
+      "url": "https://cwe.mitre.org/data/definitions/22.html#:~:text=The%20product%20uses%20external%20input%20to%20construct%20a%20pathname%20that%20is%20intended%20to%20identify%20a%20file%20or%20directory",
+      "q": "The product uses external input to construct a pathname that is intended to identify a file or directory"
+    }
+  },
+  {
+    "id": "2.3-07",
+    "obj": "2.3",
+    "front": "Race condition\n\nWhat is the timing window?",
+    "back": "Code needs exclusive access to a shared resource, but another sequence can modify it in a timing window. Outcome depends on who wins.",
+    "src": {
+      "title": "CWE-362: Race Condition",
+      "url": "https://cwe.mitre.org/data/definitions/362.html#:~:text=The%20product%20contains%20a%20concurrent%20code%20sequence%20that%20requires%20temporary%2C%20exclusive%20access%20to%20a%20shared%20resource",
+      "q": "The product contains a concurrent code sequence that requires temporary, exclusive access to a shared resource"
+    }
+  },
+  {
+    "id": "2.3-08",
+    "obj": "2.3",
+    "front": "Time-of-check to time-of-use (TOCTOU)\n\nWhat changes between the two steps?",
+    "back": "A resource is checked, then its state changes before use, invalidating the check. A special case of race condition.",
+    "src": {
+      "title": "CWE-367: TOCTOU Race Condition",
+      "url": "https://cwe.mitre.org/data/definitions/367.html#:~:text=The%20product%20checks%20the%20state%20of%20a%20resource%20before%20using%20that%20resource",
+      "q": "The product checks the state of a resource before using that resource"
+    }
+  },
+  {
+    "id": "2.3-09",
+    "obj": "2.3",
+    "front": "Zero-day\n\nWhy is there no patch?",
+    "back": "An attack on a previously unknown vulnerability, so the vendor has had zero days to fix it. Mitigate with layered defenses and detection.",
+    "src": {
+      "title": "NIST Glossary: zero-day attack",
+      "url": "https://csrc.nist.gov/glossary/term/zero_day_attack#:~:text=An%20attack%20that%20exploits%20a%20previously%20unknown%20hardware%2C%20firmware%2C%20or%20software%20vulnerability",
+      "q": "An attack that exploits a previously unknown hardware, firmware, or software vulnerability"
+    }
+  },
+  {
+    "id": "2.3-10",
+    "obj": "2.3",
+    "front": "Unmaintained and outdated components\n\nWhy is it a vulnerability?",
+    "back": "Third-party components that nobody supports stop receiving fixes, so known flaws stay open. Track a software inventory.",
+    "src": {
+      "title": "CWE-1104: Unmaintained Third Party Components",
+      "url": "https://cwe.mitre.org/data/definitions/1104.html#:~:text=The%20product%20relies%20on%20third-party%20components%20that%20are%20not%20actively%20supported%20or%20maintained",
+      "q": "The product relies on third-party components that are not actively supported or maintained"
+    }
+  },
+  {
+    "id": "2.3-11",
+    "obj": "2.3",
+    "front": "Components that cannot be patched\n\nWhat are the options?",
+    "back": "If a flaw cannot be fixed by update, the only option may be replacing the product. Typical of legacy and embedded firmware. Use compensating controls meanwhile.",
+    "src": {
+      "title": "CWE-1329: Component That Cannot Be Updated",
+      "url": "https://cwe.mitre.org/data/definitions/1329.html#:~:text=The%20product%20contains%20a%20component%20that%20cannot%20be%20updated%20or%20patched",
+      "q": "The product contains a component that cannot be updated or patched"
+    }
+  },
+  {
+    "id": "2.3-12",
+    "obj": "2.3",
+    "front": "Unverified downloaded code\n\nWhat must be checked before running it?",
+    "back": "Origin and integrity. Unsigned updates or downloads can be swapped by an attacker. Verify signatures and hashes.",
+    "src": {
+      "title": "CWE-494: Download of Code Without Integrity Check",
+      "url": "https://cwe.mitre.org/data/definitions/494.html#:~:text=The%20product%20downloads%20source%20code%20or%20an%20executable%20from%20a%20remote%20location%20and%20executes%20the%20code",
+      "q": "The product downloads source code or an executable from a remote location and executes the code"
+    }
+  },
+  {
+    "id": "2.3-13",
+    "obj": "2.3",
+    "front": "Firmware\n\nWhy is it hard to fix?",
+    "back": "Programs and data stored in hardware, usually read-only memory, that normally cannot be modified during execution. Updates need a special process.",
+    "src": {
+      "title": "NIST Glossary: firmware",
+      "url": "https://csrc.nist.gov/glossary/term/firmware#:~:text=Computer%20programs%20and%20data%20stored%20in%20hardware",
+      "q": "Computer programs and data stored in hardware"
+    }
+  },
+  {
+    "id": "2.4-17",
+    "obj": "2.4",
+    "front": "Indicator of compromise (IoC)\n\nWhat is it, and what might one be?",
+    "back": "A technical artifact or observable suggesting an attack is coming, underway, or has already happened. Examples: odd file hashes, bad IPs, unusual logins.",
+    "src": {
+      "title": "NIST Glossary: indicator of compromise",
+      "url": "https://csrc.nist.gov/glossary/term/indicator_of_compromise#:~:text=Technical%20artifacts%20or%20observables%20that%20suggest%20that%20an%20attack%20is%20imminent%20or%20is%20currently%20underway",
+      "q": "Technical artifacts or observables that suggest that an attack is imminent or is currently underway"
+    }
+  },
+  {
+    "id": "2.5-01",
+    "obj": "2.5",
+    "front": "Patch management\n\nWhich steps does it cover?",
+    "back": "Systematic notification, identification, deployment, installation and verification of software revisions (patches, hot fixes, service packs).",
+    "src": {
+      "title": "NIST Glossary: patch management",
+      "url": "https://csrc.nist.gov/glossary/term/patch_management#:~:text=The%20systematic%20notification%2C%20identification%2C%20deployment%2C%20installation%2C%20and%20verification",
+      "q": "The systematic notification, identification, deployment, installation, and verification"
+    }
+  },
+  {
+    "id": "2.5-02",
+    "obj": "2.5",
+    "front": "Hardening\n\nWhat two things does it do?",
+    "back": "Removes a means of attack by patching vulnerabilities and turning off nonessential services.",
+    "src": {
+      "title": "NIST Glossary: hardening",
+      "url": "https://csrc.nist.gov/glossary/term/hardening#:~:text=A%20process%20intended%20to%20eliminate%20a%20means%20of%20attack%20by%20patching%20vulnerabilities",
+      "q": "A process intended to eliminate a means of attack by patching vulnerabilities"
+    }
+  },
+  {
+    "id": "2.5-03",
+    "obj": "2.5",
+    "front": "Application allow list\n\nHow is it enforced?",
+    "back": "Only applications on an approved baseline list may run on a host. Everything else is blocked, including unknown malware.",
+    "src": {
+      "title": "NIST Glossary: application allowlisting",
+      "url": "https://csrc.nist.gov/glossary/term/application_allowlisting#:~:text=A%20list%20of%20applications%20and%20application%20components",
+      "q": "A list of applications and application components"
+    }
+  },
+  {
+    "id": "2.5-04",
+    "obj": "2.5",
+    "front": "Least privilege\n\nWhat is the rule?",
+    "back": "Each user, process and system gets only the access needed for its task, so a compromise has a smaller blast radius.",
+    "src": {
+      "title": "NIST Glossary: least privilege",
+      "url": "https://csrc.nist.gov/glossary/term/least_privilege#:~:text=restrict%20the%20access%20privileges%20of%20users%20%28or%20processes%20acting%20on%20behalf%20of%20users%29%20to%20the%20minimum%20necessary",
+      "q": "restrict the access privileges of users (or processes acting on behalf of users) to the minimum necessary"
+    }
+  },
+  {
+    "id": "2.5-05",
+    "obj": "2.5",
+    "front": "Sandbox\n\nWhat does it limit?",
+    "back": "A restricted execution environment that stops possibly malicious software from reaching any resource it was not authorized for.",
+    "src": {
+      "title": "NIST Glossary: sandbox",
+      "url": "https://csrc.nist.gov/glossary/term/sandbox#:~:text=A%20restricted%2C%20controlled%20execution%20environment%20that%20prevents%20potentially%20malicious%20software",
+      "q": "A restricted, controlled execution environment that prevents potentially malicious software"
+    }
+  },
+  {
+    "id": "2.5-06",
+    "obj": "2.5",
+    "front": "Intrusion detection system (IDS)\n\nDoes it block traffic?",
+    "back": "It monitors and analyzes events for signs of intrusion and alerts. Detection only; an IPS adds blocking.",
+    "src": {
+      "title": "NIST Glossary: intrusion detection system",
+      "url": "https://csrc.nist.gov/glossary/term/intrusion_detection_system#:~:text=A%20security%20service%20that%20monitors%20and%20analyzes%20network%20or%20system%20events",
+      "q": "A security service that monitors and analyzes network or system events"
+    }
+  },
+  {
+    "id": "2.5-07",
+    "obj": "2.5",
+    "front": "Vulnerability scanning\n\nWhat does it find?",
+    "back": "Identifies hosts, their attributes and the known vulnerabilities on them. Run regularly and feed results to patching.",
+    "src": {
+      "title": "NIST Glossary: vulnerability scanning",
+      "url": "https://csrc.nist.gov/glossary/term/vulnerability_scanning#:~:text=A%20technique%20used%20to%20identify%20hosts%2Fhost%20attributes%20and%20associated%20vulnerabilities",
+      "q": "A technique used to identify hosts/host attributes and associated vulnerabilities"
+    }
+  },
+  {
+    "id": "2.5-08",
+    "obj": "2.5",
+    "front": "Mobile device management (MDM)\n\nWhat does it control?",
+    "back": "Central administration of phones, tablets and laptops: enforce settings, push apps and updates, and wipe lost devices.",
+    "src": {
+      "title": "NIST Glossary: mobile device management",
+      "url": "https://csrc.nist.gov/glossary/term/mobile_device_management#:~:text=The%20administration%20of%20mobile%20devices",
+      "q": "The administration of mobile devices"
+    }
   }
 ]

@@ -22,3 +22,6 @@ Run locally with `python3 -m http.server` (fetch needs http, not file://).
 
 ## Security+ Domain 1 gaps (no verified public source yet)
 Deterrent and directive control types, gap analysis, access control vestibule/bollards/fencing/lighting, adaptive identity, backout plan, maintenance window, SOPs, downtime/restarts, legacy apps, dependencies, version control.
+
+## Security+ Domain 2 gaps (no verified public source yet)
+Named actor types (hacktivist, organized crime, unskilled attacker), shadow IT, motivations, BEC/typosquatting/pretexting/vishing/smishing, VM escape, memory injection, malicious update, segmentation, impossible travel and other log indicators, EDR, decommissioning, DNS/wireless/physical attacks, cryptographic attacks.
