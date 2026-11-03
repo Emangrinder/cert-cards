@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1.2-01", "obj": "1.2",
+    "front": "Confidentiality\n\nWhat does it protect, and what is one control that enforces it?",
+    "back": "Only authorized parties can read the information. Enforced by encryption and access control. First leg of the CIA triad.",
+    "src": { "title": "NIST Glossary: confidentiality", "url": "https://csrc.nist.gov/glossary/term/confidentiality" }
+  },
+  {
+    "id": "1.2-02", "obj": "1.2",
+    "front": "Integrity\n\nWhat does it protect, and what is one control that enforces it?",
+    "back": "Data is not altered or destroyed in an unauthorized way. Detected with hashing and digital signatures.",
+    "src": { "title": "NIST Glossary: integrity", "url": "https://csrc.nist.gov/glossary/term/integrity" }
+  },
+  {
+    "id": "1.2-03", "obj": "1.2",
+    "front": "Availability\n\nWhat does it protect, and what is one control that enforces it?",
+    "back": "Authorized users can reach the information and systems when needed. Supported by redundancy, backups and DoS defenses.",
+    "src": { "title": "NIST Glossary: availability", "url": "https://csrc.nist.gov/glossary/term/availability" }
+  }
+]
