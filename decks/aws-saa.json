@@ -1,0 +1,794 @@
+[
+  {
+    "id": "1.1-01",
+    "obj": "1.1",
+    "front": "Shared responsibility model\n\nWho secures what, in the cloud?",
+    "back": "AWS secures the cloud itself: hardware, software, networking and facilities. The customer secures what they put in the cloud: data, identities, configuration, guest OS.",
+    "src": {
+      "title": "AWS: Shared Responsibility Model",
+      "url": "https://aws.amazon.com/compliance/shared-responsibility-model/#:~:text=AWS%20is%20responsible%20for%20protecting%20the%20infrastructure%20that%20runs%20all%20of%20the%20services%20offered%20in%20the%20AWS%20Cloud",
+      "q": "AWS is responsible for protecting the infrastructure that runs all of the services offered in the AWS Cloud"
+    }
+  },
+  {
+    "id": "1.1-02",
+    "obj": "1.1",
+    "front": "IAM\n\nWhat does it control?",
+    "back": "A web service for securely controlling access to AWS resources: who is authenticated and what they are authorized to do.",
+    "src": {
+      "title": "AWS Docs: What is IAM?",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html#:~:text=AWS%20Identity%20and%20Access%20Management%20%28IAM%29%20is%20a%20web%20service%20that%20helps%20you%20securely%20control%20access%20to%20AWS%20resources",
+      "q": "AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources"
+    }
+  },
+  {
+    "id": "1.1-03",
+    "obj": "1.1",
+    "front": "IAM role\n\nHow does it differ from an IAM user?",
+    "back": "An identity with permission policies that anyone who needs it can assume, instead of being tied to one person. Prefer roles for workloads and cross-account access.",
+    "src": {
+      "title": "AWS Docs: IAM roles",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html#:~:text=instead%20of%20being%20uniquely%20associated%20with%20one%20person%2C%20a%20role%20is%20intended%20to%20be%20assumable%20by%20anyone%20who%20needs%20it",
+      "q": "instead of being uniquely associated with one person, a role is intended to be assumable by anyone who needs it"
+    }
+  },
+  {
+    "id": "1.1-04",
+    "obj": "1.1",
+    "front": "IAM role credentials\n\nWhat kind of credentials does a role use?",
+    "back": "No long-term password or access keys. It hands out temporary credentials, which is safer than embedding keys in code.",
+    "src": {
+      "title": "AWS Docs: IAM roles",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html#:~:text=a%20role%20does%20not%20have%20standard%20long-term%20credentials%20such%20as%20a%20password%20or%20access%20keys%20associated%20with%20it",
+      "q": "a role does not have standard long-term credentials such as a password or access keys associated with it"
+    }
+  },
+  {
+    "id": "1.1-05",
+    "obj": "1.1",
+    "front": "STS temporary credentials\n\nHow long can they last?",
+    "back": "From a few minutes to several hours. After expiry AWS no longer accepts them. Used for role switching, federation and cross-account access.",
+    "src": {
+      "title": "AWS Docs: Temporary security credentials",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html#:~:text=They%20can%20be%20configured%20to%20last%20for%20anywhere%20from%20a%20few%20minutes%20to%20several%20hours",
+      "q": "They can be configured to last for anywhere from a few minutes to several hours"
+    }
+  },
+  {
+    "id": "1.1-06",
+    "obj": "1.1",
+    "front": "MFA on the root user\n\nWhich accounts should have it?",
+    "back": "The root user of every account (standalone, management and member) and IAM users. Prefer phishing-resistant MFA like passkeys or security keys.",
+    "src": {
+      "title": "AWS Docs: MFA in IAM",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa.html#:~:text=You%20can%20enable%20MFA%20for%20the%20AWS%20account%20root%20user%20of%20all%20AWS%20accounts",
+      "q": "You can enable MFA for the AWS account root user of all AWS accounts"
+    }
+  },
+  {
+    "id": "1.1-07",
+    "obj": "1.1",
+    "front": "IAM policy evaluation\n\nWhat happens first when a request arrives?",
+    "back": "AWS authenticates the principal, then evaluates policies. An explicit deny always wins, then an allow is needed, otherwise the request is implicitly denied.",
+    "src": {
+      "title": "AWS Docs: Policy evaluation logic",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html#:~:text=AWS%20first%20authenticates%20the%20principal%20that%20makes%20the%20request%2C%20if%20necessary",
+      "q": "AWS first authenticates the principal that makes the request, if necessary"
+    }
+  },
+  {
+    "id": "1.1-08",
+    "obj": "1.1",
+    "front": "Service control policies (SCPs)\n\nDo they grant permissions?",
+    "back": "No. SCPs set the maximum available permissions for IAM users and roles in an organization's accounts. Identity or resource policies still must allow the action.",
+    "src": {
+      "title": "AWS Docs: Service control policies",
+      "url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html#:~:text=SCPs%20offer%20central%20control%20over%20the%20maximum%20available%20permissions%20for%20the%20IAM%20users%20and%20IAM%20roles%20in%20your%20organization",
+      "q": "SCPs offer central control over the maximum available permissions for the IAM users and IAM roles in your organization"
+    }
+  },
+  {
+    "id": "1.1-09",
+    "obj": "1.1",
+    "front": "AWS Control Tower\n\nWhat does it set up?",
+    "back": "A multi-account environment following prescriptive best practices, with guardrails and governance across accounts.",
+    "src": {
+      "title": "AWS Docs: What is AWS Control Tower?",
+      "url": "https://docs.aws.amazon.com/controltower/latest/userguide/what-is-control-tower.html#:~:text=AWS%20Control%20Tower%20offers%20a%20straightforward%20way%20to%20set%20up%20and%20govern%20an%20AWS%20multi-account%20environment",
+      "q": "AWS Control Tower offers a straightforward way to set up and govern an AWS multi-account environment"
+    }
+  },
+  {
+    "id": "1.1-10",
+    "obj": "1.1",
+    "front": "IAM Identity Center\n\nWho is it for?",
+    "back": "Connects workforce users to AWS accounts and managed applications with single sign-on, often federated with an existing directory.",
+    "src": {
+      "title": "AWS Docs: What is IAM Identity Center?",
+      "url": "https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#:~:text=AWS%20IAM%20Identity%20Center%20is%20the%20AWS%20solution%20for%20connecting%20your%20workforce%20users%20to%20AWS%20managed%20applications",
+      "q": "AWS IAM Identity Center is the AWS solution for connecting your workforce users to AWS managed applications"
+    }
+  },
+  {
+    "id": "1.2-01",
+    "obj": "1.2",
+    "front": "Security group\n\nWhat does it control, and is it stateful?",
+    "back": "Inbound and outbound traffic for the resources it is attached to (like an EC2 instance). Allow rules only, and it is stateful, so return traffic is automatic.",
+    "src": {
+      "title": "AWS Docs: Security groups",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html#:~:text=it%20controls%20the%20inbound%20and%20outbound%20traffic%20for%20the%20instance",
+      "q": "it controls the inbound and outbound traffic for the instance"
+    }
+  },
+  {
+    "id": "1.2-02",
+    "obj": "1.2",
+    "front": "Network ACL\n\nWhere does it apply, and how does it differ from a security group?",
+    "back": "A subnet-level firewall with its own rules, similar to security group rules. Stateless, with numbered allow and deny rules.",
+    "src": {
+      "title": "AWS Docs: Network ACLs",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#:~:text=You%20can%20use%20the%20default%20network%20ACL%20for%20your%20VPC%2C%20or%20you%20can%20create%20a%20custom%20network%20ACL%20for%20your%20VPC%20with%20rules%20similar%20to%20your%20security%20group%20rules",
+      "q": "You can use the default network ACL for your VPC, or you can create a custom network ACL for your VPC with rules similar to your security group rules"
+    }
+  },
+  {
+    "id": "1.2-03",
+    "obj": "1.2",
+    "front": "NAT gateway\n\nWhat does it let private subnets do?",
+    "back": "Lets instances in a private subnet reach services outside the VPC, while external services cannot start connections to them.",
+    "src": {
+      "title": "AWS Docs: NAT gateways",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#:~:text=You%20can%20use%20a%20NAT%20gateway%20so%20that%20instances%20in%20a%20private%20subnet%20can%20connect%20to%20services%20outside%20your%20VPC",
+      "q": "You can use a NAT gateway so that instances in a private subnet can connect to services outside your VPC"
+    }
+  },
+  {
+    "id": "1.2-04",
+    "obj": "1.2",
+    "front": "AWS PrivateLink\n\nWhat problem does it solve?",
+    "back": "Privately connects your VPC to services as if they were in your VPC, without going over the public internet.",
+    "src": {
+      "title": "AWS Docs: What is AWS PrivateLink?",
+      "url": "https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html#:~:text=AWS%20PrivateLink%20is%20a%20highly%20available%2C%20scalable%20technology%20that%20you%20can%20use%20to%20privately%20connect%20your%20VPC%20to%20services%20and%20resources%20as%20if%20they%20were%20in%20your%20VPC",
+      "q": "AWS PrivateLink is a highly available, scalable technology that you can use to privately connect your VPC to services and resources as if they were in your VPC"
+    }
+  },
+  {
+    "id": "1.2-05",
+    "obj": "1.2",
+    "front": "AWS WAF\n\nWhat does it inspect?",
+    "back": "HTTP(S) requests forwarded to protected resources such as CloudFront and load balancers. Use it for SQL injection and XSS rules.",
+    "src": {
+      "title": "AWS Docs: AWS WAF",
+      "url": "https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html#:~:text=AWS%20WAF%20is%20a%20web%20application%20firewall%20that%20lets%20you%20monitor%20the%20HTTP%28S%29%20requests%20that%20are%20forwarded%20to%20your%20protected%20web%20application%20resources",
+      "q": "AWS WAF is a web application firewall that lets you monitor the HTTP(S) requests that are forwarded to your protected web application resources"
+    }
+  },
+  {
+    "id": "1.2-06",
+    "obj": "1.2",
+    "front": "AWS Shield\n\nWhich attacks does it address?",
+    "back": "DDoS attacks at network and transport layers (3 and 4) and the application layer (7). Standard is automatic, Advanced adds more protection and support.",
+    "src": {
+      "title": "AWS Docs: How AWS Shield works",
+      "url": "https://docs.aws.amazon.com/waf/latest/developerguide/ddos-overview.html#:~:text=AWS%20Shield%20Standard%20and%20AWS%20Shield%20Advanced%20provide%20protections%20against%20Distributed%20Denial%20of%20Service%20%28DDoS%29%20attacks",
+      "q": "AWS Shield Standard and AWS Shield Advanced provide protections against Distributed Denial of Service (DDoS) attacks"
+    }
+  },
+  {
+    "id": "1.2-07",
+    "obj": "1.2",
+    "front": "Amazon GuardDuty\n\nWhat does it do?",
+    "back": "Threat detection that continuously monitors and analyzes AWS data sources and logs in your account.",
+    "src": {
+      "title": "AWS Docs: What is GuardDuty?",
+      "url": "https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html#:~:text=Amazon%20GuardDuty%20is%20a%20threat%20detection%20service%20that%20continuously%20monitors%2C%20analyzes%2C%20and%20processes%20AWS%20data%20sources%20and%20logs%20in%20your%20AWS%20environment",
+      "q": "Amazon GuardDuty is a threat detection service that continuously monitors, analyzes, and processes AWS data sources and logs in your AWS environment"
+    }
+  },
+  {
+    "id": "1.2-08",
+    "obj": "1.2",
+    "front": "Amazon Macie\n\nWhat does it find?",
+    "back": "Sensitive data, such as PII in S3, by using machine learning and pattern matching.",
+    "src": {
+      "title": "AWS Docs: What is Macie?",
+      "url": "https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html#:~:text=Amazon%20Macie%20is%20a%20data%20security%20service%20that%20discovers%20sensitive%20data%20by%20using%20machine%20learning%20and%20pattern%20matching",
+      "q": "Amazon Macie is a data security service that discovers sensitive data by using machine learning and pattern matching"
+    }
+  },
+  {
+    "id": "1.2-09",
+    "obj": "1.2",
+    "front": "Amazon Cognito\n\nWhen would you use it?",
+    "back": "Sign-up, sign-in and access control for web and mobile app users: a user directory and authentication service for your customers.",
+    "src": {
+      "title": "AWS Docs: What is Amazon Cognito?",
+      "url": "https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html#:~:text=Amazon%20Cognito%20is%20an%20identity%20platform%20for%20web%20and%20mobile%20apps",
+      "q": "Amazon Cognito is an identity platform for web and mobile apps"
+    }
+  },
+  {
+    "id": "1.2-10",
+    "obj": "1.2",
+    "front": "AWS Secrets Manager\n\nWhat does it manage?",
+    "back": "Database credentials, API keys and other secrets, with retrieval and automatic rotation, so they are not hard-coded.",
+    "src": {
+      "title": "AWS Docs: What is AWS Secrets Manager?",
+      "url": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html#:~:text=AWS%20Secrets%20Manager%20helps%20you%20manage%2C%20retrieve%2C%20and%20rotate%20database%20credentials%2C%20application%20credentials%2C%20OAuth%20tokens%2C%20API%20keys%2C%20and%20other%20secrets%20throughout%20their%20lifecycles",
+      "q": "AWS Secrets Manager helps you manage, retrieve, and rotate database credentials, application credentials, OAuth tokens, API keys, and other secrets throughout their lifecycles"
+    }
+  },
+  {
+    "id": "1.2-11",
+    "obj": "1.2",
+    "front": "AWS Direct Connect\n\nWhat does it link?",
+    "back": "Your internal network to a Direct Connect location over Ethernet fiber: a private dedicated connection, not over the internet.",
+    "src": {
+      "title": "AWS Docs: What is Direct Connect?",
+      "url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html#:~:text=Direct%20Connect%20links%20your%20internal%20network%20to%20a%20Direct%20Connect%20location%20over%20a%20standard%20Ethernet%20fiber-optic%20cable",
+      "q": "Direct Connect links your internal network to a Direct Connect location over a standard Ethernet fiber-optic cable"
+    }
+  },
+  {
+    "id": "1.3-01",
+    "obj": "1.3",
+    "front": "AWS KMS\n\nWhat does it manage?",
+    "back": "Creates and controls the keys used to encrypt and sign data. Keys are protected in FIPS-validated hardware security modules. Use key policies to control access.",
+    "src": {
+      "title": "AWS Docs: AWS KMS overview",
+      "url": "https://docs.aws.amazon.com/kms/latest/developerguide/overview.html#:~:text=AWS%20Key%20Management%20Service%20%28AWS%20KMS%29%20is%20an%20AWS%20managed%20service%20that%20makes%20it%20easy%20for%20you%20to%20create%20and%20control%20the%20keys%20used%20to%20encrypt%20and%20sign%20your%20data",
+      "q": "AWS Key Management Service (AWS KMS) is an AWS managed service that makes it easy for you to create and control the keys used to encrypt and sign your data"
+    }
+  },
+  {
+    "id": "1.3-02",
+    "obj": "1.3",
+    "front": "AWS Certificate Manager (ACM)\n\nWhat does it handle?",
+    "back": "Creating, storing and renewing public and private SSL/TLS certificates for AWS websites and apps. Gives encryption in transit with automatic renewal.",
+    "src": {
+      "title": "AWS Docs: What is ACM?",
+      "url": "https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html#:~:text=AWS%20Certificate%20Manager%20%28ACM%29%20handles%20the%20complexity%20of%20creating%2C%20storing%2C%20and%20renewing%20public%20and%20private%20SSL%2FTLS%20X.509%20certificates%20and%20keys",
+      "q": "AWS Certificate Manager (ACM) handles the complexity of creating, storing, and renewing public and private SSL/TLS X.509 certificates and keys"
+    }
+  },
+  {
+    "id": "1.3-03",
+    "obj": "1.3",
+    "front": "AWS Config\n\nWhat does it record?",
+    "back": "A detailed view of resource configurations, relationships, and how they changed over time. Useful for compliance checks.",
+    "src": {
+      "title": "AWS Docs: What is AWS Config?",
+      "url": "https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html#:~:text=AWS%20Config%20provides%20a%20detailed%20view%20of%20the%20configuration%20of%20AWS%20resources%20in%20your%20AWS%20account",
+      "q": "AWS Config provides a detailed view of the configuration of AWS resources in your AWS account"
+    }
+  },
+  {
+    "id": "1.3-04",
+    "obj": "1.3",
+    "front": "S3 Block Public Access\n\nWhat does it override?",
+    "back": "Bucket policies, access point policies and object permissions that would allow public access. Turn it on to prevent accidental exposure.",
+    "src": {
+      "title": "AWS Docs: S3 Block Public Access",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html#:~:text=S3%20Block%20Public%20Access%20settings%20override%20these%20policies%20and%20permissions%20so%20that%20you%20can%20limit%20public%20access%20to%20these%20resources",
+      "q": "S3 Block Public Access settings override these policies and permissions so that you can limit public access to these resources"
+    }
+  },
+  {
+    "id": "1.3-05",
+    "obj": "1.3",
+    "front": "S3 Versioning\n\nWhat can you recover from?",
+    "back": "Unintended user actions and application failures: every version of every object is preserved and restorable.",
+    "src": {
+      "title": "AWS Docs: S3 Versioning",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html#:~:text=You%20can%20use%20the%20S3%20Versioning%20feature%20to%20preserve%2C%20retrieve%2C%20and%20restore%20every%20version%20of%20every%20object%20stored%20in%20your%20buckets",
+      "q": "You can use the S3 Versioning feature to preserve, retrieve, and restore every version of every object stored in your buckets"
+    }
+  },
+  {
+    "id": "1.3-06",
+    "obj": "1.3",
+    "front": "AWS Backup\n\nWhat does it centralize?",
+    "back": "Backup policies and monitoring across AWS services and on premises, in one place.",
+    "src": {
+      "title": "AWS Docs: What is AWS Backup?",
+      "url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#:~:text=AWS%20Backup%20is%20a%20fully-managed%20service%20that%20makes%20it%20easy%20to%20centralize%20and%20automate%20data%20protection%20across%20AWS%20services",
+      "q": "AWS Backup is a fully-managed service that makes it easy to centralize and automate data protection across AWS services"
+    }
+  },
+  {
+    "id": "2.1-01",
+    "obj": "2.1",
+    "front": "Elastic Load Balancing\n\nWhat does it do?",
+    "back": "Distributes incoming traffic across multiple targets (instances, containers, IPs) in one or more Availability Zones.",
+    "src": {
+      "title": "AWS Docs: What is Elastic Load Balancing?",
+      "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html#:~:text=Elastic%20Load%20Balancing%20automatically%20distributes%20your%20incoming%20traffic%20across%20multiple%20targets",
+      "q": "Elastic Load Balancing automatically distributes your incoming traffic across multiple targets"
+    }
+  },
+  {
+    "id": "2.1-02",
+    "obj": "2.1",
+    "front": "EC2 Auto Scaling\n\nWhat does it keep correct?",
+    "back": "The number of EC2 instances available for the current load: adds instances on demand and removes them when not needed.",
+    "src": {
+      "title": "AWS Docs: What is EC2 Auto Scaling?",
+      "url": "https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html#:~:text=Amazon%20EC2%20Auto%20Scaling%20helps%20you%20ensure%20that%20you%20have%20the%20correct%20number%20of%20Amazon%20EC2%20instances%20available%20to%20handle%20the%20load%20for%20your%20application",
+      "q": "Amazon EC2 Auto Scaling helps you ensure that you have the correct number of Amazon EC2 instances available to handle the load for your application"
+    }
+  },
+  {
+    "id": "2.1-03",
+    "obj": "2.1",
+    "front": "Amazon SQS\n\nWhat does a queue give you?",
+    "back": "Decoupling: a durable queue between components so a producer and consumer scale and fail independently.",
+    "src": {
+      "title": "AWS Docs: What is Amazon SQS?",
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html#:~:text=offers%20a%20secure%2C%20durable%2C%20and%20available%20hosted%20queue%20that%20lets%20you%20integrate%20and%20decouple%20distributed%20software%20systems%20and%20components",
+      "q": "offers a secure, durable, and available hosted queue that lets you integrate and decouple distributed software systems and components"
+    }
+  },
+  {
+    "id": "2.1-04",
+    "obj": "2.1",
+    "front": "Amazon SNS\n\nHow does it deliver messages?",
+    "back": "Publish/subscribe: publishers send to a topic and the service fans out to many subscribers.",
+    "src": {
+      "title": "AWS Docs: What is Amazon SNS?",
+      "url": "https://docs.aws.amazon.com/sns/latest/dg/welcome.html#:~:text=is%20a%20fully%20managed%20service%20that%20provides%20message%20delivery%20from%20publishers%20%28producers%29%20to%20subscribers%20%28consumers%29",
+      "q": "is a fully managed service that provides message delivery from publishers (producers) to subscribers (consumers)"
+    }
+  },
+  {
+    "id": "2.1-05",
+    "obj": "2.1",
+    "front": "Amazon EventBridge\n\nWhat connects components?",
+    "back": "Events. A serverless event bus for building event-driven applications with routing rules.",
+    "src": {
+      "title": "AWS Docs: What is EventBridge?",
+      "url": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html#:~:text=is%20a%20serverless%20service%20that%20uses%20events%20to%20connect%20application%20components%20together",
+      "q": "is a serverless service that uses events to connect application components together"
+    }
+  },
+  {
+    "id": "2.1-06",
+    "obj": "2.1",
+    "front": "AWS Lambda\n\nWhat do you not manage?",
+    "back": "Servers. Lambda runs your code and handles infrastructure, capacity provisioning, scaling and patching.",
+    "src": {
+      "title": "AWS Docs: What is AWS Lambda?",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html#:~:text=With%20Lambda%2C%20you%20can%20run%20code%20without%20provisioning%20or%20managing%20servers",
+      "q": "With Lambda, you can run code without provisioning or managing servers"
+    }
+  },
+  {
+    "id": "2.1-07",
+    "obj": "2.1",
+    "front": "Amazon API Gateway\n\nWhat does it publish?",
+    "back": "REST, HTTP and WebSocket APIs at any scale, with monitoring and security. A common front door for Lambda.",
+    "src": {
+      "title": "AWS Docs: What is API Gateway?",
+      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html#:~:text=Amazon%20API%20Gateway%20is%20an%20AWS%20service%20for%20creating%2C%20publishing%2C%20maintaining%2C%20monitoring%2C%20and%20securing%20REST%2C%20HTTP%2C%20and%20WebSocket%20APIs%20at%20any%20scale",
+      "q": "Amazon API Gateway is an AWS service for creating, publishing, maintaining, monitoring, and securing REST, HTTP, and WebSocket APIs at any scale"
+    }
+  },
+  {
+    "id": "2.1-08",
+    "obj": "2.1",
+    "front": "AWS Fargate\n\nWhat do you stop managing?",
+    "back": "Clusters of virtual machines for containers: no choosing server types or scaling clusters. Serverless compute for ECS and EKS.",
+    "src": {
+      "title": "AWS Docs: AWS Fargate",
+      "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html#:~:text=With%20AWS%20Fargate%2C%20you%20no%20longer%20have%20to%20provision%2C%20configure%2C%20or%20scale%20clusters%20of%20virtual%20machines%20to%20run%20containers",
+      "q": "With AWS Fargate, you no longer have to provision, configure, or scale clusters of virtual machines to run containers"
+    }
+  },
+  {
+    "id": "2.2-01",
+    "obj": "2.2",
+    "front": "Route 53 failover routing\n\nWhat topology does it support?",
+    "back": "Active-passive failover: traffic goes to the primary until health checks fail, then to the secondary.",
+    "src": {
+      "title": "AWS Docs: Choosing a routing policy",
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#:~:text=Use%20when%20you%20want%20to%20configure%20active-passive%20failover",
+      "q": "Use when you want to configure active-passive failover"
+    }
+  },
+  {
+    "id": "2.2-02",
+    "obj": "2.2",
+    "front": "Route 53 geolocation routing\n\nWhen do you use it?",
+    "back": "When you want to route traffic by the location of your users, for example for localization or compliance.",
+    "src": {
+      "title": "AWS Docs: Choosing a routing policy",
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#:~:text=Use%20when%20you%20want%20to%20route%20traffic%20based%20on%20the%20location%20of%20your%20users",
+      "q": "Use when you want to route traffic based on the location of your users"
+    }
+  },
+  {
+    "id": "2.2-03",
+    "obj": "2.2",
+    "front": "RDS Multi-AZ\n\nIs the standby readable?",
+    "back": "In a Multi-AZ DB instance deployment, no. The standby is for failover support only. Use read replicas for read scaling.",
+    "src": {
+      "title": "AWS Docs: Multi-AZ DB instance deployments",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html#:~:text=A%20Multi-AZ%20DB%20instance%20deployment%20has%20one%20standby%20DB%20instance%20that%20provides%20failover%20support",
+      "q": "A Multi-AZ DB instance deployment has one standby DB instance that provides failover support"
+    }
+  },
+  {
+    "id": "2.2-04",
+    "obj": "2.2",
+    "front": "RDS read replica\n\nWhat is it for?",
+    "back": "A read-only copy of a DB instance used to offload read traffic and scale reads, not a high availability mechanism by itself.",
+    "src": {
+      "title": "AWS Docs: RDS read replicas",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html#:~:text=A%20read%20replica%20is%20a%20read-only%20copy%20of%20a%20DB%20instance",
+      "q": "A read replica is a read-only copy of a DB instance"
+    }
+  },
+  {
+    "id": "2.2-05",
+    "obj": "2.2",
+    "front": "Amazon Aurora\n\nWhat engines is it compatible with?",
+    "back": "A fully managed relational database engine compatible with MySQL and PostgreSQL, with built-in replication across Availability Zones.",
+    "src": {
+      "title": "AWS Docs: What is Aurora?",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html#:~:text=Amazon%20Aurora%20%28Aurora%29%20is%20a%20fully%20managed%20relational%20database%20engine",
+      "q": "Amazon Aurora (Aurora) is a fully managed relational database engine"
+    }
+  },
+  {
+    "id": "2.2-06",
+    "obj": "2.2",
+    "front": "DynamoDB global tables\n\nWhat do they replicate across?",
+    "back": "Regions (and optionally accounts), automatically. Gives multi-Region deployment with low or zero RPO.",
+    "src": {
+      "title": "AWS Docs: DynamoDB global tables",
+      "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html#:~:text=Global%20tables%20automatically%20replicate%20your%20DynamoDB%20table%20data%20across%20AWS%20Regions",
+      "q": "Global tables automatically replicate your DynamoDB table data across AWS Regions"
+    }
+  },
+  {
+    "id": "2.2-07",
+    "obj": "2.2",
+    "front": "S3 replication\n\nWhere can objects be copied?",
+    "back": "To one or many destination buckets, in the same or other Regions, same or different accounts.",
+    "src": {
+      "title": "AWS Docs: Replicating objects in S3",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication.html#:~:text=You%20can%20replicate%20objects%20to%20a%20single%20destination%20bucket%20or%20to%20multiple%20destination%20buckets",
+      "q": "You can replicate objects to a single destination bucket or to multiple destination buckets"
+    }
+  },
+  {
+    "id": "2.2-08",
+    "obj": "2.2",
+    "front": "DR: Backup and restore\n\nWhat does it protect against?",
+    "back": "Data loss or corruption. Cheapest, slowest recovery. Can cover a regional disaster if backups are replicated to another Region.",
+    "src": {
+      "title": "AWS Docs: Disaster recovery options in the cloud",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html#:~:text=Backup%20and%20restore%20is%20a%20suitable%20approach%20for%20mitigating%20against%20data%20loss%20or%20corruption",
+      "q": "Backup and restore is a suitable approach for mitigating against data loss or corruption"
+    }
+  },
+  {
+    "id": "2.2-09",
+    "obj": "2.2",
+    "front": "DR: Pilot light\n\nWhat is always on?",
+    "back": "Data replication and core infrastructure like databases. The rest of the application is provisioned at recovery time.",
+    "src": {
+      "title": "AWS Docs: Disaster recovery options in the cloud",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html#:~:text=With%20the%20pilot%20light%20approach%2C%20you%20replicate%20your%20data%20from%20one%20Region%20to%20another%20and%20provision%20a%20copy%20of%20your%20core%20workload%20infrastructure",
+      "q": "With the pilot light approach, you replicate your data from one Region to another and provision a copy of your core workload infrastructure"
+    }
+  },
+  {
+    "id": "2.2-10",
+    "obj": "2.2",
+    "front": "DR: Warm standby\n\nHow does it differ from pilot light?",
+    "back": "A scaled-down but fully functional copy of production is always running in another Region, so recovery is faster.",
+    "src": {
+      "title": "AWS Docs: Disaster recovery options in the cloud",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html#:~:text=The%20warm%20standby%20approach%20involves%20ensuring%20that%20there%20is%20a%20scaled%20down%2C%20but%20fully%20functional%2C%20copy%20of%20your%20production%20environment%20in%20another%20Region",
+      "q": "The warm standby approach involves ensuring that there is a scaled down, but fully functional, copy of your production environment in another Region"
+    }
+  },
+  {
+    "id": "2.2-11",
+    "obj": "2.2",
+    "front": "DR: Multi-site active/active\n\nWhat is the trade-off?",
+    "back": "Serves traffic from all Regions. Most complex and costly, but recovery time can be near zero.",
+    "src": {
+      "title": "AWS Docs: Disaster recovery options in the cloud",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html#:~:text=This%20approach%20is%20the%20most%20complex%20and%20costly%20approach%20to%20disaster%20recovery%2C%20but%20it%20can%20reduce%20your%20recovery%20time%20to%20near%20zero%20for%20most%20disasters",
+      "q": "This approach is the most complex and costly approach to disaster recovery, but it can reduce your recovery time to near zero for most disasters"
+    }
+  },
+  {
+    "id": "2.2-12",
+    "obj": "2.2",
+    "front": "Amazon EFS\n\nHow is it shared and sized?",
+    "back": "Serverless, fully elastic file storage shared by many instances, with no provisioning of capacity.",
+    "src": {
+      "title": "AWS Docs: What is Amazon EFS?",
+      "url": "https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html#:~:text=Amazon%20Elastic%20File%20System%20%28Amazon%20EFS%29%20provides%20serverless%2C%20fully%20elastic%20file%20storage",
+      "q": "Amazon Elastic File System (Amazon EFS) provides serverless, fully elastic file storage"
+    }
+  },
+  {
+    "id": "3.1-01",
+    "obj": "3.1",
+    "front": "EBS performance\n\nWhat else affects volume performance?",
+    "back": "Instance configuration, I/O characteristics and workload demand, not only volume type. Use EBS-optimized instances to use provisioned IOPS fully.",
+    "src": {
+      "title": "AWS Docs: EBS volume types",
+      "url": "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html#:~:text=There%20are%20several%20factors%20that%20can%20affect%20the%20performance%20of%20EBS%20volumes",
+      "q": "There are several factors that can affect the performance of EBS volumes"
+    }
+  },
+  {
+    "id": "3.1-02",
+    "obj": "3.1",
+    "front": "Amazon FSx for Windows File Server\n\nWhen do you pick it?",
+    "back": "To lift and shift Windows applications needing fully managed Windows file servers with a native Windows file system.",
+    "src": {
+      "title": "AWS Docs: What is FSx for Windows?",
+      "url": "https://docs.aws.amazon.com/fsx/latest/WindowsGuide/what-is.html#:~:text=Amazon%20FSx%20for%20Windows%20File%20Server%20provides%20fully%20managed%20Microsoft%20Windows%20file%20servers%2C%20backed%20by%20a%20fully%20native%20Windows%20file%20system",
+      "q": "Amazon FSx for Windows File Server provides fully managed Microsoft Windows file servers, backed by a fully native Windows file system"
+    }
+  },
+  {
+    "id": "3.1-03",
+    "obj": "3.1",
+    "front": "S3 Transfer Acceleration\n\nWhat does it speed up?",
+    "back": "Long-distance transfers between a client and an S3 bucket, using CloudFront's globally distributed edge locations.",
+    "src": {
+      "title": "AWS Docs: S3 Transfer Acceleration",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/transfer-acceleration.html#:~:text=Amazon%20S3%20Transfer%20Acceleration%20is%20a%20bucket-level%20feature%20that%20enables%20fast%2C%20easy%2C%20and%20secure%20transfers%20of%20files%20over%20long%20distances",
+      "q": "Amazon S3 Transfer Acceleration is a bucket-level feature that enables fast, easy, and secure transfers of files over long distances"
+    }
+  },
+  {
+    "id": "3.2-01",
+    "obj": "3.2",
+    "front": "Cluster placement group\n\nWhat is it good for?",
+    "back": "Low-latency, tightly coupled node-to-node communication, like HPC. Packs instances close together inside one AZ.",
+    "src": {
+      "title": "AWS Docs: Placement groups",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html#:~:text=Packs%20instances%20close%20together%20inside%20an%20Availability%20Zone",
+      "q": "Packs instances close together inside an Availability Zone"
+    }
+  },
+  {
+    "id": "3.2-02",
+    "obj": "3.2",
+    "front": "Partition placement group\n\nWhat does it isolate?",
+    "back": "Groups of instances in one partition do not share underlying hardware with other partitions. Good for large distributed systems.",
+    "src": {
+      "title": "AWS Docs: Placement groups",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html#:~:text=Spreads%20your%20instances%20across%20logical%20partitions%20so%20that%20groups%20of%20instances%20in%20one%20partition%20do%20not%20share%20the%20underlying%20hardware",
+      "q": "Spreads your instances across logical partitions so that groups of instances in one partition do not share the underlying hardware"
+    }
+  },
+  {
+    "id": "3.3-01",
+    "obj": "3.3",
+    "front": "Amazon ElastiCache\n\nWhat does it provide?",
+    "back": "A distributed in-memory data store or cache to reduce database load and give low-latency reads.",
+    "src": {
+      "title": "AWS Docs: What is ElastiCache?",
+      "url": "https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/WhatIs.html#:~:text=Amazon%20ElastiCache%20is%20a%20web%20service%20that%20makes%20it%20easy%20to%20set%20up%2C%20manage%2C%20and%20scale%20a%20distributed%20in-memory%20data%20store%20or%20cache%20environment%20in%20the%20cloud",
+      "q": "Amazon ElastiCache is a web service that makes it easy to set up, manage, and scale a distributed in-memory data store or cache environment in the cloud"
+    }
+  },
+  {
+    "id": "3.3-02",
+    "obj": "3.3",
+    "front": "DynamoDB Accelerator (DAX)\n\nWhat response time does it target?",
+    "back": "Microseconds, for eventually consistent reads, as an in-memory cache in front of DynamoDB.",
+    "src": {
+      "title": "AWS Docs: DynamoDB Accelerator",
+      "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.html#:~:text=DynamoDB%20Accelerator%20%28DAX%29%20delivers%20fast%20response%20times%20for%20accessing%20eventually%20consistent%20data",
+      "q": "DynamoDB Accelerator (DAX) delivers fast response times for accessing eventually consistent data"
+    }
+  },
+  {
+    "id": "3.3-03",
+    "obj": "3.3",
+    "front": "DynamoDB capacity modes\n\nName the two.",
+    "back": "On-demand and provisioned. The mode also decides how you are charged for reads and writes.",
+    "src": {
+      "title": "AWS Docs: DynamoDB read/write capacity mode",
+      "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/capacity-mode.html#:~:text=you%20can%20choose%20between%20on-demand%20mode%20and%20provisioned%20mode%20for%20your%20tables",
+      "q": "you can choose between on-demand mode and provisioned mode for your tables"
+    }
+  },
+  {
+    "id": "3.4-01",
+    "obj": "3.4",
+    "front": "Amazon CloudFront\n\nWhat does it deliver?",
+    "back": "Static and dynamic web content to users faster, from a global network of edge locations.",
+    "src": {
+      "title": "AWS Docs: What is CloudFront?",
+      "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html#:~:text=Amazon%20CloudFront%20is%20a%20web%20service%20that%20speeds%20up%20distribution%20of%20your%20static%20and%20dynamic%20web%20content",
+      "q": "Amazon CloudFront is a web service that speeds up distribution of your static and dynamic web content"
+    }
+  },
+  {
+    "id": "3.4-02",
+    "obj": "3.4",
+    "front": "AWS Global Accelerator\n\nWhat does it improve?",
+    "back": "Application performance for local and global users through accelerators, using static anycast IPs and the AWS network.",
+    "src": {
+      "title": "AWS Docs: What is Global Accelerator?",
+      "url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html#:~:text=AWS%20Global%20Accelerator%20is%20a%20service%20in%20which%20you%20create%20accelerators%20to%20improve%20the%20performance%20of%20your%20applications%20for%20local%20and%20global%20users",
+      "q": "AWS Global Accelerator is a service in which you create accelerators to improve the performance of your applications for local and global users"
+    }
+  },
+  {
+    "id": "3.4-03",
+    "obj": "3.4",
+    "front": "VPC peering\n\nHow do VPCs communicate?",
+    "back": "Privately, as if on the same network, without traversing the internet. No gateway needed, and no single point of failure.",
+    "src": {
+      "title": "AWS Docs: VPC peering",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-peering.html#:~:text=This%20private%20connection%20allows%20resources%20in%20the%20peered%20VPCs%20to%20interact%20with%20each%20other%20as%20if%20they%20were%20part%20of%20the%20same%20network",
+      "q": "This private connection allows resources in the peered VPCs to interact with each other as if they were part of the same network"
+    }
+  },
+  {
+    "id": "3.4-04",
+    "obj": "3.4",
+    "front": "AWS Transit Gateway\n\nWhen is it better than many peering links?",
+    "back": "As a hub interconnecting many VPCs and on-premises networks, instead of a mesh of point-to-point peerings.",
+    "src": {
+      "title": "AWS Docs: What is Transit Gateway?",
+      "url": "https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html#:~:text=AWS%20Transit%20Gateway%20is%20a%20network%20transit%20hub%20used%20to%20interconnect%20virtual%20private%20clouds%20%28VPCs%29%20and%20on-premises%20networks",
+      "q": "AWS Transit Gateway is a network transit hub used to interconnect virtual private clouds (VPCs) and on-premises networks"
+    }
+  },
+  {
+    "id": "3.5-01",
+    "obj": "3.5",
+    "front": "Kinesis Data Streams\n\nWhat does it handle?",
+    "back": "Collecting and processing large streams of data records in real time.",
+    "src": {
+      "title": "AWS Docs: What is Kinesis Data Streams?",
+      "url": "https://docs.aws.amazon.com/streams/latest/dev/introduction.html#:~:text=You%20can%20use%20Amazon%20Kinesis%20Data%20Streams%20to%20collect%20and%20process%20large%20streams%20of%20data%20records%20in%20real%20time",
+      "q": "You can use Amazon Kinesis Data Streams to collect and process large streams of data records in real time"
+    }
+  },
+  {
+    "id": "3.5-02",
+    "obj": "3.5",
+    "front": "Amazon Athena\n\nWhat do you query, and with what?",
+    "back": "Data directly in S3 using standard SQL, serverless with no infrastructure to manage.",
+    "src": {
+      "title": "AWS Docs: What is Athena?",
+      "url": "https://docs.aws.amazon.com/athena/latest/ug/what-is.html#:~:text=Amazon%20Athena%20is%20an%20interactive%20query%20service%20that%20makes%20it%20easy%20to%20analyze%20data%20directly%20in%20Amazon%20Simple%20Storage%20Service%20%28Amazon%20S3%29%20using%20standard%20SQL",
+      "q": "Amazon Athena is an interactive query service that makes it easy to analyze data directly in Amazon Simple Storage Service (Amazon S3) using standard SQL"
+    }
+  },
+  {
+    "id": "3.5-03",
+    "obj": "3.5",
+    "front": "AWS Glue\n\nWhat does it do?",
+    "back": "Serverless data integration: discover, prepare, move and combine data from multiple sources (ETL).",
+    "src": {
+      "title": "AWS Docs: What is AWS Glue?",
+      "url": "https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html#:~:text=AWS%20Glue%20is%20a%20serverless%20data%20integration%20service%20that%20makes%20it%20easy%20for%20analytics%20users%20to%20discover%2C%20prepare%2C%20move%2C%20and%20integrate%20data%20from%20multiple%20sources",
+      "q": "AWS Glue is a serverless data integration service that makes it easy for analytics users to discover, prepare, move, and integrate data from multiple sources"
+    }
+  },
+  {
+    "id": "4.1-01",
+    "obj": "4.1",
+    "front": "S3 storage classes\n\nWhy are there several?",
+    "back": "To optimize storage costs, performance and availability for your objects. The default is S3 Standard.",
+    "src": {
+      "title": "AWS Docs: S3 storage classes",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html#:~:text=Choosing%20a%20storage%20class%20designed%20for%20your%20use%20case%20lets%20you%20optimize%20storage%20costs%2C%20performance%2C%20and%20availability%20for%20your%20objects",
+      "q": "Choosing a storage class designed for your use case lets you optimize storage costs, performance, and availability for your objects"
+    }
+  },
+  {
+    "id": "4.1-02",
+    "obj": "4.1",
+    "front": "S3 Lifecycle\n\nWhat are the two action types?",
+    "back": "Transition actions (move to another storage class) and expiration actions (delete). A set of rules applied to groups of objects.",
+    "src": {
+      "title": "AWS Docs: Managing object lifecycle",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html#:~:text=An%20S3%20Lifecycle%20configuration%20is%20a%20set%20of%20rules%20that%20define%20actions%20that%20Amazon%20S3%20applies%20to%20a%20group%20of%20objects",
+      "q": "An S3 Lifecycle configuration is a set of rules that define actions that Amazon S3 applies to a group of objects"
+    }
+  },
+  {
+    "id": "4.1-03",
+    "obj": "4.1",
+    "front": "S3 Intelligent-Tiering\n\nWhen is it a good choice?",
+    "back": "When access patterns are unknown or change. It moves objects between access tiers automatically to save cost.",
+    "src": {
+      "title": "AWS Docs: S3 Intelligent-Tiering",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-intelligent-tiering.html#:~:text=S3%20Intelligent-Tiering%20delivers%20automatic%20cost%20savings%20by%20moving%20data%20on%20a%20granular%20object%20level%20between%20access%20tiers%20when%20access%20patterns%20change",
+      "q": "S3 Intelligent-Tiering delivers automatic cost savings by moving data on a granular object level between access tiers when access patterns change"
+    }
+  },
+  {
+    "id": "4.2-01",
+    "obj": "4.2",
+    "front": "Savings Plans\n\nWhat do you commit to?",
+    "back": "A consistent amount of compute usage (USD per hour) for 1 or 3 years, in return for lower prices than On-Demand. More flexible than Reserved Instances.",
+    "src": {
+      "title": "AWS Docs: What are Savings Plans?",
+      "url": "https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html#:~:text=Savings%20Plans%20provide%20savings%20beyond%20On-Demand%20rates%20in%20exchange%20for%20a%20commitment%20of%20using%20a%20specified%20amount%20of%20compute%20power",
+      "q": "Savings Plans provide savings beyond On-Demand rates in exchange for a commitment of using a specified amount of compute power"
+    }
+  },
+  {
+    "id": "4.2-02",
+    "obj": "4.2",
+    "front": "Reserved Instances\n\nHow do they differ from Savings Plans?",
+    "back": "You commit to a specific instance configuration, while Savings Plans commit to a usage amount and allow different configurations.",
+    "src": {
+      "title": "AWS Docs: Reserved Instances",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-reserved-instances.html#:~:text=With%20Reserved%20Instances%2C%20you%20make%20a%20commitment%20to%20a%20specific%20instance%20configuration",
+      "q": "With Reserved Instances, you make a commitment to a specific instance configuration"
+    }
+  },
+  {
+    "id": "4.2-03",
+    "obj": "4.2",
+    "front": "Spot Instances\n\nWhat workloads suit them?",
+    "back": "Flexible, interruptible work: batch, stateless, fault-tolerant. Deep discounts for unused capacity that can be reclaimed.",
+    "src": {
+      "title": "AWS Docs: Spot Instances",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html#:~:text=Spot%20Instances%20are%20a%20cost-effective%20choice%20if%20you%20can%20be%20flexible%20about%20when%20your%20applications%20run%20and%20if%20your%20applications%20can%20be%20interrupted",
+      "q": "Spot Instances are a cost-effective choice if you can be flexible about when your applications run and if your applications can be interrupted"
+    }
+  },
+  {
+    "id": "4.2-04",
+    "obj": "4.2",
+    "front": "AWS Compute Optimizer\n\nWhat does it recommend?",
+    "back": "Rightsizing recommendations and idle resources, based on configuration and utilization metrics.",
+    "src": {
+      "title": "AWS Docs: What is Compute Optimizer?",
+      "url": "https://docs.aws.amazon.com/compute-optimizer/latest/ug/what-is-compute-optimizer.html#:~:text=to%20provide%20you%20with%20rightsizing%20recommendations%20and%20identify%20idle%20resources",
+      "q": "to provide you with rightsizing recommendations and identify idle resources"
+    }
+  },
+  {
+    "id": "4.3-01",
+    "obj": "4.3",
+    "front": "DynamoDB on-demand vs provisioned\n\nWhich fits unpredictable traffic?",
+    "back": "On-demand (pay per request, no capacity planning). Provisioned suits predictable traffic and can be cheaper.",
+    "src": {
+      "title": "AWS Docs: DynamoDB read/write capacity mode",
+      "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/capacity-mode.html#:~:text=you%20can%20choose%20between%20on-demand%20mode%20and%20provisioned%20mode%20for%20your%20tables",
+      "q": "you can choose between on-demand mode and provisioned mode for your tables"
+    }
+  },
+  {
+    "id": "4.0-01",
+    "obj": "4.0",
+    "front": "AWS Budgets\n\nWhat can it track and trigger?",
+    "back": "Costs, usage, and RI or Savings Plans coverage and utilization, with alerts and actions when thresholds are crossed.",
+    "src": {
+      "title": "AWS Docs: Managing costs with AWS Budgets",
+      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html#:~:text=You%20can%20use%20AWS%20Budgets%20to%20track%20and%20take%20action%20on%20your%20AWS%20costs%20and%20usage",
+      "q": "You can use AWS Budgets to track and take action on your AWS costs and usage"
+    }
+  },
+  {
+    "id": "4.0-02",
+    "obj": "4.0",
+    "front": "AWS Cost Explorer\n\nWhat do you analyze with it?",
+    "back": "Your usage and costs over time, using graphs and reports, to find drivers and trends.",
+    "src": {
+      "title": "AWS Docs: What is Cost Explorer?",
+      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html#:~:text=You%20can%20explore%20your%20usage%20and%20costs%20using%20the%20main%20graph%2C%20the%20Cost%20Explorer%20cost%20and%20usage%20reports%2C%20or%20the%20Cost%20Explorer%20RI%20reports",
+      "q": "You can explore your usage and costs using the main graph, the Cost Explorer cost and usage reports, or the Cost Explorer RI reports"
+    }
+  }
+]

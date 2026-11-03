@@ -1,3 +1,12 @@
 [
-  { "id": "security-plus", "title": "Security+ (SY0-701)", "file": "decks/security-plus.json" }
+  {
+    "id": "security-plus",
+    "title": "Security+ (SY0-701)",
+    "file": "decks/security-plus.json"
+  },
+  {
+    "id": "aws-saa",
+    "title": "AWS Solutions Architect Associate (SAA-C03)",
+    "file": "decks/aws-saa.json"
+  }
 ]

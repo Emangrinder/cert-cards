@@ -2,7 +2,7 @@
 
 Minimal flashcard decks for IT certifications, served as a static GitHub Pages site. Public sources only; summaries are written in my own words and link to the exact source section.
 
-Decks: Security+ (SY0-701) in progress, then AWS Solutions Architect Associate, then CCNA.
+Decks: Security+ (SY0-701, all 5 domains), AWS Solutions Architect Associate (SAA-C03, in progress), then CCNA.
 
 ## Controls
 - Tap right half: next card. Tap left half: previous card.
@@ -34,3 +34,9 @@ Secure baselines and wireless security (WPA3), asset inventory/tracking, data re
 
 ## Security+ Domain 5 gaps (no verified public source yet)
 Governance structures and external regulations (named laws/standards), policy vs standard vs procedure, MTBF/MTTR, risk exemptions, right to audit, vendor due diligence and questionnaires, BPA/WO, compliance consequences and reporting, attestation, passive/active reconnaissance, user guidance topics (insider threat, password management, operational security), awareness effectiveness metrics.
+
+## AWS SAA-C03 deck
+Objectives follow the official exam guide task statements (1.1 to 4.4). `Obj 4.0` marks cost-governance tools that span tasks. Sources are AWS documentation pages; `python3 tools/check_links.py decks/aws-saa.json` verifies them.
+
+### Gaps so far
+IAM best practices/least privilege, CloudTrail, Organizations beyond SCPs, VPN, Cognito pools vs identity pools, KMS key policies/rotation, EBS volume type details, instance families, S3 storage class specifics, Redshift/EMR/QuickSight, RDS Proxy, Aurora Serverless, data transfer costs, cost allocation tags.
