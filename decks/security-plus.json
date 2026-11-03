@@ -1,20 +1,651 @@
 [
   {
-    "id": "1.2-01", "obj": "1.2",
+    "id": "1.2-01",
+    "obj": "1.2",
     "front": "Confidentiality\n\nWhat does it protect, and what is one control that enforces it?",
     "back": "Only authorized parties can read the information. Enforced by encryption and access control. First leg of the CIA triad.",
-    "src": { "title": "NIST Glossary: confidentiality", "url": "https://csrc.nist.gov/glossary/term/confidentiality" }
+    "src": {
+      "title": "NIST Glossary: confidentiality",
+      "url": "https://csrc.nist.gov/glossary/term/confidentiality#:~:text=Preserving%20authorized%20restrictions%20on%20information%20access%20and%20disclosure",
+      "q": "Preserving authorized restrictions on information access and disclosure"
+    }
   },
   {
-    "id": "1.2-02", "obj": "1.2",
+    "id": "1.2-02",
+    "obj": "1.2",
     "front": "Integrity\n\nWhat does it protect, and what is one control that enforces it?",
     "back": "Data is not altered or destroyed in an unauthorized way. Detected with hashing and digital signatures.",
-    "src": { "title": "NIST Glossary: integrity", "url": "https://csrc.nist.gov/glossary/term/integrity" }
+    "src": {
+      "title": "NIST Glossary: integrity",
+      "url": "https://csrc.nist.gov/glossary/term/integrity#:~:text=Guarding%20against%20improper%20information%20modification%20or%20destruction",
+      "q": "Guarding against improper information modification or destruction"
+    }
   },
   {
-    "id": "1.2-03", "obj": "1.2",
+    "id": "1.2-03",
+    "obj": "1.2",
     "front": "Availability\n\nWhat does it protect, and what is one control that enforces it?",
     "back": "Authorized users can reach the information and systems when needed. Supported by redundancy, backups and DoS defenses.",
-    "src": { "title": "NIST Glossary: availability", "url": "https://csrc.nist.gov/glossary/term/availability" }
+    "src": {
+      "title": "NIST Glossary: availability",
+      "url": "https://csrc.nist.gov/glossary/term/availability#:~:text=Ensuring%20timely%20and%20reliable%20access%20to%20and%20use%20of%20information",
+      "q": "Ensuring timely and reliable access to and use of information"
+    }
+  },
+  {
+    "id": "1.2-04",
+    "obj": "1.2",
+    "front": "Authentication\n\nWhat question does it answer?",
+    "back": "Are you who you claim to be? Verifies the identity of a user, process or device, usually before access is granted.",
+    "src": {
+      "title": "NIST Glossary: authentication",
+      "url": "https://csrc.nist.gov/glossary/term/authentication#:~:text=Verifying%20the%20identity%20of%20a%20user%2C%20process%2C%20or%20device",
+      "q": "Verifying the identity of a user, process, or device"
+    }
+  },
+  {
+    "id": "1.2-05",
+    "obj": "1.2",
+    "front": "Authorization\n\nWhat question does it answer, and when does it happen relative to authentication?",
+    "back": "What are you allowed to do? It grants or denies access privileges, and comes after authentication succeeds.",
+    "src": {
+      "title": "NIST Glossary: authorization",
+      "url": "https://csrc.nist.gov/glossary/term/authorization#:~:text=Access%20privileges%20granted%20to%20a%20user%2C%20program%2C%20or%20process",
+      "q": "Access privileges granted to a user, program, or process"
+    }
+  },
+  {
+    "id": "1.2-06",
+    "obj": "1.2",
+    "front": "Accounting\n\nThe third A in AAA. What does it record?",
+    "back": "Who did what, and when: usage and activity records that support auditing and billing. AAA = authentication, authorization, accounting.",
+    "src": {
+      "title": "RFC 2903: Generic AAA Architecture",
+      "url": "https://www.rfc-editor.org/rfc/rfc2903.html#:~:text=Authentication%2C%20Authorization%2C%20Accounting%20%28AAA%29%20architecture",
+      "q": "Authentication, Authorization, Accounting (AAA) architecture"
+    }
+  },
+  {
+    "id": "1.2-07",
+    "obj": "1.2",
+    "front": "Non-repudiation\n\nWhat does it prevent, and which technology usually provides it?",
+    "back": "A signer cannot later deny having sent or approved something. Provided by digital signatures made with a private key only the signer holds.",
+    "src": {
+      "title": "NIST Glossary: non-repudiation",
+      "url": "https://csrc.nist.gov/glossary/term/non_repudiation#:~:text=assurance%20of%20the%20integrity%20and%20origin%20of%20data",
+      "q": "assurance of the integrity and origin of data"
+    }
+  },
+  {
+    "id": "1.1-01",
+    "obj": "1.1",
+    "front": "Control category: Technical\n\nWho carries it out? Name two examples.",
+    "back": "Carried out by the system itself through hardware, software or firmware. Examples: firewalls, encryption, access control lists, antivirus.",
+    "src": {
+      "title": "NIST Glossary: technical controls",
+      "url": "https://csrc.nist.gov/glossary/term/technical_controls#:~:text=primarily%20implemented%20and%20executed%20by%20the%20information%20system",
+      "q": "primarily implemented and executed by the information system"
+    }
+  },
+  {
+    "id": "1.1-02",
+    "obj": "1.1",
+    "front": "Control category: Managerial\n\nWhat does it focus on? Name two examples.",
+    "back": "Manages risk and the security program itself. Examples: policies, risk assessments, security planning, vendor reviews.",
+    "src": {
+      "title": "NIST Glossary: management controls",
+      "url": "https://csrc.nist.gov/glossary/term/management_controls#:~:text=focus%20on%20the%20management%20of%20risk%20and%20the%20management%20of%20information%20system%20security",
+      "q": "focus on the management of risk and the management of information system security"
+    }
+  },
+  {
+    "id": "1.1-03",
+    "obj": "1.1",
+    "front": "Control category: Operational\n\nWho carries it out? Name two examples.",
+    "back": "Carried out mainly by people rather than by systems. Examples: security awareness training, incident response procedures, change reviews.",
+    "src": {
+      "title": "NIST Glossary: operational controls",
+      "url": "https://csrc.nist.gov/glossary/term/operational_controls#:~:text=primarily%20are%20implemented%20and%20executed%20by%20people",
+      "q": "primarily are implemented and executed by people"
+    }
+  },
+  {
+    "id": "1.1-04",
+    "obj": "1.1",
+    "front": "Control category: Physical\n\nWhat does it protect, and what are two examples?",
+    "back": "Protects tangible space and equipment: locks, fences, badge readers, guards. NIST PE-3 requires verifying authorization at entry points, controlling entry and exit, and keeping access logs.",
+    "src": {
+      "title": "NIST SP 800-53 Rev 5: PE-3 Physical Access Control",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf#page=208",
+      "q": "Enforce physical access authorizations at"
+    }
+  },
+  {
+    "id": "1.1-05",
+    "obj": "1.1",
+    "front": "Control type: Preventive\n\nWhen does it act?",
+    "back": "Acts before an incident to stop it from happening. Examples: firewall rules, least privilege, locked doors.",
+    "src": {
+      "title": "Wikipedia: Security controls",
+      "url": "https://en.wikipedia.org/wiki/Security_controls#:~:text=Preventive%20controls%20are%20intended%20to%20prevent%20an%20incident%20from%20occurring",
+      "q": "Preventive controls are intended to prevent an incident from occurring"
+    }
+  },
+  {
+    "id": "1.1-06",
+    "obj": "1.1",
+    "front": "Control type: Detective\n\nWhen does it act?",
+    "back": "Identifies and alerts on an event while or after it happens. Examples: log monitoring, IDS, motion sensors, audits.",
+    "src": {
+      "title": "Wikipedia: Security controls",
+      "url": "https://en.wikipedia.org/wiki/Security_controls#:~:text=Detective%20controls%20are%20intended%20to%20identify%2C%20characterize%2C%20and%20log%20an%20incident",
+      "q": "Detective controls are intended to identify, characterize, and log an incident"
+    }
+  },
+  {
+    "id": "1.1-07",
+    "obj": "1.1",
+    "front": "Control type: Corrective\n\nWhen does it act?",
+    "back": "Limits damage and restores normal operation after an incident. Examples: restoring from backup, patching, quarantining a host.",
+    "src": {
+      "title": "Wikipedia: Security controls",
+      "url": "https://en.wikipedia.org/wiki/Security_controls#:~:text=corrective%20controls%20are%20intended%20to%20restore%20damage%20caused%20by%20the%20incident",
+      "q": "corrective controls are intended to restore damage caused by the incident"
+    }
+  },
+  {
+    "id": "1.1-08",
+    "obj": "1.1",
+    "front": "Control type: Compensating\n\nWhen do you use one?",
+    "back": "A substitute used when the recommended control cannot be applied, and it must give comparable protection. Example: extra monitoring on a legacy system that cannot be patched.",
+    "src": {
+      "title": "NIST Glossary: compensating security control",
+      "url": "https://csrc.nist.gov/glossary/term/compensating_security_control#:~:text=employed%20by%20an%20organization%20in%20lieu%20of%20a%20recommended%20security%20control",
+      "q": "employed by an organization in lieu of a recommended security control"
+    }
+  },
+  {
+    "id": "1.2-08",
+    "obj": "1.2",
+    "front": "Zero trust\n\nWhat is the core idea, and what does it replace?",
+    "back": "No implicit trust from network location. Every request is evaluated for least-privilege access, per request. It replaces the trusted-inside, untrusted-outside perimeter model.",
+    "src": {
+      "title": "NIST SP 800-207, p.13",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf#page=13",
+      "q": "Zero trust (ZT) provides a collection of concepts and ideas designed to minimize uncertainty"
+    }
+  },
+  {
+    "id": "1.2-09",
+    "obj": "1.2",
+    "front": "Zero trust: control plane vs data plane\n\nWhat travels on each?",
+    "back": "The zero trust components talk to each other on a separate control plane. The application data itself travels on the data plane.",
+    "src": {
+      "title": "NIST SP 800-207, p.18",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf#page=18",
+      "q": "components use a separate control plane to communicate"
+    }
+  },
+  {
+    "id": "1.2-10",
+    "obj": "1.2",
+    "front": "Zero trust: Policy Engine (PE)\n\nWhat is its job?",
+    "back": "Makes the final decision to grant access to a resource for a given subject, using enterprise policy and other inputs. Works with the Policy Administrator.",
+    "src": {
+      "title": "NIST SP 800-207, p.18",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf#page=18",
+      "q": "This component is responsible for the ultimate decision to grant access to a resource"
+    }
+  },
+  {
+    "id": "1.2-11",
+    "obj": "1.2",
+    "front": "Zero trust: Policy Administrator (PA)\n\nWhat is its job?",
+    "back": "Carries out the PE's decision by establishing or shutting down the communication path between subject and resource.",
+    "src": {
+      "title": "NIST SP 800-207, p.18",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf#page=18",
+      "q": "This component is responsible for establishing and/or shutting down the communication path"
+    }
+  },
+  {
+    "id": "1.2-12",
+    "obj": "1.2",
+    "front": "Zero trust: Policy Enforcement Point (PEP)\n\nWhat is its job?",
+    "back": "The gate on the data path. Enables, monitors and terminates connections between a subject and a resource.",
+    "src": {
+      "title": "NIST SP 800-207, p.19",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf#page=19",
+      "q": "This system is responsible for enabling, monitoring, and eventually terminating connections"
+    }
+  },
+  {
+    "id": "1.2-13",
+    "obj": "1.2",
+    "front": "Zero trust: implicit trust zone\n\nWhat happens to it as zero trust is adopted?",
+    "back": "The area where everything is trusted once past the entry point. Zero trust shrinks these zones as far as possible, making access rules granular.",
+    "src": {
+      "title": "NIST SP 800-207, p.13",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf#page=13",
+      "q": "shrinking implicit trust zones"
+    }
+  },
+  {
+    "id": "1.2-14",
+    "obj": "1.2",
+    "front": "Physical access monitoring\n\nName three ways to detect physical security incidents.",
+    "back": "Guards, video surveillance and physical access logs reviewed for anomalies. Results feed incident response.",
+    "src": {
+      "title": "NIST SP 800-53 Rev 5: PE-6 Monitoring Physical Access",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf#page=211",
+      "q": "Monitor physical access to the facility where the system resides"
+    }
+  },
+  {
+    "id": "1.2-15",
+    "obj": "1.2",
+    "front": "Honeypot\n\nWhat is it, and what is it used for?",
+    "back": "A system or resource built to be attractive to attackers so their activity can be detected and studied. Variants: honeynet (a network of them), honeyfile (bait file), honeytoken (bait credential or record).",
+    "src": {
+      "title": "NIST Glossary: honeypot",
+      "url": "https://csrc.nist.gov/glossary/term/honeypot#:~:text=designed%20to%20be%20attractive%20to%20potential%20crackers%20and%20intruders",
+      "q": "designed to be attractive to potential crackers and intruders"
+    }
+  },
+  {
+    "id": "1.2-16",
+    "obj": "1.2",
+    "front": "Deception and disruption\n\nWhat three jobs do decoy components do?",
+    "back": "Decoys such as honeypots and honeynets are targets built to detect, deflect and analyze malicious attacks.",
+    "src": {
+      "title": "NIST SP 800-53 Rev 5: SC-26 Decoys",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf#page=343",
+      "q": "Include components within organizational systems specifically designed to be the target of malicious attacks"
+    }
+  },
+  {
+    "id": "1.3-01",
+    "obj": "1.3",
+    "front": "Change management: approval\n\nWho decides, and what must they consider?",
+    "back": "Proposed configuration-controlled changes are reviewed and approved or disapproved, with explicit security and privacy impact considered. Decisions are documented.",
+    "src": {
+      "title": "NIST SP 800-53 Rev 5: CM-3 Configuration Change Control",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf#page=125",
+      "q": "Review proposed configuration-controlled changes to the system and approve or disapprove such changes"
+    }
+  },
+  {
+    "id": "1.3-02",
+    "obj": "1.3",
+    "front": "Change management: impact analysis\n\nWhen is it done?",
+    "back": "Before the change is implemented, analyze it for potential security and privacy impacts.",
+    "src": {
+      "title": "NIST SP 800-53 Rev 5: CM-4 Impact Analyses",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf#page=128",
+      "q": "Analyze changes to the system to determine potential security and privacy impacts"
+    }
+  },
+  {
+    "id": "1.3-03",
+    "obj": "1.3",
+    "front": "Baseline configuration\n\nHow can one be changed?",
+    "back": "A formally reviewed and agreed set of specifications at a point in time. It can only be changed through change control procedures.",
+    "src": {
+      "title": "NIST Glossary: baseline configuration",
+      "url": "https://csrc.nist.gov/glossary/term/baseline_configuration#:~:text=formally%20reviewed%20and%20agreed%20on%20at%20a%20given%20point%20in%20time",
+      "q": "formally reviewed and agreed on at a given point in time"
+    }
+  },
+  {
+    "id": "1.3-04",
+    "obj": "1.3",
+    "front": "Configuration (change) control\n\nWhat does it protect against?",
+    "back": "Controls modifications to hardware, firmware, software and documentation so the system is not improperly modified before, during or after implementation.",
+    "src": {
+      "title": "NIST Glossary: configuration control",
+      "url": "https://csrc.nist.gov/glossary/term/configuration_control#:~:text=Process%20of%20controlling%20modifications%20to%20hardware%2C%20firmware%2C%20software%2C%20and%20documentation",
+      "q": "Process of controlling modifications to hardware, firmware, software, and documentation"
+    }
+  },
+  {
+    "id": "1.3-05",
+    "obj": "1.3",
+    "front": "Allow list vs deny list\n\nWhat is an allow list, and how does a deny list differ?",
+    "back": "An allow list is a documented list of elements permitted by policy, and everything else is blocked. A deny list is the inverse: only listed items are blocked.",
+    "src": {
+      "title": "NIST Glossary: allowlist",
+      "url": "https://csrc.nist.gov/glossary/term/allowlist#:~:text=A%20documented%20list%20of%20specific%20elements%20that%20are%20allowed",
+      "q": "A documented list of specific elements that are allowed"
+    }
+  },
+  {
+    "id": "1.4-01",
+    "obj": "1.4",
+    "front": "Encryption\n\nWhat does it produce?",
+    "back": "The cryptographic transformation of data into ciphertext, which only holders of the right key can reverse.",
+    "src": {
+      "title": "NIST Glossary: encryption",
+      "url": "https://csrc.nist.gov/glossary/term/encryption#:~:text=The%20cryptographic%20transformation%20of%20data%20to%20produce%20ciphertext",
+      "q": "The cryptographic transformation of data to produce ciphertext"
+    }
+  },
+  {
+    "id": "1.4-02",
+    "obj": "1.4",
+    "front": "Key length\n\nWhat is it, and why does it matter?",
+    "back": "The length of a key in bits (also called key size). Longer keys make brute force harder.",
+    "src": {
+      "title": "NIST Glossary: key length",
+      "url": "https://csrc.nist.gov/glossary/term/key_length#:~:text=The%20length%20of%20a%20key%20in%20bits",
+      "q": "The length of a key in bits"
+    }
+  },
+  {
+    "id": "1.4-03",
+    "obj": "1.4",
+    "front": "Symmetric encryption\n\nHow many keys, and what is the main weakness?",
+    "back": "One shared key does both encrypt and decrypt, so it is fast. The weakness is getting that key to the other party safely.",
+    "src": {
+      "title": "NIST Glossary: symmetric key",
+      "url": "https://csrc.nist.gov/glossary/term/symmetric_key#:~:text=A%20cryptographic%20key%20that%20is%20used%20to%20perform%20both%20the%20cryptographic%20operation%20and%20its%20inverse",
+      "q": "A cryptographic key that is used to perform both the cryptographic operation and its inverse"
+    }
+  },
+  {
+    "id": "1.4-04",
+    "obj": "1.4",
+    "front": "AES\n\nWhat type of algorithm is it?",
+    "back": "The Advanced Encryption Standard: a symmetric block cipher that works on 128-bit blocks, with 128, 192 or 256-bit keys.",
+    "src": {
+      "title": "NIST FIPS 197 (updated)",
+      "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf#page=3",
+      "q": "Each of them transforms data in blocks of 128 bits"
+    }
+  },
+  {
+    "id": "1.4-05",
+    "obj": "1.4",
+    "front": "Asymmetric encryption\n\nHow many keys, and what is it commonly used for?",
+    "back": "Two mathematically linked keys: what one does, the other undoes. Slower than symmetric, so used for key exchange and signatures.",
+    "src": {
+      "title": "NIST Glossary: asymmetric cryptography",
+      "url": "https://csrc.nist.gov/glossary/term/asymmetric_cryptography#:~:text=Cryptography%20that%20uses%20two%20separate%20keys%20to%20exchange%20data",
+      "q": "Cryptography that uses two separate keys to exchange data"
+    }
+  },
+  {
+    "id": "1.4-06",
+    "obj": "1.4",
+    "front": "Public key\n\nWhat can you do with it, and who may have it?",
+    "back": "The public half of a key pair. Anyone may hold it. It encrypts data for the key owner or verifies their signatures.",
+    "src": {
+      "title": "NIST Glossary: public key",
+      "url": "https://csrc.nist.gov/glossary/term/public_key#:~:text=The%20public%20part%20of%20an%20asymmetric%20key%20pair",
+      "q": "The public part of an asymmetric key pair"
+    }
+  },
+  {
+    "id": "1.4-07",
+    "obj": "1.4",
+    "front": "Private key\n\nWhat can you do with it, and who may have it?",
+    "back": "The secret half of a key pair. Only the owner holds it. It decrypts data or creates digital signatures.",
+    "src": {
+      "title": "NIST Glossary: private key",
+      "url": "https://csrc.nist.gov/glossary/term/private_key#:~:text=The%20secret%20part%20of%20an%20asymmetric%20key%20pair",
+      "q": "The secret part of an asymmetric key pair"
+    }
+  },
+  {
+    "id": "1.4-08",
+    "obj": "1.4",
+    "front": "Key exchange\n\nWhat problem does it solve?",
+    "back": "Lets two parties establish keys for secure communication over an open network without having shared a secret beforehand.",
+    "src": {
+      "title": "NIST Glossary: key exchange",
+      "url": "https://csrc.nist.gov/glossary/term/key_exchange#:~:text=Process%20of%20exchanging%20public%20keys",
+      "q": "Process of exchanging public keys"
+    }
+  },
+  {
+    "id": "1.4-09",
+    "obj": "1.4",
+    "front": "Transport / communication encryption\n\nWhich protocol protects data in transit on the web?",
+    "back": "TLS: a protocol giving privacy and data integrity between two communicating applications, built from a Record layer and a Handshake layer.",
+    "src": {
+      "title": "NIST Glossary: transport layer security",
+      "url": "https://csrc.nist.gov/glossary/term/transport_layer_security#:~:text=A%20security%20protocol%20providing%20privacy%20and%20data%20integrity%20between%20two%20communicating%20applications",
+      "q": "A security protocol providing privacy and data integrity between two communicating applications"
+    }
+  },
+  {
+    "id": "1.4-10",
+    "obj": "1.4",
+    "front": "Data at rest\n\nHow is it protected, and what should never be encrypted this way?",
+    "back": "Protect it with encryption (full-disk, volume, file, database or record level). Passwords should be hashed, not stored with reversible encryption.",
+    "src": {
+      "title": "OWASP Cryptographic Storage Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html#:~:text=implementing%20solutions%20to%20protect%20data%20at%20rest",
+      "q": "implementing solutions to protect data at rest"
+    }
+  },
+  {
+    "id": "1.4-11",
+    "obj": "1.4",
+    "front": "Hashing\n\nName its key properties.",
+    "back": "A one-way function producing a fixed-length output from any input. Used to check integrity. A tiny input change gives a very different hash.",
+    "src": {
+      "title": "NIST Glossary: hash function",
+      "url": "https://csrc.nist.gov/glossary/term/hash_function#:~:text=A%20function%20on%20bit%20strings%20in%20which%20the%20length%20of%20the%20output%20is%20fixed",
+      "q": "A function on bit strings in which the length of the output is fixed"
+    }
+  },
+  {
+    "id": "1.4-12",
+    "obj": "1.4",
+    "front": "Salting\n\nWhat is a salt and what attack does it blunt?",
+    "back": "A unique random value added to each password before hashing, so an attacker must crack hashes one at a time and cannot reuse precomputed tables.",
+    "src": {
+      "title": "OWASP Password Storage Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#:~:text=A%20salt%20is%20a%20unique%2C%20randomly%20generated%20string%20that%20is%20added%20to%20each%20password",
+      "q": "A salt is a unique, randomly generated string that is added to each password"
+    }
+  },
+  {
+    "id": "1.4-13",
+    "obj": "1.4",
+    "front": "Key stretching\n\nHow does a work factor help?",
+    "back": "Repeat the hash many times so each guess is costly for an attacker. The work factor is the iteration count. Examples: PBKDF2, bcrypt.",
+    "src": {
+      "title": "OWASP Password Storage Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#:~:text=The%20work%20factor%20is%20the%20number%20of%20iterations%20of%20the%20hashing%20algorithm",
+      "q": "The work factor is the number of iterations of the hashing algorithm"
+    }
+  },
+  {
+    "id": "1.4-14",
+    "obj": "1.4",
+    "front": "Digital signature\n\nWhat three things does it provide?",
+    "back": "Origin authentication, data integrity and signer non-repudiation. Created with the signer's private key and verified with their public key.",
+    "src": {
+      "title": "NIST Glossary: digital signature",
+      "url": "https://csrc.nist.gov/glossary/term/digital_signature#:~:text=provides%20a%20mechanism%20for%20verifying%20origin%20authentication%2C%20data%20integrity%2C%20and%20signatory%20non-repudiation",
+      "q": "provides a mechanism for verifying origin authentication, data integrity, and signatory non-repudiation"
+    }
+  },
+  {
+    "id": "1.4-15",
+    "obj": "1.4",
+    "front": "Public key infrastructure (PKI)\n\nWhat does it do?",
+    "back": "The framework that issues, maintains and revokes public key certificates so keys can be tied to identities.",
+    "src": {
+      "title": "NIST Glossary: public key infrastructure",
+      "url": "https://csrc.nist.gov/glossary/term/public_key_infrastructure#:~:text=A%20framework%20that%20is%20established%20to%20issue%2C%20maintain%20and%20revoke%20public%20key%20certificates",
+      "q": "A framework that is established to issue, maintain and revoke public key certificates"
+    }
+  },
+  {
+    "id": "1.4-16",
+    "obj": "1.4",
+    "front": "Certificate authority (CA)\n\nWhat does it do?",
+    "back": "A trusted entity that issues and revokes public key certificates, vouching for who owns the key.",
+    "src": {
+      "title": "NIST Glossary: certificate authority",
+      "url": "https://csrc.nist.gov/glossary/term/certificate_authority#:~:text=A%20trusted%20entity%20that%20issues%20and%20revokes%20public%20key%20certificates",
+      "q": "A trusted entity that issues and revokes public key certificates"
+    }
+  },
+  {
+    "id": "1.4-17",
+    "obj": "1.4",
+    "front": "Root of trust: root CA and trust anchor\n\nWhy are they special?",
+    "back": "The root CA's public key is the most trusted starting point of every trust path. A trust anchor is that base of the chain, pre-installed in devices and browsers.",
+    "src": {
+      "title": "NIST Glossary: root certificate authority",
+      "url": "https://csrc.nist.gov/glossary/term/root_certificate_authority#:~:text=the%20certification%20authority%20%28CA%29%20whose%20public%20key%20serves%20as%20the%20most%20trusted%20datum",
+      "q": "the certification authority (CA) whose public key serves as the most trusted datum"
+    }
+  },
+  {
+    "id": "1.4-18",
+    "obj": "1.4",
+    "front": "Certificate signing request (CSR)\n\nWhat does it contain, and who receives it?",
+    "back": "Sent to a CA to apply for a certificate. Contains the requester's public key and identity details, and is signed with the matching private key.",
+    "src": {
+      "title": "NIST Glossary: certificate signing request",
+      "url": "https://csrc.nist.gov/glossary/term/certificate_signing_request#:~:text=A%20request%20sent%20from%20a%20certificate%20requester%20to%20a%20certificate%20authority",
+      "q": "A request sent from a certificate requester to a certificate authority"
+    }
+  },
+  {
+    "id": "1.4-19",
+    "obj": "1.4",
+    "front": "Self-signed certificate\n\nWho signs it, and why is it not trusted by default?",
+    "back": "Signed with the private key of its own subject, so no third-party CA vouches for it. Fine for lab use, but clients will not trust it by default.",
+    "src": {
+      "title": "RFC 5280 (X.509 PKI profile)",
+      "url": "https://www.rfc-editor.org/rfc/rfc5280.html#:~:text=The%20signature%20on%20a%20self-signed%20certificate%20is%20generated%20with%20the%20private%20key%20associated%20with%20the%20certificate",
+      "q": "The signature on a self-signed certificate is generated with the private key associated with the certificate"
+    }
+  },
+  {
+    "id": "1.4-20",
+    "obj": "1.4",
+    "front": "Wildcard certificate\n\nWhat does it cover, and what is the risk?",
+    "back": "Names like *.example.com cover many hosts under one certificate. If its private key leaks, every covered host is exposed.",
+    "src": {
+      "title": "RFC 6125: Service Identity",
+      "url": "https://www.rfc-editor.org/rfc/rfc6125.html#:~:text=contains%20the%20wildcard%20character%20%27%2A%27%20as%20part%20or%20all%20of%20a%20label",
+      "q": "contains the wildcard character '*' as part or all of a label"
+    }
+  },
+  {
+    "id": "1.4-21",
+    "obj": "1.4",
+    "front": "Certificate revocation list (CRL)\n\nWhat is it, and what is its weakness?",
+    "back": "A list of revoked certificates, signed by the CA. Clients must download and check it, so it can be large and out of date.",
+    "src": {
+      "title": "NIST Glossary: certificate revocation list",
+      "url": "https://csrc.nist.gov/glossary/term/certificate_revocation_list#:~:text=A%20list%20of%20revoked%20public%20key%20certificates%20created%20and%20digitally%20signed%20by%20a%20certification%20authority",
+      "q": "A list of revoked public key certificates created and digitally signed by a certification authority"
+    }
+  },
+  {
+    "id": "1.4-22",
+    "obj": "1.4",
+    "front": "OCSP\n\nHow does it differ from a CRL?",
+    "back": "An online protocol that asks a responder for the status of one certificate in real time, instead of downloading a whole list.",
+    "src": {
+      "title": "NIST Glossary: OCSP",
+      "url": "https://csrc.nist.gov/glossary/term/online_certificate_status_protocol#:~:text=An%20online%20protocol%20used%20to%20determine%20the%20status%20of%20a%20public%20key%20certificate",
+      "q": "An online protocol used to determine the status of a public key certificate"
+    }
+  },
+  {
+    "id": "1.4-23",
+    "obj": "1.4",
+    "front": "Key escrow\n\nWhy would an organization keep copies of keys, and what is the risk?",
+    "back": "Retaining the private component of an encryption key pair so data can be recovered if the owner loses it. The escrow store becomes a high-value target.",
+    "src": {
+      "title": "NIST Glossary: key escrow",
+      "url": "https://csrc.nist.gov/glossary/term/key_escrow#:~:text=The%20retention%20of%20the%20private%20component%20of%20the%20key%20pair%20associated%20with%20a%20subscriber",
+      "q": "The retention of the private component of the key pair associated with a subscriber"
+    }
+  },
+  {
+    "id": "1.4-24",
+    "obj": "1.4",
+    "front": "Key management system\n\nWhat part of a key's life does it handle?",
+    "back": "Manages keys and their metadata across the lifecycle: generation, distribution, storage, backup, recovery, use, revocation and destruction.",
+    "src": {
+      "title": "NIST Glossary: key management system",
+      "url": "https://csrc.nist.gov/glossary/term/key_management_system#:~:text=A%20system%20for%20the%20management%20of%20cryptographic%20keys%20and%20their%20metadata",
+      "q": "A system for the management of cryptographic keys and their metadata"
+    }
+  },
+  {
+    "id": "1.4-25",
+    "obj": "1.4",
+    "front": "Trusted Platform Module (TPM)\n\nWhat is it and what does it protect?",
+    "back": "A tamper-resistant chip on the motherboard that performs cryptographic operations, including key generation, and protects keys and small secrets.",
+    "src": {
+      "title": "NIST Glossary: trusted platform module",
+      "url": "https://csrc.nist.gov/glossary/term/trusted_platform_module#:~:text=A%20tamper-resistant%20integrated%20circuit%20built%20into%20some%20computer%20motherboards",
+      "q": "A tamper-resistant integrated circuit built into some computer motherboards"
+    }
+  },
+  {
+    "id": "1.4-26",
+    "obj": "1.4",
+    "front": "Hardware security module (HSM)\n\nWhy use one instead of storing keys in software?",
+    "back": "Dedicated hardware (or a virtual equivalent) that stores and uses keys, greatly lowering the risk of key extraction from memory.",
+    "src": {
+      "title": "OWASP Key Management Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Key_Management_Cheat_Sheet.html#:~:text=Hardware%20Security%20Module%20%28HSM%29%20or%20Trusted%20Platform%20Module%20%28TPM%29",
+      "q": "Hardware Security Module (HSM) or Trusted Platform Module (TPM)"
+    }
+  },
+  {
+    "id": "1.4-27",
+    "obj": "1.4",
+    "front": "Steganography\n\nWhat does it hide, compared with encryption?",
+    "back": "Hides the very existence of a message, for example inside an image. Encryption hides the content but not the fact that a message exists.",
+    "src": {
+      "title": "NIST Glossary: steganography",
+      "url": "https://csrc.nist.gov/glossary/term/steganography#:~:text=communicating%20in%20a%20way%20that%20hides%20the%20existence%20of%20the%20communication",
+      "q": "communicating in a way that hides the existence of the communication"
+    }
+  },
+  {
+    "id": "1.4-28",
+    "obj": "1.4",
+    "front": "Data masking\n\nWhat does it do to a value?",
+    "back": "Removes or replaces a field, for example with asterisks or a pseudonym, in a way that does not preserve the analytic value.",
+    "src": {
+      "title": "NIST Glossary: masking",
+      "url": "https://csrc.nist.gov/glossary/term/masking#:~:text=The%20process%20of%20systematically%20removing%20a%20field%20or%20replacing%20it%20with%20a%20value",
+      "q": "The process of systematically removing a field or replacing it with a value"
+    }
+  },
+  {
+    "id": "1.4-29",
+    "obj": "1.4",
+    "front": "Tokenization\n\nWhat replaces the sensitive value, and how is it reversed?",
+    "back": "Swaps sensitive data (like a card number) for a surrogate token. De-tokenization redeems the token for the original through a protected vault.",
+    "src": {
+      "title": "PCI SSC: Tokenization Guidelines",
+      "url": "https://listings.pcisecuritystandards.org/documents/Tokenization_Guidelines_Info_Supplement.pdf#page=3",
+      "q": "Tokenization is a process by which the primary account number (PAN) is replaced with a surrogate value"
+    }
+  },
+  {
+    "id": "1.4-30",
+    "obj": "1.4",
+    "front": "Blockchain\n\nWhat makes it tamper evident?",
+    "back": "A distributed ledger of signed transactions grouped in blocks. Each block is cryptographically linked to the previous one after consensus, so edits are detectable.",
+    "src": {
+      "title": "NIST Glossary: blockchain",
+      "url": "https://csrc.nist.gov/glossary/term/blockchain#:~:text=A%20distributed%20digital%20ledger%20of%20cryptographically-signed%20transactions",
+      "q": "A distributed digital ledger of cryptographically-signed transactions"
+    }
   }
 ]

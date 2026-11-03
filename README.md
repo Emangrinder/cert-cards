@@ -16,3 +16,9 @@ Add an entry to `decks/index.json` and a JSON array of cards:
 Use `#:~:text=` text fragments in `url` to land on the exact paragraph.
 
 Run locally with `python3 -m http.server` (fetch needs http, not file://).
+
+## Checking sources
+`python3 tools/check_links.py` confirms every card's source loads and still contains the quoted passage (`src.q`). PDF sources link to `#page=N`; the check needs `pdftotext`.
+
+## Security+ Domain 1 gaps (no verified public source yet)
+Deterrent and directive control types, gap analysis, access control vestibule/bollards/fencing/lighting, adaptive identity, backout plan, maintenance window, SOPs, downtime/restarts, legacy apps, dependencies, version control.
