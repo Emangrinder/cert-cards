@@ -25,3 +25,6 @@ Deterrent and directive control types, gap analysis, access control vestibule/bo
 
 ## Security+ Domain 2 gaps (no verified public source yet)
 Named actor types (hacktivist, organized crime, unskilled attacker), shadow IT, motivations, BEC/typosquatting/pretexting/vishing/smishing, VM escape, memory injection, malicious update, segmentation, impossible travel and other log indicators, EDR, decommissioning, DNS/wireless/physical attacks, cryptographic attacks.
+
+## Security+ Domain 3 gaps (no verified public source yet)
+IaC, microservices, serverless, RTOS/embedded, responsibility matrix, NGFW/WAF/UTM, load balancer, 802.1X port security, SASE/SD-WAN, device placement and failure modes, data classification levels and sovereignty, platform diversity, multi-cloud, capacity planning, backup types and replication, generators.

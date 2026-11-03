@@ -1186,5 +1186,500 @@
       "url": "https://csrc.nist.gov/glossary/term/mobile_device_management#:~:text=The%20administration%20of%20mobile%20devices",
       "q": "The administration of mobile devices"
     }
+  },
+  {
+    "id": "3.1-01",
+    "obj": "3.1",
+    "front": "Cloud computing\n\nWhat are its defining traits?",
+    "back": "On-demand network access to a shared pool of configurable resources (servers, storage, apps) that can be rapidly provisioned and released with little management effort.",
+    "src": {
+      "title": "NIST Glossary: cloud computing",
+      "url": "https://csrc.nist.gov/glossary/term/cloud_computing#:~:text=A%20model%20for%20enabling%20ubiquitous%2C%20convenient%2C%20on-demand%20network%20access%20to%20a%20shared%20pool%20of%20configurable%20computing%20resources",
+      "q": "A model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources"
+    }
+  },
+  {
+    "id": "3.1-02",
+    "obj": "3.1",
+    "front": "IaaS\n\nWhat does the customer get, and what do they manage?",
+    "back": "Raw compute, storage and networking. The customer deploys and runs their own OS and software, so they also patch and secure them.",
+    "src": {
+      "title": "NIST Glossary: infrastructure as a service",
+      "url": "https://csrc.nist.gov/glossary/term/infrastructure_as_a_service#:~:text=to%20provision%20processing%2C%20storage%2C%20networks%2C%20and%20other%20fundamental%20computing%20resources",
+      "q": "to provision processing, storage, networks, and other fundamental computing resources"
+    }
+  },
+  {
+    "id": "3.1-03",
+    "obj": "3.1",
+    "front": "PaaS\n\nWhat does the customer deploy?",
+    "back": "Their own applications onto provider-managed infrastructure and tools. The provider manages the OS and runtime; the customer manages code and data.",
+    "src": {
+      "title": "NIST Glossary: platform as a service",
+      "url": "https://csrc.nist.gov/glossary/term/platform_as_a_service#:~:text=to%20deploy%20onto%20the%20cloud%20infrastructure%20consumer-created%20or%20acquired%20applications",
+      "q": "to deploy onto the cloud infrastructure consumer-created or acquired applications"
+    }
+  },
+  {
+    "id": "3.1-04",
+    "obj": "3.1",
+    "front": "SaaS\n\nWhat does the customer use?",
+    "back": "The provider's applications, reached from a browser or thin client. The customer manages only their data, users and settings.",
+    "src": {
+      "title": "NIST Glossary: software as a service",
+      "url": "https://csrc.nist.gov/glossary/term/software_as_a_service#:~:text=applications%20running%20on%20a%20cloud%20infrastructure.%20The%20applications%20are%20accessible%20from%20various%20client%20devices",
+      "q": "applications running on a cloud infrastructure. The applications are accessible from various client devices"
+    }
+  },
+  {
+    "id": "3.1-05",
+    "obj": "3.1",
+    "front": "Public cloud\n\nWho can use it?",
+    "back": "Provisioned for open use by the general public and hosted at the provider. Shared infrastructure, pay as you go.",
+    "src": {
+      "title": "NIST Glossary: public cloud",
+      "url": "https://csrc.nist.gov/glossary/term/public_cloud#:~:text=The%20cloud%20infrastructure%20is%20provisioned%20for%20open%20use%20by%20the%20general%20public",
+      "q": "The cloud infrastructure is provisioned for open use by the general public"
+    }
+  },
+  {
+    "id": "3.1-06",
+    "obj": "3.1",
+    "front": "Private cloud\n\nWho can use it?",
+    "back": "Provisioned for exclusive use by a single organization. Can be owned and run by the organization or a third party.",
+    "src": {
+      "title": "NIST Glossary: private cloud",
+      "url": "https://csrc.nist.gov/glossary/term/private_cloud#:~:text=provisioned%20for%20exclusive%20use%20by%20a%20single%20organization%20comprising%20multiple%20consumers",
+      "q": "provisioned for exclusive use by a single organization comprising multiple consumers"
+    }
+  },
+  {
+    "id": "3.1-07",
+    "obj": "3.1",
+    "front": "Community cloud\n\nWho shares it?",
+    "back": "Exclusive use by a specific community of organizations with shared concerns, such as mission, security requirements or compliance.",
+    "src": {
+      "title": "NIST Glossary: community cloud",
+      "url": "https://csrc.nist.gov/glossary/term/community_cloud#:~:text=provisioned%20for%20exclusive%20use%20by%20a%20specific%20community%20of%20consumers%20from%20organizations%20that%20have%20shared%20concerns",
+      "q": "provisioned for exclusive use by a specific community of consumers from organizations that have shared concerns"
+    }
+  },
+  {
+    "id": "3.1-08",
+    "obj": "3.1",
+    "front": "Hybrid cloud\n\nWhat is combined?",
+    "back": "Two or more distinct clouds (private, community or public) that stay separate but are joined by technology that allows data and application portability.",
+    "src": {
+      "title": "NIST Glossary: hybrid cloud",
+      "url": "https://csrc.nist.gov/glossary/term/hybrid_cloud#:~:text=a%20composition%20of%20two%20or%20more%20distinct%20cloud%20infrastructures",
+      "q": "a composition of two or more distinct cloud infrastructures"
+    }
+  },
+  {
+    "id": "3.1-09",
+    "obj": "3.1",
+    "front": "Virtualization\n\nWhat does it abstract?",
+    "back": "Simulates the hardware or software that other software runs on, so many virtual machines can share one physical host.",
+    "src": {
+      "title": "NIST Glossary: virtualization",
+      "url": "https://csrc.nist.gov/glossary/term/virtualization#:~:text=The%20simulation%20of%20the%20software%20and%2For%20hardware%20upon%20which%20other%20software%20runs",
+      "q": "The simulation of the software and/or hardware upon which other software runs"
+    }
+  },
+  {
+    "id": "3.1-10",
+    "obj": "3.1",
+    "front": "Hypervisor\n\nWhat does it manage?",
+    "back": "The virtualization layer that manages guest operating systems on a host and controls instruction flow between guests and hardware. Compromise of it affects every guest.",
+    "src": {
+      "title": "NIST Glossary: hypervisor",
+      "url": "https://csrc.nist.gov/glossary/term/hypervisor#:~:text=The%20virtualization%20component%20that%20manages%20the%20guest%20OSs%20on%20a%20host",
+      "q": "The virtualization component that manages the guest OSs on a host"
+    }
+  },
+  {
+    "id": "3.1-11",
+    "obj": "3.1",
+    "front": "Container\n\nWhat does it package?",
+    "back": "An application and its dependencies packaged to run in an isolated environment, lighter than a full VM because it shares the host kernel.",
+    "src": {
+      "title": "NIST Glossary: container",
+      "url": "https://csrc.nist.gov/glossary/term/container#:~:text=A%20method%20for%20packaging%20and%20securely%20running%20an%20application%20within%20an%20application%20virtualization%20environment",
+      "q": "A method for packaging and securely running an application within an application virtualization environment"
+    }
+  },
+  {
+    "id": "3.1-12",
+    "obj": "3.1",
+    "front": "Snapshot\n\nWhat does it capture?",
+    "back": "The state of a running VM image, stored as differences from the base image. Handy for rollback, not a replacement for backups.",
+    "src": {
+      "title": "NIST Glossary: snapshot",
+      "url": "https://csrc.nist.gov/glossary/term/snapshot#:~:text=A%20record%20of%20the%20state%20of%20a%20running%20image",
+      "q": "A record of the state of a running image"
+    }
+  },
+  {
+    "id": "3.1-13",
+    "obj": "3.1",
+    "front": "Software-defined networking (SDN)\n\nWhat does it separate or program?",
+    "back": "Network behavior is initialized, controlled and changed dynamically through open interfaces and software, instead of device-by-device configuration.",
+    "src": {
+      "title": "RFC 7426: SDN Layers and Architecture Terminology",
+      "url": "https://www.rfc-editor.org/rfc/rfc7426.html#:~:text=Software-Defined%20Networking%20%28SDN%29%20refers%20to%20a%20new%20approach%20for%20network%20programmability",
+      "q": "Software-Defined Networking (SDN) refers to a new approach for network programmability"
+    }
+  },
+  {
+    "id": "3.1-14",
+    "obj": "3.1",
+    "front": "Industrial control system (ICS)\n\nWhat does it control?",
+    "back": "Systems that control industrial processes such as manufacturing and distribution. Availability and safety matter most, and patching is often hard.",
+    "src": {
+      "title": "NIST Glossary: industrial control system",
+      "url": "https://csrc.nist.gov/glossary/term/industrial_control_system#:~:text=An%20information%20system%20used%20to%20control%20industrial%20processes%20such%20as%20manufacturing",
+      "q": "An information system used to control industrial processes such as manufacturing"
+    }
+  },
+  {
+    "id": "3.1-15",
+    "obj": "3.1",
+    "front": "SCADA\n\nWhat distances does it work over?",
+    "back": "Computerized systems that gather data and apply operational controls over long distances, such as power grids and pipelines.",
+    "src": {
+      "title": "NIST Glossary: SCADA",
+      "url": "https://csrc.nist.gov/glossary/term/scada#:~:text=A%20generic%20name%20for%20a%20computerized%20system%20that%20is%20capable%20of%20gathering%20and%20processing%20data%20and%20applying%20operational%20controls%20over%20long%20distances",
+      "q": "A generic name for a computerized system that is capable of gathering and processing data and applying operational controls over long distances"
+    }
+  },
+  {
+    "id": "3.1-16",
+    "obj": "3.1",
+    "front": "Internet of Things (IoT)\n\nWhy is it a security concern?",
+    "back": "Sensors, controllers and appliances connected to the internet. Often weak default credentials and little patching, which widens the attack surface.",
+    "src": {
+      "title": "NIST Glossary: internet of things",
+      "url": "https://csrc.nist.gov/glossary/term/internet_of_things#:~:text=user%20or%20industrial%20devices%20that%20are%20connected%20to%20the%20internet",
+      "q": "user or industrial devices that are connected to the internet"
+    }
+  },
+  {
+    "id": "3.1-17",
+    "obj": "3.1",
+    "front": "Air gap\n\nWhat connection is allowed?",
+    "back": "No physical connection, and any data transfer is manual under human control. Strongest isolation, but removable media can still bridge it.",
+    "src": {
+      "title": "NIST Glossary: air gap",
+      "url": "https://csrc.nist.gov/glossary/term/air_gap#:~:text=any%20logical%20connection%20is%20not%20automated",
+      "q": "any logical connection is not automated"
+    }
+  },
+  {
+    "id": "3.2-01",
+    "obj": "3.2",
+    "front": "Demilitarized zone (DMZ)\n\nWhere does it sit and what goes in it?",
+    "back": "A perimeter segment between internal and external networks that holds externally reachable services, such as web servers, so the internal network stays protected.",
+    "src": {
+      "title": "NIST Glossary: demilitarized zone",
+      "url": "https://csrc.nist.gov/glossary/term/demilitarized_zone#:~:text=Perimeter%20network%20segment%20that%20is%20logically%20between%20internal%20and%20external%20networks",
+      "q": "Perimeter network segment that is logically between internal and external networks"
+    }
+  },
+  {
+    "id": "3.2-02",
+    "obj": "3.2",
+    "front": "Firewall\n\nWhat does it do?",
+    "back": "A gateway that limits access between networks according to security policy. Rules allow or deny traffic by address, port and state.",
+    "src": {
+      "title": "NIST Glossary: firewall",
+      "url": "https://csrc.nist.gov/glossary/term/firewall#:~:text=A%20gateway%20that%20limits%20access%20between%20networks%20in%20accordance%20with%20local%20security%20policy",
+      "q": "A gateway that limits access between networks in accordance with local security policy"
+    }
+  },
+  {
+    "id": "3.2-03",
+    "obj": "3.2",
+    "front": "Proxy server\n\nWhat does it do?",
+    "back": "Handles clients' requests by forwarding them to other servers. Allows content filtering, caching and hiding client addresses.",
+    "src": {
+      "title": "NIST Glossary: proxy server",
+      "url": "https://csrc.nist.gov/glossary/term/proxy_server#:~:text=A%20server%20that%20services%20the%20requests%20of%20its%20clients%20by%20forwarding%20those%20requests%20to%20other%20servers",
+      "q": "A server that services the requests of its clients by forwarding those requests to other servers"
+    }
+  },
+  {
+    "id": "3.2-04",
+    "obj": "3.2",
+    "front": "Intrusion prevention system (IPS)\n\nHow does it differ from an IDS?",
+    "back": "Detects intrusive activity and also tries to stop it, ideally before it reaches its target. Sits inline, so a fault can disrupt traffic.",
+    "src": {
+      "title": "NIST Glossary: intrusion prevention system",
+      "url": "https://csrc.nist.gov/glossary/term/intrusion_prevention_system#:~:text=A%20system%20that%20can%20detect%20an%20intrusive%20activity%20and%20also%20attempt%20to%20stop%20the%20activity",
+      "q": "A system that can detect an intrusive activity and also attempt to stop the activity"
+    }
+  },
+  {
+    "id": "3.2-05",
+    "obj": "3.2",
+    "front": "Bastion host\n\nWhy is it hardened?",
+    "back": "A special-purpose computer exposed on a network and designed and configured to withstand attacks. Admins reach internal systems through it (jump server pattern).",
+    "src": {
+      "title": "NIST Glossary: bastion host",
+      "url": "https://csrc.nist.gov/glossary/term/bastion_host#:~:text=A%20special%20purpose%20computer%20on%20a%20network%20specifically%20designed%20and%20configured%20to%20withstand%20attacks",
+      "q": "A special purpose computer on a network specifically designed and configured to withstand attacks"
+    }
+  },
+  {
+    "id": "3.2-06",
+    "obj": "3.2",
+    "front": "Fail-secure vs fail-safe\n\nWhat does each protect when a device fails?",
+    "back": "Fail-secure keeps the secure state on failure (a door stays locked). Fail-safe prevents damage to people and property (a door unlocks). Choose by which risk matters more.",
+    "src": {
+      "title": "NIST Glossary: fail secure",
+      "url": "https://csrc.nist.gov/glossary/term/fail_secure#:~:text=prevents%20loss%20of%20secure%20state%20when%20a%20failure%20occurs",
+      "q": "prevents loss of secure state when a failure occurs"
+    }
+  },
+  {
+    "id": "3.2-07",
+    "obj": "3.2",
+    "front": "Extensible Authentication Protocol (EAP)\n\nWhat is it?",
+    "back": "A framework for adding authentication methods to a protocol in a standard way. Used with 802.1X port-based access control on wired and wireless networks.",
+    "src": {
+      "title": "NIST Glossary: EAP",
+      "url": "https://csrc.nist.gov/glossary/term/extensible_authentication_protocol#:~:text=A%20framework%20for%20adding%20arbitrary%20authentication%20methods%20in%20a%20standardized%20way%20to%20any%20protocol",
+      "q": "A framework for adding arbitrary authentication methods in a standardized way to any protocol"
+    }
+  },
+  {
+    "id": "3.2-08",
+    "obj": "3.2",
+    "front": "Virtual private network (VPN)\n\nWhat does it create?",
+    "back": "A protected link over a shared network using tunneling and security controls, giving the impression of a dedicated line.",
+    "src": {
+      "title": "NIST Glossary: virtual private network",
+      "url": "https://csrc.nist.gov/glossary/term/virtual_private_network#:~:text=Protected%20information%20system%20link%20utilizing%20tunneling%2C%20security%20controls%2C%20and%20endpoint%20address%20translation",
+      "q": "Protected information system link utilizing tunneling, security controls, and endpoint address translation"
+    }
+  },
+  {
+    "id": "3.2-09",
+    "obj": "3.2",
+    "front": "IPsec\n\nWhat services does it provide?",
+    "back": "Cryptographic security for IPv4 and IPv6: access control, connectionless integrity, data origin authentication and replay protection. Used for VPN tunnels.",
+    "src": {
+      "title": "NIST Glossary: IPsec",
+      "url": "https://csrc.nist.gov/glossary/term/ipsec#:~:text=cryptographically-based%20security%20for%20IPv4%20and%20IPv6",
+      "q": "cryptographically-based security for IPv4 and IPv6"
+    }
+  },
+  {
+    "id": "3.3-01",
+    "obj": "3.3",
+    "front": "Personally identifiable information (PII)\n\nWhat counts?",
+    "back": "Information that can distinguish or trace a person's identity, like name, SSN or biometrics, alone or combined with other data. Regulated data.",
+    "src": {
+      "title": "NIST Glossary: PII",
+      "url": "https://csrc.nist.gov/glossary/term/personally_identifiable_information#:~:text=Information%20that%20can%20be%20used%20to%20distinguish%20or%20trace%20an%20individual",
+      "q": "Information that can be used to distinguish or trace an individual"
+    }
+  },
+  {
+    "id": "3.3-02",
+    "obj": "3.3",
+    "front": "Controlled unclassified information (CUI)\n\nWho defines it?",
+    "back": "Government-created or government-held information that a law, regulation or policy requires to be protected, though it is not classified.",
+    "src": {
+      "title": "NIST Glossary: CUI",
+      "url": "https://csrc.nist.gov/glossary/term/controlled_unclassified_information#:~:text=Information%20the%20Government%20creates%20or%20possesses",
+      "q": "Information the Government creates or possesses"
+    }
+  },
+  {
+    "id": "3.3-03",
+    "obj": "3.3",
+    "front": "Proprietary information\n\nWhat does it include?",
+    "back": "Business information such as financial data, research and trade secrets that gives a company its edge. Protected by contracts and access controls.",
+    "src": {
+      "title": "NIST Glossary: proprietary information",
+      "url": "https://csrc.nist.gov/glossary/term/proprietary_information#:~:text=Material%20and%20information%20relating%20to%20or%20associated%20with%20a%20company",
+      "q": "Material and information relating to or associated with a company"
+    }
+  },
+  {
+    "id": "3.3-04",
+    "obj": "3.3",
+    "front": "Sensitive information\n\nWhat makes data sensitive?",
+    "back": "Information whose loss, misuse or unauthorized access or modification could harm interests or individuals' privacy. Classification drives handling rules.",
+    "src": {
+      "title": "NIST Glossary: sensitive information",
+      "url": "https://csrc.nist.gov/glossary/term/sensitive_information#:~:text=the%20loss%2C%20misuse%2C%20or%20unauthorized%20access%20to%20or%20modification%20of",
+      "q": "the loss, misuse, or unauthorized access to or modification of"
+    }
+  },
+  {
+    "id": "3.3-05",
+    "obj": "3.3",
+    "front": "Data loss prevention (DLP)\n\nWhich data states does it cover?",
+    "back": "Identifies, monitors and protects data in use (endpoint), in motion (network) and at rest (storage) with deep content inspection and policy.",
+    "src": {
+      "title": "NIST Glossary: data loss prevention",
+      "url": "https://csrc.nist.gov/glossary/term/data_loss_prevention#:~:text=to%20identify%2C%20monitor%2C%20and%20protect%20data%20in%20use",
+      "q": "to identify, monitor, and protect data in use"
+    }
+  },
+  {
+    "id": "3.4-01",
+    "obj": "3.4",
+    "front": "High availability\n\nWhat feature delivers it?",
+    "back": "A failover feature that keeps service up during device or component interruptions, usually through redundant components.",
+    "src": {
+      "title": "NIST Glossary: high availability",
+      "url": "https://csrc.nist.gov/glossary/term/high_availability#:~:text=A%20failover%20feature%20to%20ensure%20availability%20during%20device%20or%20component%20interruptions",
+      "q": "A failover feature to ensure availability during device or component interruptions"
+    }
+  },
+  {
+    "id": "3.4-02",
+    "obj": "3.4",
+    "front": "Failover\n\nWho triggers it?",
+    "back": "Automatic switch to a redundant or standby system when the active one fails, typically without human intervention.",
+    "src": {
+      "title": "NIST Glossary: failover",
+      "url": "https://csrc.nist.gov/glossary/term/failover#:~:text=The%20capability%20to%20switch%20over%20automatically",
+      "q": "The capability to switch over automatically"
+    }
+  },
+  {
+    "id": "3.4-03",
+    "obj": "3.4",
+    "front": "Fault tolerance\n\nWhat does the system keep doing?",
+    "back": "Continuing to run properly when one or more components fail, through redundancy such as RAID, dual power supplies and clustering.",
+    "src": {
+      "title": "NIST Glossary: fault tolerance",
+      "url": "https://csrc.nist.gov/glossary/term/fault_tolerance#:~:text=The%20ability%20of%20a%20system%20to%20continue%20to%20run%20when%20one%20or%20more%20component%28s%29%20of%20the%20system%20fails",
+      "q": "The ability of a system to continue to run when one or more component(s) of the system fails"
+    }
+  },
+  {
+    "id": "3.4-04",
+    "obj": "3.4",
+    "front": "Hot site\n\nHow ready is it?",
+    "back": "A fully operational offsite facility with hardware and software, ready to take over almost immediately. Fastest and most expensive.",
+    "src": {
+      "title": "NIST Glossary: hot site",
+      "url": "https://csrc.nist.gov/glossary/term/hot_site#:~:text=A%20fully%20operational%20offsite%20data%20processing%20facility%20equipped%20with%20hardware%20and%20software",
+      "q": "A fully operational offsite data processing facility equipped with hardware and software"
+    }
+  },
+  {
+    "id": "3.4-05",
+    "obj": "3.4",
+    "front": "Warm site\n\nHow ready is it?",
+    "back": "A conditioned work space partially equipped with systems and telecom to support relocated operations. Hours to days to activate.",
+    "src": {
+      "title": "NIST Glossary: warm site",
+      "url": "https://csrc.nist.gov/glossary/term/warm_site#:~:text=An%20environmentally%20conditioned%20work%20space%20that%20is%20partially%20equipped",
+      "q": "An environmentally conditioned work space that is partially equipped"
+    }
+  },
+  {
+    "id": "3.4-06",
+    "obj": "3.4",
+    "front": "Cold site\n\nWhat does it lack?",
+    "back": "Has power and physical space but no computer equipment in place. Cheapest, slowest to recover.",
+    "src": {
+      "title": "NIST Glossary: cold site",
+      "url": "https://csrc.nist.gov/glossary/term/cold_site#:~:text=A%20backup%20facility%20that%20has%20the%20necessary%20electrical%20and%20physical%20components%20of%20a%20computer%20facility",
+      "q": "A backup facility that has the necessary electrical and physical components of a computer facility"
+    }
+  },
+  {
+    "id": "3.4-07",
+    "obj": "3.4",
+    "front": "Recovery time objective (RTO)\n\nWhat does it measure?",
+    "back": "How long a system can be in recovery before harming the mission. Sets how fast you must restore.",
+    "src": {
+      "title": "NIST Glossary: recovery time objective",
+      "url": "https://csrc.nist.gov/glossary/term/recovery_time_objective#:~:text=The%20overall%20length%20of%20time%20an%20information%20system",
+      "q": "The overall length of time an information system"
+    }
+  },
+  {
+    "id": "3.4-08",
+    "obj": "3.4",
+    "front": "Recovery point objective (RPO)\n\nWhat does it measure?",
+    "back": "The point in time to which data must be recovered after an outage. Sets how much data loss is acceptable, and so how often to back up.",
+    "src": {
+      "title": "NIST Glossary: recovery point objective",
+      "url": "https://csrc.nist.gov/glossary/term/recovery_point_objective#:~:text=The%20point%20in%20time%20to%20which%20data%20must%20be%20recovered%20after%20an%20outage",
+      "q": "The point in time to which data must be recovered after an outage"
+    }
+  },
+  {
+    "id": "3.4-09",
+    "obj": "3.4",
+    "front": "Backup\n\nWhat is its purpose?",
+    "back": "A copy of files and programs made so they can be recovered. Keep copies offsite, encrypt them and test restores.",
+    "src": {
+      "title": "NIST Glossary: backup",
+      "url": "https://csrc.nist.gov/glossary/term/backup#:~:text=A%20copy%20of%20files%20and%20programs%20made%20to%20facilitate%20recovery%20if%20necessary",
+      "q": "A copy of files and programs made to facilitate recovery if necessary"
+    }
+  },
+  {
+    "id": "3.4-10",
+    "obj": "3.4",
+    "front": "Uninterruptible power supply (UPS)\n\nHow long does it run devices?",
+    "back": "A battery unit that keeps connected devices running for a short time after power is lost. Bridges to a generator or clean shutdown.",
+    "src": {
+      "title": "NIST Glossary: UPS",
+      "url": "https://csrc.nist.gov/glossary/term/uninterruptible_power_supply#:~:text=A%20device%20with%20an%20internal%20battery%20that%20allows%20connected%20devices%20to%20run%20for%20at%20least%20a%20short%20time",
+      "q": "A device with an internal battery that allows connected devices to run for at least a short time"
+    }
+  },
+  {
+    "id": "3.4-11",
+    "obj": "3.4",
+    "front": "Tabletop exercise\n\nHow is the plan tested?",
+    "back": "A discussion-based exercise where people with roles in a plan meet and talk through their responsibilities to validate it. Low cost, no systems touched.",
+    "src": {
+      "title": "NIST Glossary: tabletop exercise",
+      "url": "https://csrc.nist.gov/glossary/term/tabletop_exercise#:~:text=A%20discussion-based%20exercise%20where%20personnel%20with%20roles%20and%20responsibilities%20in%20a%20particular%20IT%20plan%20meet",
+      "q": "A discussion-based exercise where personnel with roles and responsibilities in a particular IT plan meet"
+    }
+  },
+  {
+    "id": "3.4-12",
+    "obj": "3.4",
+    "front": "Business continuity plan (BCP)\n\nWhat does it keep going?",
+    "back": "Documented instructions for sustaining mission and business processes during and after a significant disruption.",
+    "src": {
+      "title": "NIST Glossary: business continuity plan",
+      "url": "https://csrc.nist.gov/glossary/term/business_continuity_plan#:~:text=The%20documentation%20of%20a%20predetermined%20set%20of%20instructions%20or%20procedures",
+      "q": "The documentation of a predetermined set of instructions or procedures"
+    }
+  },
+  {
+    "id": "3.4-13",
+    "obj": "3.4",
+    "front": "Continuity of operations plan (COOP)\n\nWhat does it guide?",
+    "back": "Management policy and procedures guiding the enterprise response to major loss of capability or damage to facilities.",
+    "src": {
+      "title": "NIST Glossary: continuity of operations plan",
+      "url": "https://csrc.nist.gov/glossary/term/continuity_of_operations_plan#:~:text=Management%20policy%20and%20procedures%20used%20to%20guide%20an%20enterprise%20response%20to%20a%20major%20loss%20of%20enterprise%20capability",
+      "q": "Management policy and procedures used to guide an enterprise response to a major loss of enterprise capability"
+    }
+  },
+  {
+    "id": "3.4-14",
+    "obj": "3.4",
+    "front": "Disaster recovery plan (DRP)\n\nWhat does it focus on?",
+    "back": "Procedures to restore systems and capability after a loss. Narrower than BCP: it covers IT recovery.",
+    "src": {
+      "title": "NIST Glossary: disaster recovery plan",
+      "url": "https://csrc.nist.gov/glossary/term/disaster_recovery_plan#:~:text=Management%20policy%20and%20procedures%20used%20to%20guide%20an%20enterprise%20response%20to%20a%20perceived%20loss%20of%20mission%20capability",
+      "q": "Management policy and procedures used to guide an enterprise response to a perceived loss of mission capability"
+    }
   }
 ]
