@@ -8,5 +8,10 @@
     "id": "aws-saa",
     "title": "AWS Solutions Architect Associate (SAA-C03)",
     "file": "decks/aws-saa.json"
+  },
+  {
+    "id": "ccna",
+    "title": "CCNA (200-301 v1.1)",
+    "file": "decks/ccna.json"
   }
 ]

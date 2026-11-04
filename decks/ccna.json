@@ -1,0 +1,1355 @@
+[
+  {
+    "id": "1.1-01",
+    "obj": "1.1",
+    "front": "Router: what does it do with a packet?",
+    "back": "A router looks up the destination in its routing table (static and dynamic routes) and forwards the packet toward the next network. Think layer 3.",
+    "src": {
+      "title": "Wikipedia: Router (computing)",
+      "url": "https://en.wikipedia.org/wiki/Router_(computing)#:~:text=Static%20and%20dynamic%20routes%20are%20stored%20in%20the%20routing%20table.",
+      "q": "Static and dynamic routes are stored in the routing table."
+    }
+  },
+  {
+    "id": "1.1-02",
+    "obj": "1.1",
+    "front": "Router forwarding plane vs control plane",
+    "back": "The forwarding plane moves packets between interfaces; the control plane builds the routing table that tells it where to go.",
+    "src": {
+      "title": "Wikipedia: Router (computing)",
+      "url": "https://en.wikipedia.org/wiki/Router_(computing)#:~:text=This%20unit%20forwards%20the%20data%20packets%20between%20incoming%20and%20outgoing%20interface%20connections.",
+      "q": "This unit forwards the data packets between incoming and outgoing interface connections."
+    }
+  },
+  {
+    "id": "1.1-03",
+    "obj": "1.1",
+    "front": "Layer 2 switch: what does it forward on?",
+    "back": "It learns the source MAC of each connected device and keeps a table mapping MAC addresses to ports, then forwards frames by destination MAC.",
+    "src": {
+      "title": "Wikipedia: Network switch",
+      "url": "https://en.wikipedia.org/wiki/Network_switch#:~:text=The%20bridge%20learns%20the%20MAC%20address%20of%20each%20connected%20device%2C%20storing%20this%20data%20in%20a%20table%20that%20maps%20MAC%20addresses%20to%20ports.",
+      "q": "The bridge learns the MAC address of each connected device, storing this data in a table that maps MAC addresses to ports."
+    }
+  },
+  {
+    "id": "1.1-04",
+    "obj": "1.1",
+    "front": "NGFW vs traditional firewall",
+    "back": "A next-generation firewall inspects more OSI layers than ports and protocols alone, so it can filter on packet contents such as the application.",
+    "src": {
+      "title": "Wikipedia: Next-generation firewall",
+      "url": "https://en.wikipedia.org/wiki/Next-generation_firewall#:~:text=The%20goal%20of%20next-generation%20firewalls%20is%20to%20include%20more%20layers%20of%20the%20OSI%20model",
+      "q": "The goal of next-generation firewalls is to include more layers of the OSI model"
+    }
+  },
+  {
+    "id": "1.1-05",
+    "obj": "1.1",
+    "front": "IPS: how is it different from IDS?",
+    "back": "An intrusion prevention system identifies malicious activity, logs and reports it, and also tries to block or stop it. A plain IDS only monitors.",
+    "src": {
+      "title": "Wikipedia: Intrusion detection system",
+      "url": "https://en.wikipedia.org/wiki/Intrusion_detection_system#:~:text=The%20main%20functions%20of%20intrusion%20prevention%20systems%20are%20to%20identify%20malicious%20activity%2C%20log%20information%20about%20this%20activity%2C%20report%20it%20and%20attempt%20to%20block%20or%20stop%20it.",
+      "q": "The main functions of intrusion prevention systems are to identify malicious activity, log information about this activity, report it and attempt to block or stop it."
+    }
+  },
+  {
+    "id": "1.1-06",
+    "obj": "1.1",
+    "front": "What does a wireless LAN controller do for APs?",
+    "back": "It automatically handles AP configuration, so lightweight APs are managed centrally instead of one by one.",
+    "src": {
+      "title": "Wikipedia: Wireless LAN controller",
+      "url": "https://en.wikipedia.org/wiki/Wireless_LAN_controller#:~:text=The%20WLAN%20controller%20automatically%20handles%20the%20configuration%20of%20wireless%20access%20points",
+      "q": "The WLAN controller automatically handles the configuration of wireless access points"
+    }
+  },
+  {
+    "id": "1.1-07",
+    "obj": "1.1",
+    "front": "How do a lightweight AP and its controller talk?",
+    "back": "CAPWAP: UDP 5246 carries control traffic and UDP 5247 carries data. It replaced Cisco's older LWAPP.",
+    "src": {
+      "title": "Wikipedia: CAPWAP",
+      "url": "https://en.wikipedia.org/wiki/CAPWAP#:~:text=CAPWAP%20uses%20UDP%20ports%205246%20%28control%20channel%29%20and%205247%20%28data%20channel%29.",
+      "q": "CAPWAP uses UDP ports 5246 (control channel) and 5247 (data channel)."
+    }
+  },
+  {
+    "id": "1.1-08",
+    "obj": "1.1",
+    "front": "ICMP: what is it for?",
+    "back": "Error and control messages for IP, such as destination unreachable and echo (ping). It is an integral part of IP.",
+    "src": {
+      "title": "RFC 792",
+      "url": "https://www.rfc-editor.org/rfc/rfc792#:~:text=ICMP%20is%20actually%20an%20integral%20part%20of%20IP%2C%20and%20must%20be%20implemented%20by%20every%20IP%20module.",
+      "q": "ICMP is actually an integral part of IP, and must be implemented by every IP module."
+    }
+  },
+  {
+    "id": "1.2-01",
+    "obj": "1.2",
+    "front": "Three-tier design: what does each layer connect?",
+    "back": "Access switches connect to aggregation (distribution) switches, and those connect to the core. Core switches also link to the Internet.",
+    "src": {
+      "title": "Wikipedia: Data center network architectures",
+      "url": "https://en.wikipedia.org/wiki/Data_center_network_architectures#:~:text=All%20of%20the%20aggregate%20layer%20switches%20are%20connected%20to%20each%20other%20by%20core%20layer%20switches.",
+      "q": "All of the aggregate layer switches are connected to each other by core layer switches."
+    }
+  },
+  {
+    "id": "1.2-02",
+    "obj": "1.2",
+    "front": "Three-tier weaknesses",
+    "back": "The classic three-tier design struggles with scalability, fault tolerance, energy efficiency and cross-sectional bandwidth, which is why leaf-and-spine fabrics appeared.",
+    "src": {
+      "title": "Wikipedia: Data center network architectures",
+      "url": "https://en.wikipedia.org/wiki/Data_center_network_architectures#:~:text=Major%20problems%20faced%20by%20the%20three-tier%20architecture%20include%2C%20scalability%2C%20fault%20tolerance",
+      "q": "Major problems faced by the three-tier architecture include, scalability, fault tolerance"
+    }
+  },
+  {
+    "id": "1.2-03",
+    "obj": "1.2",
+    "front": "WAN vs LAN",
+    "back": "A LAN is physically close together. A WAN spans wide areas, is often built on leased telecom circuits, and can be private to one organization.",
+    "src": {
+      "title": "Wikipedia: Wide area network",
+      "url": "https://en.wikipedia.org/wiki/Wide_area_network#:~:text=WANs%20can%20be%20separated%20from%20local%20area%20networks%20%28LANs%29%20in%20that%20the%20latter%20refers%20to%20physically%20proximal%20networks.",
+      "q": "WANs can be separated from local area networks (LANs) in that the latter refers to physically proximal networks."
+    }
+  },
+  {
+    "id": "1.3-01",
+    "obj": "1.3",
+    "front": "Single-mode vs multi-mode fiber",
+    "back": "Multi-mode has a large core, carries multiple light modes and is limited in reach by modal dispersion. Single-mode keeps light pulses clean over longer distances.",
+    "src": {
+      "title": "Wikipedia: Multi-mode optical fiber",
+      "url": "https://en.wikipedia.org/wiki/Multi-mode_optical_fiber#:~:text=Multi-mode%20fiber%20has%20a%20fairly%20large%20core%20diameter%20that%20enables%20multiple%20light%20modes%20to%20be%20propagated%20and%20limits%20the%20maximum%20length%20of%20a%20transmission%20link%20because%20of%20modal%20dispersion",
+      "q": "Multi-mode fiber has a fairly large core diameter that enables multiple light modes to be propagated and limits the maximum length of a transmission link because of modal dispersion"
+    }
+  },
+  {
+    "id": "1.3-02",
+    "obj": "1.3",
+    "front": "Why is single-mode used for long runs?",
+    "back": "It has no modal dispersion, so it keeps the fidelity of each light pulse over longer distances than multi-mode.",
+    "src": {
+      "title": "Wikipedia: Single-mode optical fiber",
+      "url": "https://en.wikipedia.org/wiki/Single-mode_optical_fiber#:~:text=Single-mode%20fibers%20are%20therefore%20better%20at%20retaining%20the%20fidelity%20of%20each%20light%20pulse%20over%20longer%20distances%20than%20multi-mode%20fibers.",
+      "q": "Single-mode fibers are therefore better at retaining the fidelity of each light pulse over longer distances than multi-mode fibers."
+    }
+  },
+  {
+    "id": "1.3-03",
+    "obj": "1.3",
+    "front": "Why are copper pairs twisted?",
+    "back": "Twisting reduces electromagnetic radiation and crosstalk between neighboring pairs and improves rejection of outside interference.",
+    "src": {
+      "title": "Wikipedia: Twisted pair",
+      "url": "https://en.wikipedia.org/wiki/Twisted_pair#:~:text=a%20twisted%20pair%20reduces%20electromagnetic%20radiation%20from%20the%20pair%20and%20crosstalk%20between%20neighboring%20pairs",
+      "q": "a twisted pair reduces electromagnetic radiation from the pair and crosstalk between neighboring pairs"
+    }
+  },
+  {
+    "id": "1.3-04",
+    "obj": "1.3",
+    "front": "Shared-media Ethernet: how are collisions handled?",
+    "back": "CSMA/CD: a station that detects a collision stops, sends a jam signal and waits a random time before retrying. Full-duplex point-to-point links do not need it.",
+    "src": {
+      "title": "Wikipedia: CSMA/CD",
+      "url": "https://en.wikipedia.org/wiki/Carrier-sense_multiple_access_with_collision_detection#:~:text=the%20station%20stops%20transmitting%20that%20frame%2C%20transmits%20a%20jam%20signal%2C%20and%20then%20waits%20for%20a%20random%20time%20interval%20before%20trying%20to%20resend%20the%20frame.",
+      "q": "the station stops transmitting that frame, transmits a jam signal, and then waits for a random time interval before trying to resend the frame."
+    }
+  },
+  {
+    "id": "1.4-01",
+    "obj": "1.4",
+    "front": "What does autonegotiation settle?",
+    "back": "Two connected devices choose common transmission parameters: speed, duplex mode and flow control.",
+    "src": {
+      "title": "Wikipedia: Auto-negotiation",
+      "url": "https://en.wikipedia.org/wiki/Auto-negotiation#:~:text=two%20connected%20devices%20choose%20common%20transmission%20parameters%2C%20such%20as%20speed%2C%20duplex%20mode%2C%20and%20flow%20control",
+      "q": "two connected devices choose common transmission parameters, such as speed, duplex mode, and flow control"
+    }
+  },
+  {
+    "id": "1.4-02",
+    "obj": "1.4",
+    "front": "How does a duplex mismatch happen?",
+    "back": "One side autonegotiates and falls back to half duplex while the peer is hard-set to full duplex. The result is a link that works inefficiently.",
+    "src": {
+      "title": "Wikipedia: Duplex mismatch",
+      "url": "https://en.wikipedia.org/wiki/Duplex_mismatch#:~:text=the%20autonegotiating%20end%20of%20the%20connection%20uses%20half%20duplex%20while%20the%20non-negotiating%20peer%20is%20locked%20at%20full%20duplex%2C%20and%20this%20is%20a%20duplex%20mismatch.",
+      "q": "the autonegotiating end of the connection uses half duplex while the non-negotiating peer is locked at full duplex, and this is a duplex mismatch."
+    }
+  },
+  {
+    "id": "1.4-03",
+    "obj": "1.4",
+    "front": "Duplex mismatch symptom: who sees the collisions?",
+    "back": "The half-duplex end sees incoming data while sending and counts a collision. The full-duplex end has CSMA/CD disabled and detects none.",
+    "src": {
+      "title": "Wikipedia: Duplex mismatch",
+      "url": "https://en.wikipedia.org/wiki/Duplex_mismatch#:~:text=It%20does%20not%20detect%20any%20collision%20since%20CSMA%2FCD%20is%20disabled%20on%20the%20full-duplex%20side.",
+      "q": "It does not detect any collision since CSMA/CD is disabled on the full-duplex side."
+    }
+  },
+  {
+    "id": "1.5-01",
+    "obj": "1.5",
+    "front": "TCP in one line",
+    "back": "A connection-oriented, end-to-end reliable protocol. Sequence numbers and acknowledgments order segments and drop duplicates.",
+    "src": {
+      "title": "RFC 793",
+      "url": "https://www.rfc-editor.org/rfc/rfc793#:~:text=TCP%20is%20a%20connection-oriented%2C%20end-to-end%20reliable%20protocol%20designed%20to%20fit%20into%20a%20layered%20hierarchy%20of%20protocols%20which%20support%20multi-network%20applications.",
+      "q": "TCP is a connection-oriented, end-to-end reliable protocol designed to fit into a layered hierarchy of protocols which support multi-network applications."
+    }
+  },
+  {
+    "id": "1.5-02",
+    "obj": "1.5",
+    "front": "TCP three-way handshake",
+    "back": "Connections are set up with the SYN control flag in an exchange of three messages. The connection is established once sequence numbers are synchronized in both directions.",
+    "src": {
+      "title": "RFC 793",
+      "url": "https://www.rfc-editor.org/rfc/rfc793#:~:text=The%20procedures%20to%20establish%20connections%20utilize%20the%20synchronize%20%28SYN%29%20control%20flag%20and%20involves%20an%20exchange%20of%20three%20messages.",
+      "q": "The procedures to establish connections utilize the synchronize (SYN) control flag and involves an exchange of three messages."
+    }
+  },
+  {
+    "id": "1.5-03",
+    "obj": "1.5",
+    "front": "How does TCP keep data in order?",
+    "back": "Each octet gets a sequence number and needs a positive acknowledgment (ACK). The receiver uses the numbers to reorder segments and discard duplicates.",
+    "src": {
+      "title": "RFC 793",
+      "url": "https://www.rfc-editor.org/rfc/rfc793#:~:text=At%20the%20receiver%2C%20the%20sequence%20numbers%20are%20used%20to%20correctly%20order%20segments%20that%20may%20be%20received%20out%20of%20order%20and%20to%20eliminate%20duplicates.",
+      "q": "At the receiver, the sequence numbers are used to correctly order segments that may be received out of order and to eliminate duplicates."
+    }
+  },
+  {
+    "id": "1.5-04",
+    "obj": "1.5",
+    "front": "UDP in one line",
+    "back": "Minimal mechanism: it sends datagrams with no guarantee of delivery or duplicate protection.",
+    "src": {
+      "title": "RFC 768",
+      "url": "https://www.rfc-editor.org/rfc/rfc768#:~:text=The%20protocol%20is%20transaction%20oriented%2C%20and%20delivery%20and%20duplicate%20protection%20are%20not%20guaranteed.",
+      "q": "The protocol is transaction oriented, and delivery and duplicate protection are not guaranteed."
+    }
+  },
+  {
+    "id": "1.5-05",
+    "obj": "1.5",
+    "front": "When should an app choose TCP over UDP?",
+    "back": "When it needs ordered, reliable delivery of a data stream. UDP's own spec points those applications to TCP.",
+    "src": {
+      "title": "RFC 768",
+      "url": "https://www.rfc-editor.org/rfc/rfc768#:~:text=Applications%20requiring%20ordered%20reliable%20delivery%20of%20streams%20of%20data%20should%20use%20the%20Transmission%20Control%20Protocol%20%28TCP%29",
+      "q": "Applications requiring ordered reliable delivery of streams of data should use the Transmission Control Protocol (TCP)"
+    }
+  },
+  {
+    "id": "1.6-01",
+    "obj": "1.6",
+    "front": "Subnet mask: what does it do?",
+    "back": "ANDed with an IP address it yields the routing prefix, which splits the address into network and host parts.",
+    "src": {
+      "title": "Wikipedia: Subnet",
+      "url": "https://en.wikipedia.org/wiki/Subnet#:~:text=which%20is%20the%20bitmask%20that%2C%20when%20applied%20by%20a%20bitwise%20AND%20operation%20to%20any%20IP%20address%20in%20the%20network%2C%20yields%20the%20routing%20prefix.",
+      "q": "which is the bitmask that, when applied by a bitwise AND operation to any IP address in the network, yields the routing prefix."
+    }
+  },
+  {
+    "id": "1.6-02",
+    "obj": "1.6",
+    "front": "CIDR notation",
+    "back": "The routing prefix is written as the first address of the network, a slash, then the prefix bit-length (for example /24).",
+    "src": {
+      "title": "Wikipedia: Subnet",
+      "url": "https://en.wikipedia.org/wiki/Subnet#:~:text=followed%20by%20a%20slash%20character%20%28%2F%29%2C%20and%20ending%20with%20the%20bit-length%20of%20the%20prefix.",
+      "q": "followed by a slash character (/), and ending with the bit-length of the prefix."
+    }
+  },
+  {
+    "id": "1.6-03",
+    "obj": "1.6",
+    "front": "Two fields of an IPv4 address",
+    "back": "The network number (routing prefix) and the rest field, the host identifier. Subnetting divides a network into two or more networks.",
+    "src": {
+      "title": "Wikipedia: Subnet",
+      "url": "https://en.wikipedia.org/wiki/Subnet#:~:text=the%20network%20number%20or%20routing%20prefix",
+      "q": "the network number or routing prefix"
+    }
+  },
+  {
+    "id": "1.7-01",
+    "obj": "1.7",
+    "front": "Name the three RFC 1918 private ranges",
+    "back": "10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16. Not routable on the Internet, so NAT is needed to reach it.",
+    "src": {
+      "title": "RFC 1918",
+      "url": "https://www.rfc-editor.org/rfc/rfc1918#:~:text=10.0.0.0%20-%2010.255.255.255%20%2810%2F8%20prefix%29%20172.16.0.0%20-%20172.31.255.255%20%28172.16%2F12%20prefix%29%20192.168.0.0%20-%20192.168.255.255%20%28192.168%2F16%20prefix%29",
+      "q": "10.0.0.0 - 10.255.255.255 (10/8 prefix) 172.16.0.0 - 172.31.255.255 (172.16/12 prefix) 192.168.0.0 - 192.168.255.255 (192.168/16 prefix)"
+    }
+  },
+  {
+    "id": "1.7-02",
+    "obj": "1.7",
+    "front": "Cost of using private address space",
+    "back": "Renumbering hosts and networks when moving between private and public space.",
+    "src": {
+      "title": "RFC 1918",
+      "url": "https://www.rfc-editor.org/rfc/rfc1918#:~:text=The%20cost%20of%20using%20private%20internet%20address%20space%20is%20the%20potentially%20costly%20effort%20to%20renumber%20hosts%20and%20networks%20between%20public%20and%20private.",
+      "q": "The cost of using private internet address space is the potentially costly effort to renumber hosts and networks between public and private."
+    }
+  },
+  {
+    "id": "1.8-01",
+    "obj": "1.8",
+    "front": "IPv6 interface ID length",
+    "back": "Interface IDs are 64 bits for all unicast addresses except those starting with binary 000, so the usual subnet prefix is /64.",
+    "src": {
+      "title": "RFC 4291",
+      "url": "https://www.rfc-editor.org/rfc/rfc4291#:~:text=Interface%20IDs%20are%20required%20to%20be%2064%20bits%20long%20and%20to%20be%20constructed%20in%20Modified%20EUI-64%20format.",
+      "q": "Interface IDs are required to be 64 bits long and to be constructed in Modified EUI-64 format."
+    }
+  },
+  {
+    "id": "1.8-02",
+    "obj": "1.8",
+    "front": "How does SLAAC build an address?",
+    "back": "Routers advertise prefixes that identify the subnet. Hosts generate the interface identifier themselves.",
+    "src": {
+      "title": "RFC 4862",
+      "url": "https://www.rfc-editor.org/rfc/rfc4862#:~:text=Routers%20advertise%20prefixes%20that%20identify%20the%20subnet%28s%29%20associated%20with%20a%20link%2C%20while%20hosts%20generate%20an%20%22interface%20identifier%22%20that%20uniquely%20identifies%20an%20interface%20on%20a%20subnet.",
+      "q": "Routers advertise prefixes that identify the subnet(s) associated with a link, while hosts generate an \"interface identifier\" that uniquely identifies an interface on a subnet."
+    }
+  },
+  {
+    "id": "1.9-01",
+    "obj": "1.9",
+    "front": "Link-local address: how many does an interface need?",
+    "back": "Every IPv6 interface must have at least one link-local unicast address, used for on-link communication.",
+    "src": {
+      "title": "RFC 4291",
+      "url": "https://www.rfc-editor.org/rfc/rfc4291#:~:text=All%20interfaces%20are%20required%20to%20have%20at%20least%20one%20Link-Local%20unicast%20address",
+      "q": "All interfaces are required to have at least one Link-Local unicast address"
+    }
+  },
+  {
+    "id": "1.9-02",
+    "obj": "1.9",
+    "front": "Unique local address prefix",
+    "back": "FC00::/7. These are not advertised or accepted by exterior routing between administrative regions.",
+    "src": {
+      "title": "RFC 4193",
+      "url": "https://www.rfc-editor.org/rfc/rfc4193#:~:text=The%20default%20behavior%20of%20exterior%20routing%20protocol%20sessions%20between%20administrative%20routing%20regions%20must%20be%20to%20ignore%20receipt%20of%20and%20not%20advertise%20prefixes%20in%20the%20FC00%3A%3A%2F7%20block.",
+      "q": "The default behavior of exterior routing protocol sessions between administrative routing regions must be to ignore receipt of and not advertise prefixes in the FC00::/7 block."
+    }
+  },
+  {
+    "id": "1.9-03",
+    "obj": "1.9",
+    "front": "Anycast delivery",
+    "back": "A packet to an anycast address goes to one interface that has it, the nearest by the routing protocol's distance measure.",
+    "src": {
+      "title": "RFC 4291",
+      "url": "https://www.rfc-editor.org/rfc/rfc4291#:~:text=A%20packet%20sent%20to%20an%20anycast%20address%20is%20delivered%20to%20one%20of%20the%20interfaces%20identified%20by%20that%20address",
+      "q": "A packet sent to an anycast address is delivered to one of the interfaces identified by that address"
+    }
+  },
+  {
+    "id": "1.9-04",
+    "obj": "1.9",
+    "front": "Multicast delivery",
+    "back": "A packet to a multicast address is delivered to all interfaces in the group, which are typically on different nodes.",
+    "src": {
+      "title": "RFC 4291",
+      "url": "https://www.rfc-editor.org/rfc/rfc4291#:~:text=A%20packet%20sent%20to%20a%20multicast%20address%20is%20delivered%20to%20all%20interfaces%20identified%20by%20that%20address.",
+      "q": "A packet sent to a multicast address is delivered to all interfaces identified by that address."
+    }
+  },
+  {
+    "id": "1.11-01",
+    "obj": "1.11",
+    "front": "Which 2.4 GHz channels do not overlap?",
+    "back": "Channels 1, 6 and 11 in North America.",
+    "src": {
+      "title": "Wikipedia: Wi-Fi",
+      "url": "https://en.wikipedia.org/wiki/Wi-Fi#:~:text=Channels%201%2C%206%2C%20and%2011%20are%20the%20only%20group%20of%20three%20non-overlapping%20channels%20in%20North%20America.",
+      "q": "Channels 1, 6, and 11 are the only group of three non-overlapping channels in North America."
+    }
+  },
+  {
+    "id": "1.11-02",
+    "obj": "1.11",
+    "front": "Why do co-channel APs slow each other down?",
+    "back": "Channels can be shared, but within range only one transmitter can transmit on a channel at a time.",
+    "src": {
+      "title": "Wikipedia: Wi-Fi",
+      "url": "https://en.wikipedia.org/wiki/Wi-Fi#:~:text=within%20range%2C%20only%20one%20transmitter%20can%20transmit%20on%20a%20channel%20at%20a%20time.",
+      "q": "within range, only one transmitter can transmit on a channel at a time."
+    }
+  },
+  {
+    "id": "1.11-03",
+    "obj": "1.11",
+    "front": "Wi-Fi bands",
+    "back": "Most Wi-Fi uses 2.4 GHz and 5 GHz, with 6 GHz in newer generations. Each band is divided into channels.",
+    "src": {
+      "title": "Wikipedia: Wi-Fi",
+      "url": "https://en.wikipedia.org/wiki/Wi-Fi#:~:text=these%20bands%20are%20subdivided%20into%20multiple%20channels.",
+      "q": "these bands are subdivided into multiple channels."
+    }
+  },
+  {
+    "id": "1.11-04",
+    "obj": "1.11",
+    "front": "WPA vs WPA2 encryption",
+    "back": "WPA used TKIP, an interim fix for WEP. WPA2 (802.11i) added AES-based CCMP.",
+    "src": {
+      "title": "Wikipedia: Wi-Fi Protected Access",
+      "url": "https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#:~:text=The%20WPA%20protocol%20implements%20the%20Temporal%20Key%20Integrity%20Protocol%20%28TKIP%29.",
+      "q": "The WPA protocol implements the Temporal Key Integrity Protocol (TKIP)."
+    }
+  },
+  {
+    "id": "1.12-01",
+    "obj": "1.12",
+    "front": "Hypervisor",
+    "back": "Software or firmware that creates and runs a virtual machine on the host hardware (also called a virtual machine monitor).",
+    "src": {
+      "title": "Wikipedia: Virtualization",
+      "url": "https://en.wikipedia.org/wiki/Virtualization#:~:text=The%20software%20or%20firmware%20that%20creates%20a%20virtual%20machine%20on%20the%20host%20hardware%20is%20called%20a%20hypervisor",
+      "q": "The software or firmware that creates a virtual machine on the host hardware is called a hypervisor"
+    }
+  },
+  {
+    "id": "1.12-02",
+    "obj": "1.12",
+    "front": "Container vs VM",
+    "back": "Containers are OS-level virtualization: the kernel permits multiple isolated user-space instances. No separate guest OS per instance.",
+    "src": {
+      "title": "Wikipedia: Virtualization",
+      "url": "https://en.wikipedia.org/wiki/Virtualization#:~:text=refers%20to%20an%20operating%20system%20feature%20in%20which%20the%20kernel%20allows%20the%20existence%20of%20multiple%20isolated%20user-space%20instances.",
+      "q": "refers to an operating system feature in which the kernel allows the existence of multiple isolated user-space instances."
+    }
+  },
+  {
+    "id": "1.12-03",
+    "obj": "1.12",
+    "front": "VRF",
+    "back": "Separate routing tables on one router. VRFs do not share routes, and packets forward only between interfaces in the same VRF.",
+    "src": {
+      "title": "Wikipedia: Virtual routing and forwarding",
+      "url": "https://en.wikipedia.org/wiki/Virtual_routing_and_forwarding#:~:text=Therefore%2C%20the%20packets%20are%20only%20forwarded%20between%20interfaces%20on%20the%20same%20VRF.",
+      "q": "Therefore, the packets are only forwarded between interfaces on the same VRF."
+    }
+  },
+  {
+    "id": "1.13-01",
+    "obj": "1.13",
+    "front": "ARP: what problem does it solve?",
+    "back": "It gets the MAC address that goes with an IPv4 address, so a host can send a packet to another node on the local network.",
+    "src": {
+      "title": "Wikipedia: Address Resolution Protocol",
+      "url": "https://en.wikipedia.org/wiki/Address_Resolution_Protocol#:~:text=ARP%20enables%20a%20host%20to%20send%2C%20for%20example%2C%20an%20IPv4%20packet%20to%20another%20node%20in%20the%20local%20network%20by%20providing%20a%20protocol%20to%20get%20the%20MAC%20address%20associated%20with%20an%20IP%20address.",
+      "q": "ARP enables a host to send, for example, an IPv4 packet to another node in the local network by providing a protocol to get the MAC address associated with an IP address."
+    }
+  },
+  {
+    "id": "1.13-02",
+    "obj": "1.13",
+    "front": "ARP spoofing",
+    "back": "A spoofer answers a request for another system's address to intercept its traffic, enabling man-in-the-middle attacks.",
+    "src": {
+      "title": "Wikipedia: Address Resolution Protocol",
+      "url": "https://en.wikipedia.org/wiki/Address_Resolution_Protocol#:~:text=in%20ARP%20spoofing%20the%20answering%20system%2C%20or%20spoofer%20%2C%20replies%20to%20a%20request%20for%20another%20system%27s%20address%20with%20the%20aim%20of%20intercepting%20data%20bound%20for%20that%20system.",
+      "q": "in ARP spoofing the answering system, or spoofer , replies to a request for another system's address with the aim of intercepting data bound for that system."
+    }
+  },
+  {
+    "id": "2.1-01",
+    "obj": "2.1",
+    "front": "What does a VLAN do to broadcast domains?",
+    "back": "VLANs form multiple broadcast domains, so broadcast traffic stays inside its VLAN.",
+    "src": {
+      "title": "Wikipedia: Virtual LAN",
+      "url": "https://en.wikipedia.org/wiki/Virtual_LAN#:~:text=VLANs%20can%20help%20manage%20broadcast%20traffic%20by%20forming%20multiple%20broadcast%20domains",
+      "q": "VLANs can help manage broadcast traffic by forming multiple broadcast domains"
+    }
+  },
+  {
+    "id": "2.1-02",
+    "obj": "2.1",
+    "front": "How do frames carry VLAN identity?",
+    "back": "VLANs work by applying tags to frames forwarded within the broadcast domain, so traffic behaves as if split into separate networks.",
+    "src": {
+      "title": "Wikipedia: Virtual LAN",
+      "url": "https://en.wikipedia.org/wiki/Virtual_LAN#:~:text=VLANs%20work%20by%20applying%20tags%20to%20network%20frames%20that%20are%20forwarded%20within%20the%20broadcast%20domain",
+      "q": "VLANs work by applying tags to network frames that are forwarded within the broadcast domain"
+    }
+  },
+  {
+    "id": "2.2-01",
+    "obj": "2.2",
+    "front": "802.1Q",
+    "back": "The standard for VLAN tagging on Ethernet frames and the procedures bridges and switches use to handle them.",
+    "src": {
+      "title": "Wikipedia: IEEE 802.1Q",
+      "url": "https://en.wikipedia.org/wiki/IEEE_802.1Q#:~:text=The%20standard%20defines%20a%20system%20of%20VLAN%20tagging%20for%20Ethernet%20frames",
+      "q": "The standard defines a system of VLAN tagging for Ethernet frames"
+    }
+  },
+  {
+    "id": "2.2-02",
+    "obj": "2.2",
+    "front": "Native VLAN",
+    "back": "An untagged frame in the VLAN-aware part of the network is assumed to belong to the native VLAN.",
+    "src": {
+      "title": "Wikipedia: IEEE 802.1Q",
+      "url": "https://en.wikipedia.org/wiki/IEEE_802.1Q#:~:text=A%20frame%20in%20the%20VLAN-aware%20portion%20of%20the%20network%20that%20does%20not%20contain%20a%20VLAN%20tag%20is%20assumed%20to%20be%20flowing%20on%20the%20native%20VLAN",
+      "q": "A frame in the VLAN-aware portion of the network that does not contain a VLAN tag is assumed to be flowing on the native VLAN"
+    }
+  },
+  {
+    "id": "2.3-01",
+    "obj": "2.3",
+    "front": "CDP: where do announcements go?",
+    "back": "Cisco devices send CDP announcements to multicast MAC 01:00:0c:cc:cc:cc out each connected interface. CDP is Cisco-proprietary.",
+    "src": {
+      "title": "Wikipedia: Cisco Discovery Protocol",
+      "url": "https://en.wikipedia.org/wiki/Cisco_Discovery_Protocol#:~:text=Cisco%20devices%20send%20CDP%20announcements%20to%20the%20destination%20MAC%20address%2001%3A00%3A0c%3Acc%3Acc%3Acc",
+      "q": "Cisco devices send CDP announcements to the destination MAC address 01:00:0c:cc:cc:cc"
+    }
+  },
+  {
+    "id": "2.3-02",
+    "obj": "2.3",
+    "front": "LLDP data and discovery",
+    "back": "LLDP info is stored in the device's MIB, queryable with SNMP, so topology can be discovered by crawling devices.",
+    "src": {
+      "title": "Wikipedia: Link Layer Discovery Protocol",
+      "url": "https://en.wikipedia.org/wiki/Link_Layer_Discovery_Protocol#:~:text=The%20topology%20of%20an%20LLDP-enabled%20network%20can%20be%20discovered%20by%20crawling%20the%20hosts%20and%20querying%20this%20database.",
+      "q": "The topology of an LLDP-enabled network can be discovered by crawling the hosts and querying this database."
+    }
+  },
+  {
+    "id": "2.4-01",
+    "obj": "2.4",
+    "front": "EtherChannel capacity",
+    "back": "Between two and eight active ports, plus one to eight inactive failover ports that become active as others fail.",
+    "src": {
+      "title": "Wikipedia: EtherChannel",
+      "url": "https://en.wikipedia.org/wiki/EtherChannel#:~:text=An%20EtherChannel%20can%20be%20created%20from%20between%20two%20and%20eight%20active%20Fast%2C%20Gigabit%20or%2010-Gigabit%20Ethernet%20ports",
+      "q": "An EtherChannel can be created from between two and eight active Fast, Gigabit or 10-Gigabit Ethernet ports"
+    }
+  },
+  {
+    "id": "2.4-02",
+    "obj": "2.4",
+    "front": "LACP vs PAgP",
+    "back": "PAgP is Cisco's protocol, LACP is the IEEE standard. Both automate bundling Ethernet ports.",
+    "src": {
+      "title": "Wikipedia: EtherChannel",
+      "url": "https://en.wikipedia.org/wiki/EtherChannel#:~:text=The%20second%20way%20is%20by%20using%20Cisco%27s%20Port%20Aggregation%20Protocol%20%28PAgP%29%20or%20the%20IETF%27s%20LACP%20for%20the%20automated%20aggregation%20of%20Ethernet%20ports.",
+      "q": "The second way is by using Cisco's Port Aggregation Protocol (PAgP) or the IETF's LACP for the automated aggregation of Ethernet ports."
+    }
+  },
+  {
+    "id": "2.4-03",
+    "obj": "2.4",
+    "front": "What does LACP do?",
+    "back": "Provides a method to control bundling several physical links into a single logical link.",
+    "src": {
+      "title": "Wikipedia: Link aggregation",
+      "url": "https://en.wikipedia.org/wiki/Link_aggregation#:~:text=provides%20a%20method%20to%20control%20the%20bundling%20of%20several%20physical%20links%20together%20to%20form%20a%20single%20logical%20link.",
+      "q": "provides a method to control the bundling of several physical links together to form a single logical link."
+    }
+  },
+  {
+    "id": "2.5-01",
+    "obj": "2.5",
+    "front": "What problem does STP solve?",
+    "back": "Bridge loops and the broadcast radiation they cause, by building a loop-free logical topology.",
+    "src": {
+      "title": "Wikipedia: Spanning Tree Protocol",
+      "url": "https://en.wikipedia.org/wiki/Spanning_Tree_Protocol#:~:text=The%20basic%20function%20of%20STP%20is%20to%20prevent%20bridge%20loops%20and%20the%20broadcast%20radiation%20that%20results%20from%20them.",
+      "q": "The basic function of STP is to prevent bridge loops and the broadcast radiation that results from them."
+    }
+  },
+  {
+    "id": "2.5-02",
+    "obj": "2.5",
+    "front": "Root bridge: what is its role?",
+    "back": "One switch is elected root. All other switches pick their best path to it and block redundant links.",
+    "src": {
+      "title": "Wikipedia: Spanning Tree Protocol",
+      "url": "https://en.wikipedia.org/wiki/Spanning_Tree_Protocol#:~:text=All%20switches%20then%20select%20their%20best%20connection%20towards%20the%20root%20bridge%20for%20forwarding%20and%20block%20other%20redundant%20links.",
+      "q": "All switches then select their best connection towards the root bridge for forwarding and block other redundant links."
+    }
+  },
+  {
+    "id": "2.5-03",
+    "obj": "2.5",
+    "front": "Root, designated and blocked ports",
+    "back": "Every port on a link between bridges is a root port, a designated port or a blocked port.",
+    "src": {
+      "title": "Wikipedia: Spanning Tree Protocol",
+      "url": "https://en.wikipedia.org/wiki/Spanning_Tree_Protocol#:~:text=All%20bridge%20ports%20that%20connect%20a%20link%20between%20two%20bridges%20are%20either%20a%20root%20port%20%28RP%29%2C%20a%20designated%20port%20%28DP%29%2C%20or%20a%20blocked%20port%20%28BP%29.",
+      "q": "All bridge ports that connect a link between two bridges are either a root port (RP), a designated port (DP), or a blocked port (BP)."
+    }
+  },
+  {
+    "id": "2.5-04",
+    "obj": "2.5",
+    "front": "Root bridge election tie-break",
+    "back": "Lowest bridge ID wins. With identical IDs (default), the lower MAC address breaks the tie.",
+    "src": {
+      "title": "Wikipedia: Spanning Tree Protocol",
+      "url": "https://en.wikipedia.org/wiki/Spanning_Tree_Protocol#:~:text=the%20protocol%20will%20assign%20one%20switch%20as%20the%20root%20bridge%20based%20on%20the%20switch%27s%20MAC%20addresses",
+      "q": "the protocol will assign one switch as the root bridge based on the switch's MAC addresses"
+    }
+  },
+  {
+    "id": "2.5-05",
+    "obj": "2.5",
+    "front": "PortFast",
+    "back": "For edge ports on a LAN with no other bridges. Skips the slow listening/learning delay.",
+    "src": {
+      "title": "Wikipedia: Spanning Tree Protocol",
+      "url": "https://en.wikipedia.org/wiki/Spanning_Tree_Protocol#:~:text=Ports%20may%20be%20configured%20as%20edge%20ports%20if%20they%20are%20attached%20to%20a%20LAN%20that%20has%20no%20other%20bridges%20attached",
+      "q": "Ports may be configured as edge ports if they are attached to a LAN that has no other bridges attached"
+    }
+  },
+  {
+    "id": "2.5-06",
+    "obj": "2.5",
+    "front": "PVST+ on Cisco",
+    "back": "Per-VLAN spanning tree using 802.1Q encapsulation. Cisco switches commonly implement it, and switches must match the VLAN STP variant.",
+    "src": {
+      "title": "Wikipedia: Rapid Spanning Tree Protocol",
+      "url": "https://en.wikipedia.org/wiki/Rapid_Spanning_Tree_Protocol#:~:text=Cisco%20switches%20now%20commonly%20implement%20PVST%2B",
+      "q": "Cisco switches now commonly implement PVST+"
+    }
+  },
+  {
+    "id": "2.5-07",
+    "obj": "2.5",
+    "front": "RSTP learning state",
+    "back": "The port does not forward frames yet but learns source addresses and adds them to the MAC table.",
+    "src": {
+      "title": "Wikipedia: Rapid Spanning Tree Protocol",
+      "url": "https://en.wikipedia.org/wiki/Rapid_Spanning_Tree_Protocol#:~:text=While%20the%20port%20does%20not%20yet%20forward%20frames%2C%20it%20does%20learn%20source%20addresses%20from%20frames%20received%20and%20adds%20them%20to%20the%20MAC%20table.",
+      "q": "While the port does not yet forward frames, it does learn source addresses from frames received and adds them to the MAC table."
+    }
+  },
+  {
+    "id": "2.6-01",
+    "obj": "2.6",
+    "front": "CAPWAP is based on which earlier protocol?",
+    "back": "Cisco's Lightweight Access Point Protocol (LWAPP). CAPWAP is the standardized successor used between lightweight APs and the WLC.",
+    "src": {
+      "title": "Wikipedia: CAPWAP",
+      "url": "https://en.wikipedia.org/wiki/CAPWAP#:~:text=CAPWAP%20is%20based%20on%20Lightweight%20Access%20Point%20Protocol%20%28LWAPP%29.",
+      "q": "CAPWAP is based on Lightweight Access Point Protocol (LWAPP)."
+    }
+  },
+  {
+    "id": "2.7-01",
+    "obj": "2.7",
+    "front": "Is the CAPWAP tunnel secured?",
+    "back": "Yes. CAPWAP adds full Datagram Transport Layer Security (DTLS) tunnel establishment compared with LWAPP.",
+    "src": {
+      "title": "Wikipedia: CAPWAP",
+      "url": "https://en.wikipedia.org/wiki/CAPWAP#:~:text=with%20the%20addition%20of%20a%20full%20Datagram%20Transport%20Layer%20Security%20%28DTLS%29%20tunnel%20establishment",
+      "q": "with the addition of a full Datagram Transport Layer Security (DTLS) tunnel establishment"
+    }
+  },
+  {
+    "id": "2.8-01",
+    "obj": "2.8",
+    "front": "Why SSH over Telnet?",
+    "back": "SSH replaced Telnet and other plaintext remote shells that sent passwords unprotected.",
+    "src": {
+      "title": "Wikipedia: Secure Shell",
+      "url": "https://en.wikipedia.org/wiki/Secure_Shell#:~:text=SSH%20was%20designed%20for%20Unix-like%20operating%20systems%20as%20a%20replacement%20for%20Telnet",
+      "q": "SSH was designed for Unix-like operating systems as a replacement for Telnet"
+    }
+  },
+  {
+    "id": "2.8-02",
+    "obj": "2.8",
+    "front": "RADIUS vs TACACS+ transport",
+    "back": "TACACS+ only uses TCP. RADIUS normally uses UDP.",
+    "src": {
+      "title": "Wikipedia: TACACS",
+      "url": "https://en.wikipedia.org/wiki/TACACS#:~:text=TACACS%2B%20can%20only%20use%20TCP%2C%20while%20RADIUS%20normally%20operates%20over%20UDP",
+      "q": "TACACS+ can only use TCP, while RADIUS normally operates over UDP"
+    }
+  },
+  {
+    "id": "2.8-03",
+    "obj": "2.8",
+    "front": "TACACS+ AAA design",
+    "back": "It separates authentication, authorization and accounting into separate processes that can run on separate servers.",
+    "src": {
+      "title": "Wikipedia: TACACS",
+      "url": "https://en.wikipedia.org/wiki/TACACS#:~:text=It%20also%20separates%20the%20authentication%2C%20authorization%2C%20and%20accounting%20%28AAA%29%20functions%20out%20into%20separate%20processes",
+      "q": "It also separates the authentication, authorization, and accounting (AAA) functions out into separate processes"
+    }
+  },
+  {
+    "id": "3.1-01",
+    "obj": "3.1",
+    "front": "What does a routing table hold?",
+    "back": "Network/next-hop associations: for a destination, which next-hop router to send to.",
+    "src": {
+      "title": "Wikipedia: Routing table",
+      "url": "https://en.wikipedia.org/wiki/Routing_table#:~:text=The%20routing%20table%20contains%20network%2Fnext%20hop%20associations.",
+      "q": "The routing table contains network/next hop associations."
+    }
+  },
+  {
+    "id": "3.1-02",
+    "obj": "3.1",
+    "front": "Routing table fields",
+    "back": "At least the destination subnet and netmask, the next hop, and the metric of the path.",
+    "src": {
+      "title": "Wikipedia: Routing table",
+      "url": "https://en.wikipedia.org/wiki/Routing_table#:~:text=The%20routing%20table%20consists%20of%20at%20least%20three%20information%20fields",
+      "q": "The routing table consists of at least three information fields"
+    }
+  },
+  {
+    "id": "3.1-03",
+    "obj": "3.1",
+    "front": "Administrative distance: lower or higher wins?",
+    "back": "Lowest wins. AD ranks route sources from most preferred (low) to least preferred (high).",
+    "src": {
+      "title": "Wikipedia: Administrative distance",
+      "url": "https://en.wikipedia.org/wiki/Administrative_distance#:~:text=the%20router%20uses%20the%20route%20with%20the%20lowest%20administrative%20distance.",
+      "q": "the router uses the route with the lowest administrative distance."
+    }
+  },
+  {
+    "id": "3.1-04",
+    "obj": "3.1",
+    "front": "OSPF vs RIP AD",
+    "back": "OSPF is 110, RIP is 120 by default on Cisco routers.",
+    "src": {
+      "title": "Wikipedia: Administrative distance",
+      "url": "https://en.wikipedia.org/wiki/Administrative_distance#:~:text=OSPF%20has%20a%20default%20administrative%20distance%20of%20110%20and%20RIP%20has%20a%20default%20administrative%20distance%20of%20120",
+      "q": "OSPF has a default administrative distance of 110 and RIP has a default administrative distance of 120"
+    }
+  },
+  {
+    "id": "3.1-05",
+    "obj": "3.1",
+    "front": "Static route AD",
+    "back": "1 on Cisco routers, so static routes beat dynamic protocol routes.",
+    "src": {
+      "title": "Wikipedia: Administrative distance",
+      "url": "https://en.wikipedia.org/wiki/Administrative_distance#:~:text=On%20Cisco%20routers%2C%20static%20routes%20have%20an%20administrative%20distance%20of%201",
+      "q": "On Cisco routers, static routes have an administrative distance of 1"
+    }
+  },
+  {
+    "id": "3.2-01",
+    "obj": "3.2",
+    "front": "Longest prefix match",
+    "back": "Of all matching entries, the one with the longest subnet mask (most specific) is chosen, before AD or metric are considered.",
+    "src": {
+      "title": "Wikipedia: Longest prefix match",
+      "url": "https://en.wikipedia.org/wiki/Longest_prefix_match#:~:text=is%20called%20the%20longest%20prefix%20match",
+      "q": "is called the longest prefix match"
+    }
+  },
+  {
+    "id": "3.2-02",
+    "obj": "3.2",
+    "front": "Why does /28 beat /16?",
+    "back": "A longer mask is more specific, so the /28 route is the longest match.",
+    "src": {
+      "title": "Wikipedia: Longest prefix match",
+      "url": "https://en.wikipedia.org/wiki/Longest_prefix_match#:~:text=since%20its%20subnet%20mask%20%28%2F28%29%20is%20longer%20than%20the%20other%20entry%27s%20mask%20%28%2F16%29",
+      "q": "since its subnet mask (/28) is longer than the other entry's mask (/16)"
+    }
+  },
+  {
+    "id": "3.3-01",
+    "obj": "3.3",
+    "front": "Floating static route",
+    "back": "A static route given a higher AD to serve as a backup path if the primary link fails.",
+    "src": {
+      "title": "Wikipedia: Administrative distance",
+      "url": "https://en.wikipedia.org/wiki/Administrative_distance#:~:text=Floating%20static%20routes%20are%20used%20to%20provide%20an%20alternate%20path%20when%20a%20primary%20link%20fails.",
+      "q": "Floating static routes are used to provide an alternate path when a primary link fails."
+    }
+  },
+  {
+    "id": "3.4-01",
+    "obj": "3.4",
+    "front": "Who elects a DR?",
+    "back": "On each broadcast and NBMA network with at least two routers. The Hello Protocol elects it.",
+    "src": {
+      "title": "RFC 2328",
+      "url": "https://www.rfc-editor.org/rfc/rfc2328#:~:text=Each%20broadcast%20and%20NBMA%20network%20that%20has%20at%20least%20two%20attached%20routers%20has%20a%20Designated%20Router.",
+      "q": "Each broadcast and NBMA network that has at least two attached routers has a Designated Router."
+    }
+  },
+  {
+    "id": "3.4-02",
+    "obj": "3.4",
+    "front": "OSPF Router ID",
+    "back": "A 32-bit number that uniquely identifies the router in the AS.",
+    "src": {
+      "title": "RFC 2328",
+      "url": "https://www.rfc-editor.org/rfc/rfc2328#:~:text=A%2032-bit%20number%20that%20uniquely%20identifies%20this%20router%20in%20the%20AS.",
+      "q": "A 32-bit number that uniquely identifies this router in the AS."
+    }
+  },
+  {
+    "id": "3.4-03",
+    "obj": "3.4",
+    "front": "How are OSPF neighbors found?",
+    "back": "Dynamically, using OSPF's Hello Protocol.",
+    "src": {
+      "title": "RFC 2328",
+      "url": "https://www.rfc-editor.org/rfc/rfc2328#:~:text=Neighboring%20routers%20are%20discovered%20dynamically%20on%20these%20nets%20using%20OSPF%27s%20Hello%20Protocol.",
+      "q": "Neighboring routers are discovered dynamically on these nets using OSPF's Hello Protocol."
+    }
+  },
+  {
+    "id": "3.4-04",
+    "obj": "3.4",
+    "front": "OSPF metric",
+    "back": "Each route's cost is a single dimensionless metric. Equal-cost routes share traffic equally.",
+    "src": {
+      "title": "RFC 2328",
+      "url": "https://www.rfc-editor.org/rfc/rfc2328#:~:text=The%20cost%20of%20a%20route%20is%20described%20by%20a%20single%20dimensionless%20metric.",
+      "q": "The cost of a route is described by a single dimensionless metric."
+    }
+  },
+  {
+    "id": "3.4-05",
+    "obj": "3.4",
+    "front": "Why use OSPF areas?",
+    "back": "They cut routing protocol traffic. An area's topology is hidden from the rest of the AS.",
+    "src": {
+      "title": "RFC 2328",
+      "url": "https://www.rfc-editor.org/rfc/rfc2328#:~:text=The%20topology%20of%20an%20area%20is%20hidden%20from%20the%20rest%20of%20the%20Autonomous%20System.",
+      "q": "The topology of an area is hidden from the rest of the Autonomous System."
+    }
+  },
+  {
+    "id": "3.5-01",
+    "obj": "3.5",
+    "front": "What does an FHRP provide?",
+    "back": "A redundant default gateway: if the active router fails another takes over the same virtual address.",
+    "src": {
+      "title": "Wikipedia: Hot Standby Router Protocol",
+      "url": "https://en.wikipedia.org/wiki/Hot_Standby_Router_Protocol#:~:text=a%20Cisco%20proprietary%20redundancy%20protocol%20for%20establishing%20a%20fault-tolerant%20default%20gateway",
+      "q": "a Cisco proprietary redundancy protocol for establishing a fault-tolerant default gateway"
+    }
+  },
+  {
+    "id": "3.5-02",
+    "obj": "3.5",
+    "front": "HSRP signaling",
+    "back": "Gateways send multicast hello messages advertising their priority and status (active or standby).",
+    "src": {
+      "title": "Wikipedia: Hot Standby Router Protocol",
+      "url": "https://en.wikipedia.org/wiki/Hot_Standby_Router_Protocol#:~:text=HSRP%20gateways%20send%20multicast%20hello%20messages%20to%20other%20gateways%20to%20notify%20them%20of%20their%20priorities",
+      "q": "HSRP gateways send multicast hello messages to other gateways to notify them of their priorities"
+    }
+  },
+  {
+    "id": "3.5-03",
+    "obj": "3.5",
+    "front": "VRRP Master",
+    "back": "The router controlling the virtual router's IP addresses is the Master and forwards packets sent to them. VRRP is the open standard.",
+    "src": {
+      "title": "RFC 5798",
+      "url": "https://www.rfc-editor.org/rfc/rfc5798#:~:text=The%20VRRP%20router%20controlling%20the%20IPv4%20or%20IPv6%20address%28es%29%20associated%20with%20a%20virtual%20router%20is%20called%20the%20Master%2C%20and%20it%20forwards%20packets%20sent%20to%20these%20IPv4%20or%20IPv6%20addresses.",
+      "q": "The VRRP router controlling the IPv4 or IPv6 address(es) associated with a virtual router is called the Master, and it forwards packets sent to these IPv4 or IPv6 addresses."
+    }
+  },
+  {
+    "id": "4.1-01",
+    "obj": "4.1",
+    "front": "Static vs dynamic NAT",
+    "back": "Static NAT is a one-to-one inside to public mapping. Dynamic NAT draws from a group of public addresses.",
+    "src": {
+      "title": "Wikipedia: Network address translation",
+      "url": "https://en.wikipedia.org/wiki/Network_address_translation#:~:text=Where%20static%20NAT%20provides%20a%20one-to-one%20internal%20to%20public%20static%20IP%20address%20mapping%2C%20dynamic%20NAT%20uses%20a%20group%20of%20public%20IP%20addresses.",
+      "q": "Where static NAT provides a one-to-one internal to public static IP address mapping, dynamic NAT uses a group of public IP addresses."
+    }
+  },
+  {
+    "id": "4.1-02",
+    "obj": "4.1",
+    "front": "Inside NAT basics",
+    "back": "A private inside address is mapped to an external public address.",
+    "src": {
+      "title": "Wikipedia: Network address translation",
+      "url": "https://en.wikipedia.org/wiki/Network_address_translation#:~:text=A%20private%20address%20on%20the%20inside%20of%20the%20NAT%20is%20mapped%20to%20an%20external%20public%20address.",
+      "q": "A private address on the inside of the NAT is mapped to an external public address."
+    }
+  },
+  {
+    "id": "4.1-03",
+    "obj": "4.1",
+    "front": "PAT / overload",
+    "back": "Port-address translation maps many inside hosts to one address by also rewriting port numbers. Also called NAT overload.",
+    "src": {
+      "title": "Wikipedia: Network address translation",
+      "url": "https://en.wikipedia.org/wiki/Network_address_translation#:~:text=port-address%20translation%20%28PAT%29%20was%20introduced",
+      "q": "port-address translation (PAT) was introduced"
+    }
+  },
+  {
+    "id": "4.2-01",
+    "obj": "4.2",
+    "front": "What is NTP for?",
+    "back": "Synchronizing computer clocks across the Internet.",
+    "src": {
+      "title": "RFC 5905",
+      "url": "https://www.rfc-editor.org/rfc/rfc5905#:~:text=The%20Network%20Time%20Protocol%20%28NTP%29%20is%20widely%20used%20to%20synchronize%20computer%20clocks%20in%20the%20Internet.",
+      "q": "The Network Time Protocol (NTP) is widely used to synchronize computer clocks in the Internet."
+    }
+  },
+  {
+    "id": "4.2-02",
+    "obj": "4.2",
+    "front": "NTP stratum",
+    "back": "Primary servers are stratum 1. Each lower level is one greater than the one above.",
+    "src": {
+      "title": "RFC 5905",
+      "url": "https://www.rfc-editor.org/rfc/rfc5905#:~:text=Primary%20servers%20are%20assigned%20stratum%20one%3B%20secondary%20servers%20at%20each%20lower%20level%20are%20assigned%20stratum%20numbers%20one%20greater%20than%20the%20preceding%20level.",
+      "q": "Primary servers are assigned stratum one; secondary servers at each lower level are assigned stratum numbers one greater than the preceding level."
+    }
+  },
+  {
+    "id": "4.3-01",
+    "obj": "4.3",
+    "front": "DHCP purpose",
+    "back": "A framework for passing configuration information to hosts on a TCP/IP network, with automatic allocation of reusable addresses.",
+    "src": {
+      "title": "RFC 2131",
+      "url": "https://www.rfc-editor.org/rfc/rfc2131#:~:text=The%20Dynamic%20Host%20Configuration%20Protocol%20%28DHCP%29%20provides%20a%20framework%20for%20passing%20configuration%20information%20to%20hosts%20on%20a%20TCPIP%20network.",
+      "q": "The Dynamic Host Configuration Protocol (DHCP) provides a framework for passing configuration information to hosts on a TCPIP network."
+    }
+  },
+  {
+    "id": "4.3-02",
+    "obj": "4.3",
+    "front": "First step of DHCP",
+    "back": "The client broadcasts a DHCPDISCOVER on its local subnet. Relay agents forward this across routers.",
+    "src": {
+      "title": "RFC 2131",
+      "url": "https://www.rfc-editor.org/rfc/rfc2131#:~:text=The%20client%20broadcasts%20a%20DHCPDISCOVER%20message%20on%20its%20local%20physical%20subnet.",
+      "q": "The client broadcasts a DHCPDISCOVER message on its local physical subnet."
+    }
+  },
+  {
+    "id": "4.3-03",
+    "obj": "4.3",
+    "front": "DNS resolver",
+    "back": "The resolver is the local agent that retrieves information for a domain name and hides where the data is distributed.",
+    "src": {
+      "title": "RFC 1035",
+      "url": "https://www.rfc-editor.org/rfc/rfc1035#:~:text=the%20resolver%20is%20responsible%20for%20hiding%20the%20distribution%20of%20data%20among%20name%20servers%20from%20the%20user.",
+      "q": "the resolver is responsible for hiding the distribution of data among name servers from the user."
+    }
+  },
+  {
+    "id": "4.4-01",
+    "obj": "4.4",
+    "front": "What does SNMP expose?",
+    "back": "Management data as variables in a management information base (MIB) on managed devices.",
+    "src": {
+      "title": "Wikipedia: Simple Network Management Protocol",
+      "url": "https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol#:~:text=SNMP%20exposes%20management%20data%20in%20the%20form%20of%20variables%20on%20the%20managed%20systems%20organized%20in%20a%20management%20information%20base",
+      "q": "SNMP exposes management data in the form of variables on the managed systems organized in a management information base"
+    }
+  },
+  {
+    "id": "4.4-02",
+    "obj": "4.4",
+    "front": "SNMP transport and traps",
+    "back": "Messages run over UDP. A trap is an asynchronous notification from agent to manager.",
+    "src": {
+      "title": "Wikipedia: Simple Network Management Protocol",
+      "url": "https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol#:~:text=Trap%20Asynchronous%20notification%20from%20agent%20to%20manager.",
+      "q": "Trap Asynchronous notification from agent to manager."
+    }
+  },
+  {
+    "id": "4.4-03",
+    "obj": "4.4",
+    "front": "SNMP community strings",
+    "back": "Agents authenticate v1/v2c requests using community names: typically read-only, read-write and trap.",
+    "src": {
+      "title": "Wikipedia: Simple Network Management Protocol",
+      "url": "https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol#:~:text=Most%20agents%20support%20three%20community%20names%2C%20one%20each%20for%20read-only%2C%20read-write%20and%20trap.",
+      "q": "Most agents support three community names, one each for read-only, read-write and trap."
+    }
+  },
+  {
+    "id": "4.5-01",
+    "obj": "4.5",
+    "front": "Syslog priority value",
+    "back": "The number in angle brackets (PRIVAL) encodes both facility and severity.",
+    "src": {
+      "title": "RFC 5424",
+      "url": "https://www.rfc-editor.org/rfc/rfc5424#:~:text=The%20number%20contained%20within%20these%20angle%20brackets%20is%20known%20as%20the%20Priority%20value%20%28PRIVAL%29%20and%20represents%20both%20the%20Facility%20and%20Severity.",
+      "q": "The number contained within these angle brackets is known as the Priority value (PRIVAL) and represents both the Facility and Severity."
+    }
+  },
+  {
+    "id": "4.5-02",
+    "obj": "4.5",
+    "front": "Syslog severity 0 and 7",
+    "back": "Severity 0 is Emergency, 7 is Debug. Lower number means more severe.",
+    "src": {
+      "title": "RFC 5424",
+      "url": "https://www.rfc-editor.org/rfc/rfc5424#:~:text=messages%20designed%20to%20enable%20debugging%20or%20testing%20of%20software%20should%20be%20assigned%20Severity%207.",
+      "q": "messages designed to enable debugging or testing of software should be assigned Severity 7."
+    }
+  },
+  {
+    "id": "4.6-01",
+    "obj": "4.6",
+    "front": "DHCP relay",
+    "back": "A relay agent passes client broadcasts to a server on another subnet. DHCP inherits BOOTP relay agent behavior.",
+    "src": {
+      "title": "RFC 2131",
+      "url": "https://www.rfc-editor.org/rfc/rfc2131#:~:text=DHCP%20captures%20the%20behavior%20of%20BOOTP%20relay%20agents",
+      "q": "DHCP captures the behavior of BOOTP relay agents"
+    }
+  },
+  {
+    "id": "4.7-01",
+    "obj": "4.7",
+    "front": "DiffServ in one sentence",
+    "back": "Packets are classified and marked to receive a particular per-hop forwarding behavior on each node along their path.",
+    "src": {
+      "title": "RFC 2475",
+      "url": "https://www.rfc-editor.org/rfc/rfc2475#:~:text=Packets%20are%20classified%20and%20marked%20to%20receive%20a%20particular%20per-hop%20forwarding%20behavior%20on%20nodes%20along%20their%20path.",
+      "q": "Packets are classified and marked to receive a particular per-hop forwarding behavior on nodes along their path."
+    }
+  },
+  {
+    "id": "4.7-02",
+    "obj": "4.7",
+    "front": "Where to classify, mark, police, shape",
+    "back": "At network boundaries or hosts, so the core can stay simple.",
+    "src": {
+      "title": "RFC 2475",
+      "url": "https://www.rfc-editor.org/rfc/rfc2475#:~:text=Sophisticated%20classification%2C%20marking%2C%20policing%2C%20and%20shaping%20operations%20need%20only%20be%20implemented%20at%20network%20boundaries%20or%20hosts.",
+      "q": "Sophisticated classification, marking, policing, and shaping operations need only be implemented at network boundaries or hosts."
+    }
+  },
+  {
+    "id": "4.7-03",
+    "obj": "4.7",
+    "front": "DSCP",
+    "back": "Six bits of the DS field are the codepoint selecting the PHB at each node.",
+    "src": {
+      "title": "RFC 2474",
+      "url": "https://www.rfc-editor.org/rfc/rfc2474#:~:text=Six%20bits%20of%20the%20DS%20field%20are%20used%20as%20a%20codepoint%20%28DSCP%29%20to%20select%20the%20PHB%20a%20packet%20experiences%20at%20each%20node.",
+      "q": "Six bits of the DS field are used as a codepoint (DSCP) to select the PHB a packet experiences at each node."
+    }
+  },
+  {
+    "id": "4.8-01",
+    "obj": "4.8",
+    "front": "SSH port",
+    "back": "TCP 22, the server's listening port (between Telnet 23 and FTP 21).",
+    "src": {
+      "title": "Wikipedia: Secure Shell",
+      "url": "https://en.wikipedia.org/wiki/Secure_Shell#:~:text=reserving%20port%20number%2022%20as%20a%20server%20listening%20port.",
+      "q": "reserving port number 22 as a server listening port."
+    }
+  },
+  {
+    "id": "4.9-01",
+    "obj": "4.9",
+    "front": "TFTP",
+    "back": "A very simple protocol for transferring files over UDP, with no user authentication and no listing, deleting or renaming.",
+    "src": {
+      "title": "Wikipedia: Trivial File Transfer Protocol",
+      "url": "https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol#:~:text=It%20cannot%20list%2C%20delete%2C%20or%20rename%20files%20or%20directories%20and%20it%20has%20no%20provisions%20for%20user%20authentication.",
+      "q": "It cannot list, delete, or rename files or directories and it has no provisions for user authentication."
+    }
+  },
+  {
+    "id": "4.9-02",
+    "obj": "4.9",
+    "front": "TFTP transport",
+    "back": "Built on UDP (port 69 for the initial request).",
+    "src": {
+      "title": "RFC 1350",
+      "url": "https://www.rfc-editor.org/rfc/rfc1350#:~:text=TFTP%20is%20designed%20to%20be%20implemented%20on%20top%20of%20the%20Datagram%20protocol%20%28UDP%29.",
+      "q": "TFTP is designed to be implemented on top of the Datagram protocol (UDP)."
+    }
+  },
+  {
+    "id": "4.9-03",
+    "obj": "4.9",
+    "front": "FTP data connection",
+    "back": "FTP uses a control connection for commands and replies and a separate full-duplex data connection for transfers.",
+    "src": {
+      "title": "RFC 959",
+      "url": "https://www.rfc-editor.org/rfc/rfc959#:~:text=data%20connection%20A%20full%20duplex%20connection%20over%20which%20data%20is%20transferred%2C%20in%20a%20specified%20mode%20and%20type.",
+      "q": "data connection A full duplex connection over which data is transferred, in a specified mode and type."
+    }
+  },
+  {
+    "id": "5.1-01",
+    "obj": "5.1",
+    "front": "Vulnerability",
+    "back": "A known weakness in a system, procedures, controls or implementation that an actor may exploit or accidentally trigger.",
+    "src": {
+      "title": "NIST CSRC Glossary: vulnerability",
+      "url": "https://csrc.nist.gov/glossary/term/vulnerability#:~:text=A%20known%20weakness%20in%20a%20system%2C%20system%20security%20procedures%2C%20internal%20controls%2C%20or%20implementation%20by%20which%20an%20actor%20or%20event%20may%20intentionally%20exploit%20or%20accidentally%20trigger%20the%20weakness",
+      "q": "A known weakness in a system, system security procedures, internal controls, or implementation by which an actor or event may intentionally exploit or accidentally trigger the weakness"
+    }
+  },
+  {
+    "id": "5.1-02",
+    "obj": "5.1",
+    "front": "Threat",
+    "back": "Any circumstance or event with the potential to adversely impact operations, assets or individuals through an information system.",
+    "src": {
+      "title": "NIST CSRC Glossary: threat",
+      "url": "https://csrc.nist.gov/glossary/term/threat#:~:text=Any%20circumstance%20or%20event%20with%20the%20potential%20to%20adversely%20impact%20organizational%20operations",
+      "q": "Any circumstance or event with the potential to adversely impact organizational operations"
+    }
+  },
+  {
+    "id": "5.4-01",
+    "obj": "5.4",
+    "front": "Multi-factor authentication",
+    "back": "Needs more than one factor. If any component is missing or wrong, identity is not established and access stays blocked.",
+    "src": {
+      "title": "Wikipedia: Multi-factor authentication",
+      "url": "https://en.wikipedia.org/wiki/Multi-factor_authentication#:~:text=the%20user%27s%20identity%20is%20not%20established%20with%20sufficient%20certainty",
+      "q": "the user's identity is not established with sufficient certainty"
+    }
+  },
+  {
+    "id": "5.5-01",
+    "obj": "5.5",
+    "front": "IPsec tunnel vs transport mode",
+    "back": "Transport mode protects the payload of the IP packet. Tunnel mode encrypts and authenticates the entire original packet.",
+    "src": {
+      "title": "Wikipedia: IPsec",
+      "url": "https://en.wikipedia.org/wiki/IPsec#:~:text=In%20tunnel%20mode%2C%20the%20entire%20IP%20packet%20is%20encrypted%20and%20authenticated.",
+      "q": "In tunnel mode, the entire IP packet is encrypted and authenticated."
+    }
+  },
+  {
+    "id": "5.5-02",
+    "obj": "5.5",
+    "front": "Site-to-site vs remote-access VPN",
+    "back": "Site-to-site connects two networks. Remote-access connects an individual user to an office network.",
+    "src": {
+      "title": "Wikipedia: Virtual private network",
+      "url": "https://en.wikipedia.org/wiki/Virtual_private_network#:~:text=Site-to-site%20VPNs%20connect%20two%20networks%2C%20such%20as%20an%20office%20network%20and%20a%20datacenter.",
+      "q": "Site-to-site VPNs connect two networks, such as an office network and a datacenter."
+    }
+  },
+  {
+    "id": "5.6-01",
+    "obj": "5.6",
+    "front": "Network ACLs",
+    "back": "Rules on port numbers or IP addresses of a host or layer 3 device, controlling inbound and outbound traffic much like a firewall.",
+    "src": {
+      "title": "Wikipedia: Access-control list",
+      "url": "https://en.wikipedia.org/wiki/Access-control_list#:~:text=Both%20individual%20servers%20and%20routers%20can%20have%20network%20ACLs.",
+      "q": "Both individual servers and routers can have network ACLs."
+    }
+  },
+  {
+    "id": "5.7-01",
+    "obj": "5.7",
+    "front": "DHCP snooping",
+    "back": "Switch feature that excludes rogue DHCP servers and drops malicious or malformed DHCP traffic.",
+    "src": {
+      "title": "Wikipedia: DHCP snooping",
+      "url": "https://en.wikipedia.org/wiki/DHCP_snooping#:~:text=DHCP%20snooping%20can%20be%20configured%20on%20LAN%20switches%20to%20exclude%20rogue%20DHCP%20servers%20and%20remove%20malicious%20or%20malformed%20DHCP%20traffic.",
+      "q": "DHCP snooping can be configured on LAN switches to exclude rogue DHCP servers and remove malicious or malformed DHCP traffic."
+    }
+  },
+  {
+    "id": "5.7-02",
+    "obj": "5.7",
+    "front": "Port security",
+    "back": "Restricts a port by MAC address, configured statically, learned dynamically up to a limit, or both.",
+    "src": {
+      "title": "Wikipedia: MAC filtering",
+      "url": "https://en.wikipedia.org/wiki/MAC_filtering#:~:text=Port%20security%20may%20be%20configured%20statically%20with%20a%20list%2C%20dynamically%20based%20on%20the%20first%20given%20number%20of%20addresses%20detected%2C%20or%20a%20combination%20of%20these%20two%20methods.",
+      "q": "Port security may be configured statically with a list, dynamically based on the first given number of addresses detected, or a combination of these two methods."
+    }
+  },
+  {
+    "id": "5.8-01",
+    "obj": "5.8",
+    "front": "AAA",
+    "back": "A framework used to control and track access within a computer network.",
+    "src": {
+      "title": "Wikipedia: Authentication, authorization, and accounting",
+      "url": "https://en.wikipedia.org/wiki/AAA_(computer_security)#:~:text=is%20a%20framework%20used%20to%20control%20and%20track%20access%20within%20a%20computer%20network.",
+      "q": "is a framework used to control and track access within a computer network."
+    }
+  },
+  {
+    "id": "5.8-02",
+    "obj": "5.8",
+    "front": "RADIUS",
+    "back": "Provides centralized AAA for users who connect and use a network service.",
+    "src": {
+      "title": "Wikipedia: RADIUS",
+      "url": "https://en.wikipedia.org/wiki/RADIUS#:~:text=provides%20centralized%20authentication%2C%20authorization%2C%20and%20accounting",
+      "q": "provides centralized authentication, authorization, and accounting"
+    }
+  },
+  {
+    "id": "5.9-01",
+    "obj": "5.9",
+    "front": "WPA3 vs WPA2",
+    "back": "WPA3 (announced January 2018) brings several security improvements over WPA2 and enforces management-frame protection.",
+    "src": {
+      "title": "Wikipedia: Wi-Fi Protected Access",
+      "url": "https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#:~:text=In%20January%202018%2C%20the%20Wi-Fi%20Alliance%20announced%20the%20release%20of%20WPA3%2C%20which%20has%20several%20security%20improvements%20over%20WPA2.",
+      "q": "In January 2018, the Wi-Fi Alliance announced the release of WPA3, which has several security improvements over WPA2."
+    }
+  },
+  {
+    "id": "5.9-02",
+    "obj": "5.9",
+    "front": "WPA2-PSK 4-way handshake",
+    "back": "Client and AP prove they hold the PSK without transmitting it.",
+    "src": {
+      "title": "Wikipedia: Wi-Fi Protected Access",
+      "url": "https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#:~:text=a%20crucial%20step%20for%20ensuring%20both%20the%20client%20and%20AP%20have%20the%20correct%20Pre-Shared%20Key%20%28PSK%29%20without%20actually%20transmitting%20it",
+      "q": "a crucial step for ensuring both the client and AP have the correct Pre-Shared Key (PSK) without actually transmitting it"
+    }
+  },
+  {
+    "id": "6.2-01",
+    "obj": "6.2",
+    "front": "Control plane vs data plane in SDN",
+    "back": "The data plane processes packets using rules from the control plane. Controllers form the control plane.",
+    "src": {
+      "title": "Wikipedia: Software-defined networking",
+      "url": "https://en.wikipedia.org/wiki/Software-defined_networking#:~:text=In%20SDN%2C%20the%20data%20plane%20is%20responsible%20for%20processing%20data-carrying%20packets%20using%20a%20set%20of%20rules%20specified%20by%20the%20control%20plane.",
+      "q": "In SDN, the data plane is responsible for processing data-carrying packets using a set of rules specified by the control plane."
+    }
+  },
+  {
+    "id": "6.3-01",
+    "obj": "6.3",
+    "front": "Northbound interface",
+    "back": "Between SDN applications and the controller, offering abstract network views and letting apps state network behavior.",
+    "src": {
+      "title": "Wikipedia: Software-defined networking",
+      "url": "https://en.wikipedia.org/wiki/Software-defined_networking#:~:text=SDN%20NBIs%20are%20interfaces%20between%20SDN%20applications%20and%20SDN%20controllers",
+      "q": "SDN NBIs are interfaces between SDN applications and SDN controllers"
+    }
+  },
+  {
+    "id": "6.3-02",
+    "obj": "6.3",
+    "front": "OpenFlow",
+    "back": "An open protocol to manage switches from different vendors remotely. A southbound protocol between controller and devices.",
+    "src": {
+      "title": "Wikipedia: OpenFlow",
+      "url": "https://en.wikipedia.org/wiki/OpenFlow#:~:text=to%20be%20managed%20remotely%20using%20a%20single%2C%20open%20protocol",
+      "q": "to be managed remotely using a single, open protocol"
+    }
+  },
+  {
+    "id": "6.5-01",
+    "obj": "6.5",
+    "front": "DELETE method",
+    "back": "Asks the origin server to remove the association between the target resource and its current functionality.",
+    "src": {
+      "title": "RFC 9110",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110#:~:text=The%20DELETE%20method%20requests%20that%20the%20origin%20server%20remove%20the%20association%20between%20the%20target%20resource%20and%20its%20current%20functionality.",
+      "q": "The DELETE method requests that the origin server remove the association between the target resource and its current functionality."
+    }
+  },
+  {
+    "id": "6.5-02",
+    "obj": "6.5",
+    "front": "Idempotent HTTP methods",
+    "back": "Repeated identical requests have the same effect on the server as one. Safe to retry after a dropped connection.",
+    "src": {
+      "title": "RFC 9110",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110#:~:text=A%20request%20method%20is%20considered%20%22idempotent%22%20if%20the%20intended%20effect%20on%20the%20server%20of%20multiple%20identical%20requests%20with%20that%20method%20is%20the%20same%20as%20the%20effect%20for%20a%20single%20such%20request.",
+      "q": "A request method is considered \"idempotent\" if the intended effect on the server of multiple identical requests with that method is the same as the effect for a single such request."
+    }
+  },
+  {
+    "id": "6.6-01",
+    "obj": "6.6",
+    "front": "Ansible",
+    "back": "Agentless: it uses temporary SSH (or WinRM) connections to managed nodes, so no software is needed there beyond OpenSSH and Python.",
+    "src": {
+      "title": "Wikipedia: Ansible (software)",
+      "url": "https://en.wikipedia.org/wiki/Ansible_(software)#:~:text=Ansible%20is%20agentless",
+      "q": "Ansible is agentless"
+    }
+  },
+  {
+    "id": "6.6-02",
+    "obj": "6.6",
+    "front": "Ansible playbooks",
+    "back": "Written in YAML with Jinja templates. Can be idempotent if carefully written.",
+    "src": {
+      "title": "Wikipedia: Ansible (software)",
+      "url": "https://en.wikipedia.org/wiki/Ansible_(software)#:~:text=Playbooks%20use%20an%20easy%20and%20descriptive%20language%20based%20on%20YAML%20and%20Jinja%20templates",
+      "q": "Playbooks use an easy and descriptive language based on YAML and Jinja templates"
+    }
+  },
+  {
+    "id": "6.6-03",
+    "obj": "6.6",
+    "front": "Terraform",
+    "back": "Infrastructure-as-code tool using a declarative language (HCL, or JSON) to describe the desired end state.",
+    "src": {
+      "title": "Wikipedia: Terraform (software)",
+      "url": "https://en.wikipedia.org/wiki/Terraform_(software)#:~:text=Terraform%20is%20an%20infrastructure-as-code%20software%20tool%20created%20by%20HashiCorp",
+      "q": "Terraform is an infrastructure-as-code software tool created by HashiCorp"
+    }
+  },
+  {
+    "id": "6.7-01",
+    "obj": "6.7",
+    "front": "JSON types",
+    "back": "Four primitives (strings, numbers, booleans, null) and two structured types (objects and arrays).",
+    "src": {
+      "title": "RFC 8259",
+      "url": "https://www.rfc-editor.org/rfc/rfc8259#:~:text=JSON%20can%20represent%20four%20primitive%20types%20%28strings%2C%20numbers%2C%20booleans%2C%20and%20null%29%20and%20two%20structured%20types%20%28objects%20and%20arrays%29.",
+      "q": "JSON can represent four primitive types (strings, numbers, booleans, and null) and two structured types (objects and arrays)."
+    }
+  },
+  {
+    "id": "6.7-02",
+    "obj": "6.7",
+    "front": "JSON object",
+    "back": "An unordered collection of name/value pairs. A name is a string and a value is a string, number, boolean, null, object or array.",
+    "src": {
+      "title": "RFC 8259",
+      "url": "https://www.rfc-editor.org/rfc/rfc8259#:~:text=An%20object%20is%20an%20unordered%20collection%20of%20zero%20or%20more%20name%2Fvalue%20pairs",
+      "q": "An object is an unordered collection of zero or more name/value pairs"
+    }
+  }
+]
