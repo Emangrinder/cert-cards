@@ -110,6 +110,17 @@
     }
   },
   {
+    "id": "1.1-11",
+    "obj": "1.1",
+    "front": "AWS Organizations\n\nWhat does it let you do across accounts?",
+    "back": "Create accounts, group them, apply governance policies (like SCPs) and use one payment method for consolidated billing.",
+    "src": {
+      "title": "AWS Docs: What is AWS Organizations?",
+      "url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html#:~:text=AWS%20Organizations%20helps%20you%20centrally%20manage%20and%20govern%20your%20environment%20as%20you%20grow%20and%20scale%20your%20AWS%20resources",
+      "q": "AWS Organizations helps you centrally manage and govern your environment as you grow and scale your AWS resources"
+    }
+  },
+  {
     "id": "1.2-01",
     "obj": "1.2",
     "front": "Security group\n\nWhat does it control, and is it stateful?",
@@ -231,6 +242,61 @@
     }
   },
   {
+    "id": "1.2-12",
+    "obj": "1.2",
+    "front": "Gateway VPC endpoints\n\nWhich services support them, and what do they cost?",
+    "back": "S3 and DynamoDB. Gateway endpoints add no additional charge, and traffic stays on the AWS network instead of using a NAT gateway or the internet.",
+    "src": {
+      "title": "AWS Docs: Gateway endpoints",
+      "url": "https://docs.aws.amazon.com/vpc/latest/privatelink/vpce-gateway.html#:~:text=Amazon%20S3%20and%20DynamoDB%20support%20both%20gateway%20endpoints%20and%20interface%20endpoints",
+      "q": "Amazon S3 and DynamoDB support both gateway endpoints and interface endpoints"
+    }
+  },
+  {
+    "id": "1.2-13",
+    "obj": "1.2",
+    "front": "Cognito user pool\n\nWhat does it do?",
+    "back": "A user directory that authenticates users (sign-in, social and enterprise federation) and issues JSON web tokens to your app or API.",
+    "src": {
+      "title": "AWS Docs: What is Amazon Cognito?",
+      "url": "https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html#:~:text=A%20user%20pool%20is%20a%20user%20directory%20that%20draws%20from%20the%20OpenID%20Connect%20%28OIDC%29%20standard%20to%20authenticate%20users%20and%20issue%20JSON%20web%20tokens",
+      "q": "A user pool is a user directory that draws from the OpenID Connect (OIDC) standard to authenticate users and issue JSON web tokens"
+    }
+  },
+  {
+    "id": "1.2-14",
+    "obj": "1.2",
+    "front": "Cognito identity pool\n\nWhat does it issue?",
+    "back": "Temporary AWS credentials for authenticated users (and optionally guests) so they can access AWS resources directly, e.g. an S3 bucket.",
+    "src": {
+      "title": "AWS Docs: What is Amazon Cognito?",
+      "url": "https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html#:~:text=An%20identity%20pool%20is%20a%20collection%20of%20unique%20identifiers%2C%20or%20identities%2C%20that%20you%20assign%20to%20your%20users%20or%20guests%20and%20authorize%20to%20receive%20temporary%20AWS%20credentials",
+      "q": "An identity pool is a collection of unique identifiers, or identities, that you assign to your users or guests and authorize to receive temporary AWS credentials"
+    }
+  },
+  {
+    "id": "1.2-15",
+    "obj": "1.2",
+    "front": "AWS CloudTrail\n\nWhat does it record?",
+    "back": "Actions taken by a user, role or AWS service, recorded as events. Used for auditing, governance and compliance of the account.",
+    "src": {
+      "title": "AWS Docs: What is CloudTrail?",
+      "url": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html#:~:text=AWS%20CloudTrail%20is%20an%20AWS%20service%20that%20helps%20you%20enable%20operational%20and%20risk%20auditing%2C%20governance%2C%20and%20compliance%20of%20your%20AWS%20account",
+      "q": "AWS CloudTrail is an AWS service that helps you enable operational and risk auditing, governance, and compliance of your AWS account"
+    }
+  },
+  {
+    "id": "1.2-16",
+    "obj": "1.2",
+    "front": "Systems Manager Parameter Store\n\nWhat is it for?",
+    "back": "Centralized, secure storage of configuration values and secrets as named parameters, so they are not baked into code or images.",
+    "src": {
+      "title": "AWS Docs: Parameter Store",
+      "url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html#:~:text=Parameter%20Store%20is%20a%20centralized%20configuration%20data%20store%20for%20named%20values%20called%20parameters",
+      "q": "Parameter Store is a centralized configuration data store for named values called parameters"
+    }
+  },
+  {
     "id": "1.3-01",
     "obj": "1.3",
     "front": "AWS KMS\n\nWhat does it manage?",
@@ -294,6 +360,39 @@
       "title": "AWS Docs: What is AWS Backup?",
       "url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#:~:text=AWS%20Backup%20is%20a%20fully-managed%20service%20that%20makes%20it%20easy%20to%20centralize%20and%20automate%20data%20protection%20across%20AWS%20services",
       "q": "AWS Backup is a fully-managed service that makes it easy to centralize and automate data protection across AWS services"
+    }
+  },
+  {
+    "id": "1.3-07",
+    "obj": "1.3",
+    "front": "KMS key rotation\n\nHow often does automatic rotation happen by default?",
+    "back": "Every year, when automatic rotation is enabled. You can also set a custom period or rotate on demand.",
+    "src": {
+      "title": "AWS Docs: Rotating KMS keys",
+      "url": "https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html#:~:text=By%20default%2C%20when%20you%20enable%20automatic%20key%20rotation%20for%20a%20KMS%20key%2C%20AWS%20KMS%20generates%20new%20cryptographic%20material%20for%20the%20KMS%20key%20every%20year",
+      "q": "By default, when you enable automatic key rotation for a KMS key, AWS KMS generates new cryptographic material for the KMS key every year"
+    }
+  },
+  {
+    "id": "1.3-08",
+    "obj": "1.3",
+    "front": "S3 Object Lock\n\nWhat are the two ways to retain objects?",
+    "back": "Retention periods (a fixed time an object version stays locked) and legal holds. Supports write-once-read-many (WORM) compliance needs.",
+    "src": {
+      "title": "AWS Docs: S3 Object Lock",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html#:~:text=Object%20Lock%20provides%20two%20ways%20to%20manage%20object%20retention%3A%20retention%20periods%20and%20legal%20holds",
+      "q": "Object Lock provides two ways to manage object retention: retention periods and legal holds"
+    }
+  },
+  {
+    "id": "1.3-09",
+    "obj": "1.3",
+    "front": "RDS automated backups\n\nWhat can you restore to?",
+    "back": "Any point in time within the backup retention period you set (point-in-time recovery).",
+    "src": {
+      "title": "AWS Docs: RDS automated backups",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html#:~:text=If%20necessary%2C%20you%20can%20recover%20your%20DB%20instance%20to%20any%20point%20in%20time%20during%20the%20backup%20retention%20period",
+      "q": "If necessary, you can recover your DB instance to any point in time during the backup retention period"
     }
   },
   {
@@ -382,6 +481,28 @@
       "title": "AWS Docs: AWS Fargate",
       "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html#:~:text=With%20AWS%20Fargate%2C%20you%20no%20longer%20have%20to%20provision%2C%20configure%2C%20or%20scale%20clusters%20of%20virtual%20machines%20to%20run%20containers",
       "q": "With AWS Fargate, you no longer have to provision, configure, or scale clusters of virtual machines to run containers"
+    }
+  },
+  {
+    "id": "2.1-09",
+    "obj": "2.1",
+    "front": "SQS dead-letter queue\n\nWhat is it for, and where must it live?",
+    "back": "Holds messages that could not be processed, for debugging. It must be in the same account and Region as the source queue.",
+    "src": {
+      "title": "AWS Docs: SQS dead-letter queues",
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html#:~:text=The%20dead-letter%20queue%20must%20be%20in%20the%20same%20AWS%20account%20and%20Region%20as%20the%20source%20queue",
+      "q": "The dead-letter queue must be in the same AWS account and Region as the source queue"
+    }
+  },
+  {
+    "id": "2.1-10",
+    "obj": "2.1",
+    "front": "SQS FIFO queue\n\nWhat does it guarantee?",
+    "back": "Ordering within a message group. Multiple ordered message groups can exist in one queue.",
+    "src": {
+      "title": "AWS Docs: SQS FIFO queues",
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html#:~:text=FIFO%20queues%20support%20message%20groups%20that%20allow%20multiple%20ordered%20message%20groups%20within%20a%20single%20queue",
+      "q": "FIFO queues support message groups that allow multiple ordered message groups within a single queue"
     }
   },
   {
@@ -517,6 +638,72 @@
     }
   },
   {
+    "id": "2.2-13",
+    "obj": "2.2",
+    "front": "Route 53 latency routing\n\nWhat does it pick?",
+    "back": "The Region that gives the user the lowest latency, using latency records you create in multiple Regions.",
+    "src": {
+      "title": "AWS Docs: Latency-based routing",
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-latency.html#:~:text=To%20use%20latency-based%20routing%2C%20you%20create%20latency%20records%20for%20your%20resources%20in%20multiple%20AWS%20Regions",
+      "q": "To use latency-based routing, you create latency records for your resources in multiple AWS Regions"
+    }
+  },
+  {
+    "id": "2.2-14",
+    "obj": "2.2",
+    "front": "Route 53 weighted routing\n\nWhat decides the traffic split?",
+    "back": "The relative weight on each record, as a share of the total weight. Good for gradual rollouts and A/B tests.",
+    "src": {
+      "title": "AWS Docs: Weighted routing",
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-weighted.html#:~:text=You%20give%20each%20record%20a%20relative%20weight%20that%20matches%20how%20much%20traffic%20you%20want%20to%20send%20to%20each%20resource",
+      "q": "You give each record a relative weight that matches how much traffic you want to send to each resource"
+    }
+  },
+  {
+    "id": "2.2-15",
+    "obj": "2.2",
+    "front": "Aurora Global Database\n\nWhat is the topology?",
+    "back": "One primary Region for writes and up to 10 read-only secondary Regions. Fast regional recovery and low-latency reads worldwide.",
+    "src": {
+      "title": "AWS Docs: Aurora Global Database",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#:~:text=An%20Aurora%20global%20database%20has%20a%20primary%20DB%20cluster%20in%20one%20Region%2C%20and%20up%20to%2010%20secondary%20DB%20clusters%20in%20different%20Regions",
+      "q": "An Aurora global database has a primary DB cluster in one Region, and up to 10 secondary DB clusters in different Regions"
+    }
+  },
+  {
+    "id": "2.2-16",
+    "obj": "2.2",
+    "front": "RDS Proxy\n\nWhat problem does it solve?",
+    "back": "Connection surges. Pools and reuses database connections, so unpredictable traffic (like Lambda) does not exhaust the database.",
+    "src": {
+      "title": "AWS Docs: RDS Proxy",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html#:~:text=RDS%20Proxy%20establishes%20a%20database%20connection%20pool%20and%20reuses%20connections%20in%20this%20pool",
+      "q": "RDS Proxy establishes a database connection pool and reuses connections in this pool"
+    }
+  },
+  {
+    "id": "2.2-17",
+    "obj": "2.2",
+    "front": "Amazon CloudWatch\n\nWhat does it monitor?",
+    "back": "Resources and applications in real time: metrics, logs and alarms for performance, health and utilization. Alarms can trigger scaling or recovery.",
+    "src": {
+      "title": "AWS Docs: What is CloudWatch?",
+      "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html#:~:text=Amazon%20CloudWatch%20monitors%20your%20Amazon%20Web%20Services%20%28AWS%29%20resources%20and%20the%20applications%20you%20run%20on%20AWS%20in%20real%20time",
+      "q": "Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time"
+    }
+  },
+  {
+    "id": "2.2-18",
+    "obj": "2.2",
+    "front": "Well-Architected pillars\n\nName the six.",
+    "back": "Operational excellence, security, reliability, performance efficiency, cost optimization and sustainability.",
+    "src": {
+      "title": "AWS Docs: Pillars of the Well-Architected Framework",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html#:~:text=the%20six%20pillars%20of%20operational%20excellence%2C%20security%2C%20reliability%2C%20performance%20efficiency%2C%20cost%20optimization%2C%20and%20sustainability",
+      "q": "the six pillars of operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability"
+    }
+  },
+  {
     "id": "3.1-01",
     "obj": "3.1",
     "front": "EBS performance\n\nWhat else affects volume performance?",
@@ -550,6 +737,50 @@
     }
   },
   {
+    "id": "3.1-04",
+    "obj": "3.1",
+    "front": "EBS SSD volume families\n\nName the two SSD-backed families.",
+    "back": "General Purpose SSD (gp3, gp2) and Provisioned IOPS SSD (io2, io1). Pick Provisioned IOPS for latency-sensitive, high-IOPS databases.",
+    "src": {
+      "title": "AWS Docs: EBS volume types",
+      "url": "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html#:~:text=SSD-backed%20volume%20types%20include%20General%20Purpose%20SSD%20and%20Provisioned%20IOPS%20SSD",
+      "q": "SSD-backed volume types include General Purpose SSD and Provisioned IOPS SSD"
+    }
+  },
+  {
+    "id": "3.1-05",
+    "obj": "3.1",
+    "front": "EC2 instance store\n\nWhat is it good for, and what is the catch?",
+    "back": "Temporary data like buffers, caches and scratch data. It is local to the host, so data is lost when the instance stops or fails.",
+    "src": {
+      "title": "AWS Docs: Instance store",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#:~:text=Instance%20store%20is%20ideal%20for%20temporary%20storage%20of%20information%20that%20changes%20frequently%2C%20such%20as%20buffers%2C%20caches%2C%20scratch%20data%2C%20and%20other%20temporary%20content",
+      "q": "Instance store is ideal for temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content"
+    }
+  },
+  {
+    "id": "3.1-06",
+    "obj": "3.1",
+    "front": "AWS DataSync\n\nWhat does it move?",
+    "back": "File or object data to, from and between AWS storage services, with encryption and integrity validation. For online migrations.",
+    "src": {
+      "title": "AWS Docs: What is AWS DataSync?",
+      "url": "https://docs.aws.amazon.com/datasync/latest/userguide/what-is-datasync.html#:~:text=helps%20you%20quickly%20and%20easily%20transfer%20your%20file%20or%20object%20data%20to%2C%20from%2C%20and%20between%20AWS%20storage%20services",
+      "q": "helps you quickly and easily transfer your file or object data to, from, and between AWS storage services"
+    }
+  },
+  {
+    "id": "3.1-07",
+    "obj": "3.1",
+    "front": "AWS Transfer Family\n\nWhich protocols does it support?",
+    "back": "SFTP, FTPS, FTP and AS2 (plus web-based transfers) directly into and out of AWS storage, fully managed.",
+    "src": {
+      "title": "AWS Docs: What is AWS Transfer Family?",
+      "url": "https://docs.aws.amazon.com/transfer/latest/userguide/what-is-aws-transfer-family.html#:~:text=AWS%20Transfer%20Family%20is%20a%20secure%20transfer%20service%20that%20enables%20you%20to%20transfer%20files%20into%20and%20out%20of%20AWS%20storage%20services",
+      "q": "AWS Transfer Family is a secure transfer service that enables you to transfer files into and out of AWS storage services"
+    }
+  },
+  {
     "id": "3.2-01",
     "obj": "3.2",
     "front": "Cluster placement group\n\nWhat is it good for?",
@@ -569,6 +800,17 @@
       "title": "AWS Docs: Placement groups",
       "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html#:~:text=Spreads%20your%20instances%20across%20logical%20partitions%20so%20that%20groups%20of%20instances%20in%20one%20partition%20do%20not%20share%20the%20underlying%20hardware",
       "q": "Spreads your instances across logical partitions so that groups of instances in one partition do not share the underlying hardware"
+    }
+  },
+  {
+    "id": "3.2-03",
+    "obj": "3.2",
+    "front": "EC2 instance families\n\nHow do you choose a type?",
+    "back": "Each type offers different compute, memory and storage capabilities, grouped into families. Match the family to the workload requirements.",
+    "src": {
+      "title": "AWS Docs: EC2 instance types",
+      "url": "https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-types.html#:~:text=Each%20instance%20type%20offers%20different%20compute%2C%20memory%2C%20and%20storage%20capabilities%2C%20and%20is%20grouped%20in%20an%20instance%20family%20based%20on%20these%20capabilities",
+      "q": "Each instance type offers different compute, memory, and storage capabilities, and is grouped in an instance family based on these capabilities"
     }
   },
   {
@@ -602,6 +844,17 @@
       "title": "AWS Docs: DynamoDB read/write capacity mode",
       "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/capacity-mode.html#:~:text=you%20can%20choose%20between%20on-demand%20mode%20and%20provisioned%20mode%20for%20your%20tables",
       "q": "you can choose between on-demand mode and provisioned mode for your tables"
+    }
+  },
+  {
+    "id": "3.3-04",
+    "obj": "3.3",
+    "front": "Aurora Serverless v2\n\nWhen is it a good fit?",
+    "back": "Highly variable or unpredictable workloads, dev/test and multitenant databases. Capacity is monitored and adjusted automatically.",
+    "src": {
+      "title": "AWS Docs: Aurora Serverless v2",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.html#:~:text=Aurora%20serverless%20helps%20to%20automate%20the%20processes%20of%20monitoring%20the%20workload%20and%20adjusting%20the%20capacity%20for%20your%20databases",
+      "q": "Aurora serverless helps to automate the processes of monitoring the workload and adjusting the capacity for your databases"
     }
   },
   {
@@ -682,6 +935,39 @@
     }
   },
   {
+    "id": "3.5-04",
+    "obj": "3.5",
+    "front": "Amazon EMR\n\nWhat does it run?",
+    "back": "Big data frameworks like Apache Hadoop and Spark on a managed cluster platform, to process vast amounts of data.",
+    "src": {
+      "title": "AWS Docs: What is Amazon EMR?",
+      "url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html#:~:text=is%20a%20managed%20cluster%20platform%20that%20simplifies%20running%20big%20data%20frameworks%2C%20such%20as%20Apache%20Hadoop%20and%20Apache%20Spark",
+      "q": "is a managed cluster platform that simplifies running big data frameworks, such as Apache Hadoop and Apache Spark"
+    }
+  },
+  {
+    "id": "4.0-01",
+    "obj": "4.0",
+    "front": "AWS Budgets\n\nWhat can it track and trigger?",
+    "back": "Costs, usage, and RI or Savings Plans coverage and utilization, with alerts and actions when thresholds are crossed.",
+    "src": {
+      "title": "AWS Docs: Managing costs with AWS Budgets",
+      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html#:~:text=You%20can%20use%20AWS%20Budgets%20to%20track%20and%20take%20action%20on%20your%20AWS%20costs%20and%20usage",
+      "q": "You can use AWS Budgets to track and take action on your AWS costs and usage"
+    }
+  },
+  {
+    "id": "4.0-02",
+    "obj": "4.0",
+    "front": "AWS Cost Explorer\n\nWhat do you analyze with it?",
+    "back": "Your usage and costs over time, using graphs and reports, to find drivers and trends.",
+    "src": {
+      "title": "AWS Docs: What is Cost Explorer?",
+      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html#:~:text=You%20can%20explore%20your%20usage%20and%20costs%20using%20the%20main%20graph%2C%20the%20Cost%20Explorer%20cost%20and%20usage%20reports%2C%20or%20the%20Cost%20Explorer%20RI%20reports",
+      "q": "You can explore your usage and costs using the main graph, the Cost Explorer cost and usage reports, or the Cost Explorer RI reports"
+    }
+  },
+  {
     "id": "4.1-01",
     "obj": "4.1",
     "front": "S3 storage classes\n\nWhy are there several?",
@@ -712,6 +998,28 @@
       "title": "AWS Docs: S3 Intelligent-Tiering",
       "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-intelligent-tiering.html#:~:text=S3%20Intelligent-Tiering%20delivers%20automatic%20cost%20savings%20by%20moving%20data%20on%20a%20granular%20object%20level%20between%20access%20tiers%20when%20access%20patterns%20change",
       "q": "S3 Intelligent-Tiering delivers automatic cost savings by moving data on a granular object level between access tiers when access patterns change"
+    }
+  },
+  {
+    "id": "4.1-04",
+    "obj": "4.1",
+    "front": "S3 Standard-IA and One Zone-IA\n\nWhat data are they for, and what is the catch?",
+    "back": "Long-lived, infrequently accessed data with millisecond access. A retrieval fee applies. One Zone-IA stores in a single AZ.",
+    "src": {
+      "title": "AWS Docs: S3 storage classes",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html#:~:text=The%20S3%20Standard-IA%20and%20S3%20One%20Zone-IA%20storage%20classes%20are%20designed%20for%20long-lived%20and%20infrequently%20accessed%20data",
+      "q": "The S3 Standard-IA and S3 One Zone-IA storage classes are designed for long-lived and infrequently accessed data"
+    }
+  },
+  {
+    "id": "4.1-05",
+    "obj": "4.1",
+    "front": "S3 Glacier classes\n\nWhat are the trade-offs?",
+    "back": "Low-cost archival storage, but with minimum storage durations and retrieval fees, so best for rarely accessed data. Deep Archive is the cheapest, slowest.",
+    "src": {
+      "title": "AWS Docs: S3 storage classes",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html#:~:text=These%20storage%20classes%20require%20minimum%20storage%20durations%20and%20retrieval%20fees%20making%20them%20most%20effective%20for%20rarely%20accessed%20data",
+      "q": "These storage classes require minimum storage durations and retrieval fees making them most effective for rarely accessed data"
     }
   },
   {
@@ -770,25 +1078,25 @@
     }
   },
   {
-    "id": "4.0-01",
-    "obj": "4.0",
-    "front": "AWS Budgets\n\nWhat can it track and trigger?",
-    "back": "Costs, usage, and RI or Savings Plans coverage and utilization, with alerts and actions when thresholds are crossed.",
+    "id": "4.3-02",
+    "obj": "4.3",
+    "front": "Aurora Serverless cost\n\nHow does it save money?",
+    "back": "Capacity tracks the workload, so you avoid paying for compute you do not use. Best for spiky or intermittent databases.",
     "src": {
-      "title": "AWS Docs: Managing costs with AWS Budgets",
-      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html#:~:text=You%20can%20use%20AWS%20Budgets%20to%20track%20and%20take%20action%20on%20your%20AWS%20costs%20and%20usage",
-      "q": "You can use AWS Budgets to track and take action on your AWS costs and usage"
+      "title": "AWS Docs: Aurora Serverless v2",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.html#:~:text=Aurora%20serverless%20can%20help%20you%20to%20stay%20within%20budget",
+      "q": "Aurora serverless can help you to stay within budget"
     }
   },
   {
-    "id": "4.0-02",
-    "obj": "4.0",
-    "front": "AWS Cost Explorer\n\nWhat do you analyze with it?",
-    "back": "Your usage and costs over time, using graphs and reports, to find drivers and trends.",
+    "id": "4.4-01",
+    "obj": "4.4",
+    "front": "Gateway endpoint cost\n\nHow do they reduce network cost?",
+    "back": "No additional charge for gateway endpoints. Routing S3 and DynamoDB traffic through them avoids NAT gateway data processing charges.",
     "src": {
-      "title": "AWS Docs: What is Cost Explorer?",
-      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html#:~:text=You%20can%20explore%20your%20usage%20and%20costs%20using%20the%20main%20graph%2C%20the%20Cost%20Explorer%20cost%20and%20usage%20reports%2C%20or%20the%20Cost%20Explorer%20RI%20reports",
-      "q": "You can explore your usage and costs using the main graph, the Cost Explorer cost and usage reports, or the Cost Explorer RI reports"
+      "title": "AWS Docs: Gateway endpoints",
+      "url": "https://docs.aws.amazon.com/vpc/latest/privatelink/vpce-gateway.html#:~:text=There%20is%20no%20additional%20charge%20for%20using%20gateway%20endpoints",
+      "q": "There is no additional charge for using gateway endpoints"
     }
   }
 ]
