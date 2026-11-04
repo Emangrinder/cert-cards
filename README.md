@@ -2,7 +2,7 @@
 
 Minimal flashcard decks for IT certifications, served as a static GitHub Pages site. Public sources only; summaries are written in my own words and link to the exact source section.
 
-Decks: Security+ (SY0-701, all 5 domains), AWS Solutions Architect Associate (SAA-C03, 100 cards), CCNA (200-301 v1.1, 123 cards).
+Decks: Security+ (SY0-701, all 5 domains), AWS Solutions Architect Associate (SAA-C03, 100 cards), CCNA (200-301 v1.1, 160 cards).
 
 ## Controls
 - Tap right half: next card. Tap left half: previous card.
@@ -45,4 +45,4 @@ IAM least-privilege best practice, VPN, Redshift, QuickSight, Snow family, Stora
 Objectives follow the official exam topics (1.1 to 6.7). Cisco's own documentation blocks scripted fetches, so sources are RFCs and Wikipedia, which the checker can verify; `python3 tools/check_links.py decks/ccna.json` confirms every quote. The NSA Computer Networking Test prep guide was used as a topic cross-check (TCP handshake, administrative distances).
 
 ### Gaps (no verified public source yet)
-Cisco IOS command syntax for any "configure and verify" objective, PoE standards, endpoints and servers, spine-leaf, SOHO and on-premises vs cloud, IPv4 subnetting worked examples, IPv6 EUI-64 calculation, client OS IP verification commands, inter-VLAN routing (router-on-a-stick, SVI), voice VLANs, root/loop/BPDU guard, wireless architectures and AP modes, WLAN GUI configuration, GLBP, DHCP/DNS operation details beyond the basics, security program elements, password policy, most AI/ML in network operations, CRUD verbs and REST auth types.
+Cisco IOS command syntax for any "configure and verify" objective, endpoints and servers, spine-leaf specifics, IPv4 subnetting worked examples, voice VLANs, root/loop/BPDU guard and BPDU filter, Cisco AP modes and WLAN GUI configuration, DHCP/DNS details beyond the basics, REST authentication types, LAG on WLC.

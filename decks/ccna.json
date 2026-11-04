@@ -88,6 +88,61 @@
     }
   },
   {
+    "id": "1.1-09",
+    "obj": "1.1",
+    "front": "PoE: who is the PSE and who is the PD?",
+    "back": "The power sourcing equipment (PSE, e.g. a switch or injector) supplies power over the cable to the powered device (PD, e.g. an AP or phone). They signal to detect and negotiate power.",
+    "src": {
+      "title": "Wikipedia: Power over Ethernet",
+      "url": "https://en.wikipedia.org/wiki/Power_over_Ethernet#:~:text=This%20signaling%20allows%20the%20presence%20of%20a%20conformant%20device%20to%20be%20detected%20by%20the%20power%20source%20and%20allows%20the%20device%20and%20source%20to%20negotiate%20the%20amount%20of%20power%20required%20or%20available",
+      "q": "This signaling allows the presence of a conformant device to be detected by the power source and allows the device and source to negotiate the amount of power required or available"
+    }
+  },
+  {
+    "id": "1.1-10",
+    "obj": "1.1",
+    "front": "PoE Type 1 (802.3af) power",
+    "back": "Up to 15.4 W from the port, about 12.95 W guaranteed at the PD.",
+    "src": {
+      "title": "Wikipedia: Power over Ethernet",
+      "url": "https://en.wikipedia.org/wiki/Power_over_Ethernet#:~:text=provides%20up%20to%2015.4%20W%20of%20DC%20power",
+      "q": "provides up to 15.4 W of DC power"
+    }
+  },
+  {
+    "id": "1.1-11",
+    "obj": "1.1",
+    "front": "PoE+ (802.3at, Type 2)",
+    "back": "Up to 25.5 W at the PD. Prohibits using all four pairs at once for power. PoE++/4PPoE (802.3bt) goes higher.",
+    "src": {
+      "title": "Wikipedia: Power over Ethernet",
+      "url": "https://en.wikipedia.org/wiki/Power_over_Ethernet#:~:text=It%20provides%20up%20to%2025.5%20W%20and%20prohibits%20the%20use%20of%20four%20pairs%20simultaneously%20for%20power.",
+      "q": "It provides up to 25.5 W and prohibits the use of four pairs simultaneously for power."
+    }
+  },
+  {
+    "id": "1.1-12",
+    "obj": "1.1",
+    "front": "Layer 3 switch vs router",
+    "back": "A layer-3 switch performs some or all router functions. The difference is how it decides: routers traditionally use software on a CPU, switches use hardware ASICs.",
+    "src": {
+      "title": "Wikipedia: Multilayer switch",
+      "url": "https://en.wikipedia.org/wiki/Multilayer_switch#:~:text=Conventionally%2C%20routers%20use%20microprocessors%20to%20make%20forwarding%20decisions%20in%20software",
+      "q": "Conventionally, routers use microprocessors to make forwarding decisions in software"
+    }
+  },
+  {
+    "id": "1.1-13",
+    "obj": "1.1",
+    "front": "Multilayer switch",
+    "back": "Switches at layer 2 like a normal switch and adds higher-layer functions such as layer-3 routing, at wire speed.",
+    "src": {
+      "title": "Wikipedia: Multilayer switch",
+      "url": "https://en.wikipedia.org/wiki/Multilayer_switch#:~:text=Multi-layer%20switching%20can%20move%20traffic%20at%20wire%20speed%20and%20also%20provide%20layer-3%20routing.",
+      "q": "Multi-layer switching can move traffic at wire speed and also provide layer-3 routing."
+    }
+  },
+  {
     "id": "1.2-01",
     "obj": "1.2",
     "front": "Three-tier design: what does each layer connect?",
@@ -118,6 +173,28 @@
       "title": "Wikipedia: Wide area network",
       "url": "https://en.wikipedia.org/wiki/Wide_area_network#:~:text=WANs%20can%20be%20separated%20from%20local%20area%20networks%20%28LANs%29%20in%20that%20the%20latter%20refers%20to%20physically%20proximal%20networks.",
       "q": "WANs can be separated from local area networks (LANs) in that the latter refers to physically proximal networks."
+    }
+  },
+  {
+    "id": "1.2-04",
+    "obj": "1.2",
+    "front": "SOHO",
+    "back": "Small office/home office: a business with roughly one to ten workers.",
+    "src": {
+      "title": "Wikipedia: Small office/home office",
+      "url": "https://en.wikipedia.org/wiki/Small_office/home_office#:~:text=refers%20to%20the%20category%20of%20business%20or%20cottage%20industry%20that%20involves%20from%20one%20to%20ten%20workers.",
+      "q": "refers to the category of business or cottage industry that involves from one to ten workers."
+    }
+  },
+  {
+    "id": "1.2-05",
+    "obj": "1.2",
+    "front": "On-premises vs cloud trade-off",
+    "back": "The choice depends on scalability, cost structure, latency, regulatory constraints and infrastructure customization.",
+    "src": {
+      "title": "Wikipedia: Cloud computing",
+      "url": "https://en.wikipedia.org/wiki/Cloud_computing#:~:text=depends%20on%20factors%20such%20as%20scalability%2C%20cost%20structure%2C%20latency%20requirements%2C%20regulatory%20constraints%2C%20and%20infrastructure%20customization.",
+      "q": "depends on factors such as scalability, cost structure, latency requirements, regulatory constraints, and infrastructure customization."
     }
   },
   {
@@ -330,6 +407,17 @@
     }
   },
   {
+    "id": "1.8-03",
+    "obj": "1.8",
+    "front": "Modified EUI-64: what changes?",
+    "back": "Invert the universal/local (u) bit of the EUI-64 identifier. It becomes 1 for universal scope and 0 for local.",
+    "src": {
+      "title": "RFC 4291",
+      "url": "https://www.rfc-editor.org/rfc/rfc4291#:~:text=In%20the%20resulting%20Modified%20EUI-64%20format%2C%20the%20%22u%22%20bit%20is%20set%20to%20one%20%281%29%20to%20indicate%20universal%20scope%2C%20and%20it%20is%20set%20to%20zero%20%280%29%20to%20indicate%20local%20scope.",
+      "q": "In the resulting Modified EUI-64 format, the \"u\" bit is set to one (1) to indicate universal scope, and it is set to zero (0) to indicate local scope."
+    }
+  },
+  {
     "id": "1.9-01",
     "obj": "1.9",
     "front": "Link-local address: how many does an interface need?",
@@ -371,6 +459,72 @@
       "title": "RFC 4291",
       "url": "https://www.rfc-editor.org/rfc/rfc4291#:~:text=A%20packet%20sent%20to%20a%20multicast%20address%20is%20delivered%20to%20all%20interfaces%20identified%20by%20that%20address.",
       "q": "A packet sent to a multicast address is delivered to all interfaces identified by that address."
+    }
+  },
+  {
+    "id": "1.9-05",
+    "obj": "1.9",
+    "front": "Modified EUI-64 source",
+    "back": "Built from a universal token such as an IEEE 802 48-bit MAC address, or has local scope where no global token exists (serial links, tunnel ends).",
+    "src": {
+      "title": "RFC 4291",
+      "url": "https://www.rfc-editor.org/rfc/rfc4291#:~:text=Modified%20EUI-64%20format-based%20interface%20identifiers%20may%20have%20universal%20scope%20when%20derived%20from%20a%20universal%20token",
+      "q": "Modified EUI-64 format-based interface identifiers may have universal scope when derived from a universal token"
+    }
+  },
+  {
+    "id": "1.9-06",
+    "obj": "1.9",
+    "front": "IPv6 neighbor solicitation",
+    "back": "Replaces ARP. Multicast to the target's solicited-node address to learn its link-layer address. Also used for duplicate address detection.",
+    "src": {
+      "title": "RFC 4861",
+      "url": "https://www.rfc-editor.org/rfc/rfc4861#:~:text=Neighbor%20Solicitation%20messages%20are%20multicast%20to%20the%20solicited-node%20multicast%20address%20of%20the%20target%20address.",
+      "q": "Neighbor Solicitation messages are multicast to the solicited-node multicast address of the target address."
+    }
+  },
+  {
+    "id": "1.9-07",
+    "obj": "1.9",
+    "front": "Router advertisement",
+    "back": "Routers announce their presence and link/Internet parameters periodically or in answer to a router solicitation. Hosts use the prefix for SLAAC.",
+    "src": {
+      "title": "Wikipedia: Neighbor Discovery Protocol",
+      "url": "https://en.wikipedia.org/wiki/Neighbor_Discovery_Protocol#:~:text=Routers%20advertise%20their%20presence%20together%20with%20various%20link%20and%20Internet%20parameters%20either%20periodically%2C%20or%20in%20response%20to%20a%20Router%20Solicitation%20message.",
+      "q": "Routers advertise their presence together with various link and Internet parameters either periodically, or in response to a Router Solicitation message."
+    }
+  },
+  {
+    "id": "1.10-01",
+    "obj": "1.10",
+    "front": "What does ping measure?",
+    "back": "Round-trip time for messages to a destination that are echoed back. Uses ICMP.",
+    "src": {
+      "title": "Wikipedia: Ping (networking utility)",
+      "url": "https://en.wikipedia.org/wiki/Ping_(networking_utility)#:~:text=Ping%20measures%20the%20round-trip%20time%20for%20messages%20sent%20from%20the%20originating%20host%20to%20a%20destination%20computer%20that%20are%20echoed%20back%20to%20the%20source.",
+      "q": "Ping measures the round-trip time for messages sent from the originating host to a destination computer that are echoed back to the source."
+    }
+  },
+  {
+    "id": "1.10-02",
+    "obj": "1.10",
+    "front": "How does traceroute find each hop?",
+    "back": "Sends packets with TTL rising from 1. Each router that drops one replies with ICMP Time Exceeded.",
+    "src": {
+      "title": "Wikipedia: Traceroute",
+      "url": "https://en.wikipedia.org/wiki/Traceroute#:~:text=Traceroute%20sends%20packets%20with%20TTL%20values%20that%20gradually%20increase%20from%20packet%20to%20packet%2C%20starting%20with%20TTL%20value%20of%20one.",
+      "q": "Traceroute sends packets with TTL values that gradually increase from packet to packet, starting with TTL value of one."
+    }
+  },
+  {
+    "id": "1.10-03",
+    "obj": "1.10",
+    "front": "Windows ipconfig /all",
+    "back": "ipconfig /all prints more detailed address information than ipconfig alone. On Linux/macOS use ifconfig (deprecated on many Linux distros for iproute2).",
+    "src": {
+      "title": "Wikipedia: Ipconfig",
+      "url": "https://en.wikipedia.org/wiki/Ipconfig#:~:text=The%20ipconfig%20command%20supports%20the%20command-line%20switch%20%2Fall%20.",
+      "q": "The ipconfig command supports the command-line switch /all ."
     }
   },
   {
@@ -492,6 +646,50 @@
       "title": "Wikipedia: Virtual LAN",
       "url": "https://en.wikipedia.org/wiki/Virtual_LAN#:~:text=VLANs%20work%20by%20applying%20tags%20to%20network%20frames%20that%20are%20forwarded%20within%20the%20broadcast%20domain",
       "q": "VLANs work by applying tags to network frames that are forwarded within the broadcast domain"
+    }
+  },
+  {
+    "id": "2.1-03",
+    "obj": "2.1",
+    "front": "Router on a stick",
+    "back": "Inter-VLAN routing with one router connected to a switch through a single 802.1Q trunk link.",
+    "src": {
+      "title": "Wikipedia: Router on a stick",
+      "url": "https://en.wikipedia.org/wiki/Router_on_a_stick#:~:text=It%20is%20a%20method%20of%20inter-%20VLAN%20routing%20where%20one%20router%20is%20connected%20to%20a%20switch%20via%20a%20single%20cable.",
+      "q": "It is a method of inter- VLAN routing where one router is connected to a switch via a single cable."
+    }
+  },
+  {
+    "id": "2.1-04",
+    "obj": "2.1",
+    "front": "Router on a stick: traffic cost",
+    "back": "Traffic crosses the trunk twice, so the sum of up and download speed is capped at the line rate.",
+    "src": {
+      "title": "Wikipedia: Router on a stick",
+      "url": "https://en.wikipedia.org/wiki/Router_on_a_stick#:~:text=All%20traffic%20goes%20over%20the%20trunk%20twice%2C%20so%20the%20theoretical%20maximum%20sum%20of%20up%20and%20download%20speed%20is%20the%20line%20rate.",
+      "q": "All traffic goes over the trunk twice, so the theoretical maximum sum of up and download speed is the line rate."
+    }
+  },
+  {
+    "id": "2.1-05",
+    "obj": "2.1",
+    "front": "SVI",
+    "back": "A virtual routed interface connecting a VLAN to the layer 3 router engine on the same switch. Gives the VLAN a default gateway so traffic can route between VLANs.",
+    "src": {
+      "title": "Wikipedia: Switch virtual interface",
+      "url": "https://en.wikipedia.org/wiki/Switch_virtual_interface#:~:text=An%20SVI%20is%20a%20virtual%20routed%20interface%20that%20connects%20a%20VLAN%20on%20the%20device%20to%20the%20Layer%203%20router%20engine%20on%20the%20same%20device.",
+      "q": "An SVI is a virtual routed interface that connects a VLAN on the device to the Layer 3 router engine on the same device."
+    }
+  },
+  {
+    "id": "2.1-06",
+    "obj": "2.1",
+    "front": "Why do two VLANs need a router?",
+    "back": "Hosts in different VLANs cannot exchange frames directly. Traffic must be routed between them.",
+    "src": {
+      "title": "Wikipedia: Switch virtual interface",
+      "url": "https://en.wikipedia.org/wiki/Switch_virtual_interface#:~:text=Whenever%20hosts%20in%20one%20VLAN%20need%20to%20communicate%20with%20hosts%20in%20another%20VLAN%2C%20the%20traffic%20must%20be%20routed%20between%20them.",
+      "q": "Whenever hosts in one VLAN need to communicate with hosts in another VLAN, the traffic must be routed between them."
     }
   },
   {
@@ -646,6 +844,17 @@
       "title": "Wikipedia: Rapid Spanning Tree Protocol",
       "url": "https://en.wikipedia.org/wiki/Rapid_Spanning_Tree_Protocol#:~:text=While%20the%20port%20does%20not%20yet%20forward%20frames%2C%20it%20does%20learn%20source%20addresses%20from%20frames%20received%20and%20adds%20them%20to%20the%20MAC%20table.",
       "q": "While the port does not yet forward frames, it does learn source addresses from frames received and adds them to the MAC table."
+    }
+  },
+  {
+    "id": "2.5-08",
+    "obj": "2.5",
+    "front": "BPDUs",
+    "back": "Switches constantly exchange BPDUs with neighbors. The root bridge calculates path costs from bandwidth.",
+    "src": {
+      "title": "Wikipedia: Spanning Tree Protocol",
+      "url": "https://en.wikipedia.org/wiki/Spanning_Tree_Protocol#:~:text=All%20switches%20constantly%20communicate%20with%20their%20neighbors%20in%20the%20LAN%20using",
+      "q": "All switches constantly communicate with their neighbors in the LAN using"
     }
   },
   {
@@ -880,6 +1089,17 @@
     }
   },
   {
+    "id": "3.5-04",
+    "obj": "3.5",
+    "front": "GLBP",
+    "back": "Cisco's first-hop protocol that load balances across gateways in round-robin by default, with a weighting parameter, unlike HSRP's single active router.",
+    "src": {
+      "title": "Wikipedia: Gateway Load Balancing Protocol",
+      "url": "https://en.wikipedia.org/wiki/Gateway_Load_Balancing_Protocol#:~:text=By%20default%2C%20GLBP%20load%20balances%20in%20round-robin%20fashion.",
+      "q": "By default, GLBP load balances in round-robin fashion."
+    }
+  },
+  {
     "id": "4.1-01",
     "obj": "4.1",
     "front": "Static vs dynamic NAT",
@@ -1023,6 +1243,17 @@
     }
   },
   {
+    "id": "4.5-03",
+    "obj": "4.5",
+    "front": "Syslog facility",
+    "back": "A facility code states the type of system generating a message (kernel, mail, etc.). Each message also gets a severity.",
+    "src": {
+      "title": "Wikipedia: Syslog",
+      "url": "https://en.wikipedia.org/wiki/Syslog#:~:text=A%20facility%20code%20is%20used%20to%20specify%20the%20type%20of%20system%20that%20is%20logging%20the%20message.",
+      "q": "A facility code is used to specify the type of system that is logging the message."
+    }
+  },
+  {
     "id": "4.6-01",
     "obj": "4.6",
     "front": "DHCP relay",
@@ -1133,6 +1364,28 @@
     }
   },
   {
+    "id": "5.2-01",
+    "obj": "5.2",
+    "front": "Awareness program goal",
+    "back": "Behavior change as part of risk management, building a privacy and security culture.",
+    "src": {
+      "title": "NIST SP 800-50 Rev 1",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-50r1.pdf#page=5",
+      "q": "The program should encourage behavior change as part of risk management and lead to developing a privacy and security culture in the organization"
+    }
+  },
+  {
+    "id": "5.2-02",
+    "obj": "5.2",
+    "front": "Awareness exercises",
+    "back": "Tabletop exercises, role-playing simulations, cyber ranges and phishing campaigns supplement training.",
+    "src": {
+      "title": "NIST SP 800-50 Rev 1",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-50r1.pdf#page=13",
+      "q": "awareness training, practical exercises (e.g., tabletop exercises, role-playing simulations, cyber ranges, or phishing campaigns)"
+    }
+  },
+  {
     "id": "5.4-01",
     "obj": "5.4",
     "front": "Multi-factor authentication",
@@ -1141,6 +1394,50 @@
       "title": "Wikipedia: Multi-factor authentication",
       "url": "https://en.wikipedia.org/wiki/Multi-factor_authentication#:~:text=the%20user%27s%20identity%20is%20not%20established%20with%20sufficient%20certainty",
       "q": "the user's identity is not established with sufficient certainty"
+    }
+  },
+  {
+    "id": "5.4-02",
+    "obj": "5.4",
+    "front": "Password policy purpose",
+    "back": "Rules that encourage strong passwords and proper use, often taught in security awareness training.",
+    "src": {
+      "title": "Wikipedia: Password policy",
+      "url": "https://en.wikipedia.org/wiki/Password_policy#:~:text=A%20password%20policy%20is%20a%20set%20of%20rules%20designed%20to%20enhance%20computer%20security%20by%20encouraging%20users%20to%20employ%20strong%20passwords%20and%20use%20them%20properly.",
+      "q": "A password policy is a set of rules designed to enhance computer security by encouraging users to employ strong passwords and use them properly."
+    }
+  },
+  {
+    "id": "5.4-03",
+    "obj": "5.4",
+    "front": "NIST on password composition and rotation",
+    "back": "No composition rules (mixed character types) and no periodic forced changes, except when compromise is suspected.",
+    "src": {
+      "title": "NIST SP 800-63B-4",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html#:~:text=Verifiers%20and%20CSPs%20SHALL%20NOT%20require%20subscribers%20to%20change%20passwords%20periodically.",
+      "q": "Verifiers and CSPs SHALL NOT require subscribers to change passwords periodically."
+    }
+  },
+  {
+    "id": "5.4-04",
+    "obj": "5.4",
+    "front": "AAL2 and MFA",
+    "back": "AAL2 requires proof of possession and control of two distinct authentication factors.",
+    "src": {
+      "title": "NIST SP 800-63B-4",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html#:~:text=Proof%20of%20the%20possession%20and%20control%20of%20two%20distinct%20authentication%20factors%20is%20required.",
+      "q": "Proof of the possession and control of two distinct authentication factors is required."
+    }
+  },
+  {
+    "id": "5.4-05",
+    "obj": "5.4",
+    "front": "Biometrics as an authenticator",
+    "back": "A biometric alone is not recognized as an authenticator. It must pair with a physical authenticator.",
+    "src": {
+      "title": "NIST SP 800-63B-4",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html#:~:text=A%20biometric%20characteristic%20is%20not%20recognized%20as%20an%20authenticator%20by%20itself.",
+      "q": "A biometric characteristic is not recognized as an authenticator by itself."
     }
   },
   {
@@ -1243,6 +1540,17 @@
     }
   },
   {
+    "id": "6.1-01",
+    "obj": "6.1",
+    "front": "What is automation doing in the network?",
+    "back": "CRUD-style actions are pushed to devices by tools instead of typed per device. Terraform, for example, performs create/read/update/delete actions to reach a declared state.",
+    "src": {
+      "title": "Wikipedia: Terraform (software)",
+      "url": "https://en.wikipedia.org/wiki/Terraform_(software)#:~:text=Terraform%20will%20perform%20CRUD%20actions%20on%20the%20user%27s%20behalf%20to%20accomplish%20the%20desired%20state.",
+      "q": "Terraform will perform CRUD actions on the user's behalf to accomplish the desired state."
+    }
+  },
+  {
     "id": "6.2-01",
     "obj": "6.2",
     "front": "Control plane vs data plane in SDN",
@@ -1276,6 +1584,50 @@
     }
   },
   {
+    "id": "6.3-03",
+    "obj": "6.3",
+    "front": "Overlay network",
+    "back": "A logical network layered on top of a physical (underlay) network. Its links map to paths through many physical links.",
+    "src": {
+      "title": "Wikipedia: Overlay network",
+      "url": "https://en.wikipedia.org/wiki/Overlay_network#:~:text=An%20overlay%20network%20is%20a%20logical%20computer%20network%20that%20is%20layered%20on%20top%20of%20a%20physical%20network.",
+      "q": "An overlay network is a logical computer network that is layered on top of a physical network."
+    }
+  },
+  {
+    "id": "6.3-04",
+    "obj": "6.3",
+    "front": "VXLAN",
+    "back": "An overlay encapsulation giving about 16 million logical networks (24-bit VNID) versus 4094 VLANs, and layer-2 adjacency across IP networks.",
+    "src": {
+      "title": "Wikipedia: Virtual Extensible LAN",
+      "url": "https://en.wikipedia.org/wiki/Virtual_Extensible_LAN#:~:text=VXLAN%20increases%20scalability%20up%20to%20about%2016%20million%20logical%20networks%20%28using%20a%2024-bit%20VNID%29%20and%20allows%20for%20layer-2%20adjacency%20across%20IP%20networks.",
+      "q": "VXLAN increases scalability up to about 16 million logical networks (using a 24-bit VNID) and allows for layer-2 adjacency across IP networks."
+    }
+  },
+  {
+    "id": "6.4-01",
+    "obj": "6.4",
+    "front": "Machine learning",
+    "back": "Statistical algorithms that learn from data and generalize to unseen data, doing tasks without being explicitly programmed.",
+    "src": {
+      "title": "Wikipedia: Machine learning",
+      "url": "https://en.wikipedia.org/wiki/Machine_learning#:~:text=can%20learn%20from%20data%20and%20generalize%20to%20unseen%20data%2C%20and%20thus%20perform%20tasks%20without%20being%20explicitly%20programmed",
+      "q": "can learn from data and generalize to unseen data, and thus perform tasks without being explicitly programmed"
+    }
+  },
+  {
+    "id": "6.4-02",
+    "obj": "6.4",
+    "front": "Generative AI",
+    "back": "Uses generative models to produce text, images, code or other data. Models can give incorrect answers (hallucinations).",
+    "src": {
+      "title": "Wikipedia: Generative artificial intelligence",
+      "url": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence#:~:text=Generative%20AI%20models%20can%20produce%20incorrect%20answers%20or%20%22hallucinations.%22",
+      "q": "Generative AI models can produce incorrect answers or \"hallucinations.\""
+    }
+  },
+  {
     "id": "6.5-01",
     "obj": "6.5",
     "front": "DELETE method",
@@ -1295,6 +1647,61 @@
       "title": "RFC 9110",
       "url": "https://www.rfc-editor.org/rfc/rfc9110#:~:text=A%20request%20method%20is%20considered%20%22idempotent%22%20if%20the%20intended%20effect%20on%20the%20server%20of%20multiple%20identical%20requests%20with%20that%20method%20is%20the%20same%20as%20the%20effect%20for%20a%20single%20such%20request.",
       "q": "A request method is considered \"idempotent\" if the intended effect on the server of multiple identical requests with that method is the same as the effect for a single such request."
+    }
+  },
+  {
+    "id": "6.5-03",
+    "obj": "6.5",
+    "front": "CRUD",
+    "back": "The four basic storage operations: Create, Read, Update, Delete. REST APIs map them to HTTP methods.",
+    "src": {
+      "title": "Wikipedia: Create, read, update and delete",
+      "url": "https://en.wikipedia.org/wiki/Create,_read,_update_and_delete#:~:text=Together%20these%20four%20operations%20make%20up%20the%20basic%20operations%20of%20storage%20management%20known%20as%20CRUD",
+      "q": "Together these four operations make up the basic operations of storage management known as CRUD"
+    }
+  },
+  {
+    "id": "6.5-04",
+    "obj": "6.5",
+    "front": "GET",
+    "back": "Requests transfer of a current representation of the target resource. Used for reads.",
+    "src": {
+      "title": "RFC 9110",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110#:~:text=The%20GET%20method%20requests%20transfer%20of%20a%20current%20selected%20representation%20for%20the%20target%20resource",
+      "q": "The GET method requests transfer of a current selected representation for the target resource"
+    }
+  },
+  {
+    "id": "6.5-05",
+    "obj": "6.5",
+    "front": "POST",
+    "back": "Asks the target resource to process the enclosed representation by its own semantics. Often used to create.",
+    "src": {
+      "title": "RFC 9110",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110#:~:text=The%20POST%20method%20requests%20that%20the%20target%20resource%20process%20the%20representation%20enclosed%20in%20the%20request%20according%20to%20the%20resource%27s%20own%20specific%20semantics.",
+      "q": "The POST method requests that the target resource process the representation enclosed in the request according to the resource's own specific semantics."
+    }
+  },
+  {
+    "id": "6.5-06",
+    "obj": "6.5",
+    "front": "PUT",
+    "back": "Asks that the target resource's state be created or replaced with the enclosed representation. Idempotent.",
+    "src": {
+      "title": "RFC 9110",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110#:~:text=The%20PUT%20method%20requests%20that%20the%20state%20of%20the%20target%20resource%20be%20created%20or%20replaced%20with%20the%20state%20defined%20by%20the%20representation%20enclosed%20in%20the%20request%20message%20content.",
+      "q": "The PUT method requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message content."
+    }
+  },
+  {
+    "id": "6.5-07",
+    "obj": "6.5",
+    "front": "NETCONF",
+    "back": "IETF protocol for configuration and device management, published as RFC 4741 then revised in RFC 6241.",
+    "src": {
+      "title": "Wikipedia: NETCONF",
+      "url": "https://en.wikipedia.org/wiki/NETCONF#:~:text=published%20in%20December%202006%20as%20RFC%204741",
+      "q": "published in December 2006 as RFC 4741"
     }
   },
   {
